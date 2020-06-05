@@ -455,15 +455,6 @@
         'blueScore': 4
     });
 	
-    //buff += "Games:\n";
-    //console.log('Games:');
-
-    for (i in games) {
-        txt = games[i].red.join(' ') + ' [' + games[i].redScore + ':' + games[i].blueScore + '] ' + games[i].blue.join(' ');
-        //buff += txt + "\n";
-        //console.log(txt);
-    }
-
     var calculateTeamTotalElo = function(team) {
 
         var sum = 0;
@@ -497,7 +488,7 @@
 			isWin;
 
         if (typeof players[playerName] === "undefined") {
-            console.log('Unknow player ' + playerName);
+            alert('Unknow player ' + playerName);
         }
 
         if (isRedTeamPlayer(game, playerName)) {
@@ -604,6 +595,22 @@
         winRates[i].avg = Math.ceil((winRates[i].wins / (winRates[i].wins + winRates[i].loses)) * 100);
     }
 
+	var facts = {};
+	
+	var redWins = 0,
+		blueWins = 0;
+	
+	// calculate red/blue %
+	for (i in games) {
+		if (games[i].redScore > games[i].blueScore) {
+			++ redWins;
+		} else {
+			++ blueWins;
+		}
+	}
+
+	facts.redWinRate = (redWins / (blueWins + redWins)) * 100;
+	
 	var data = document.getElementById('data');
 
 	buff = '<table style="border: #ccc solid 1px; border-collapse: collapse;">'
@@ -628,6 +635,9 @@
     }
 	
 	buff += '</table>';
+	
+	buff += '<br /><br /><h4>Facts</h4>';
+	buff += '<br />Overall, Red-Blue win-rate is: ' + Math.ceil(facts.redWinRate) + '% - ' + (100 - Math.ceil(facts.redWinRate)) + '%';
 	
 	buff += '<br /><br /><h4>Elo-rank calculation rules:</h4>';
 	buff += 'New Elo-rating = Old Elo-rating + Pts * (Old Elo-rating / 400)<br /><br />';

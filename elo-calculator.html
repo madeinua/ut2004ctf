@@ -1,0 +1,615 @@
+<html>
+<script>
+    var buff = '';
+    var players = [];
+
+    players['gooz'] = 2030;
+	players['koffee'] = 2020;
+	players['made'] = 2020;
+	players['mnt'] = 2000;
+    players['simson'] = 1950;
+    players['tolyan'] = 1940;
+    players['imitator'] = 1900;
+    players['maldito'] = 1850;
+	players['j'] = 1840;
+    players['ness'] = 1850;
+    players['hodor'] = 1830;
+    players['prix'] = 1830;
+	players['small'] = 1800;
+    players['pepper'] = 1800;
+    players['sonic'] = 1800;
+    players['alter'] = 1800;
+    players['cold'] = 1800;
+    players['rigel'] = 1750;
+    players['loox'] = 1750;
+    players['what'] = 1750;
+    players['pihar'] = 1750;
+    players['forsiets'] = 1700;
+    players['WG'] = 1600;
+	players['krnki'] = 1600;
+    players['thoums'] = 1500;
+    players['bad_bond'] = 1500;
+
+    //console.log('Initial Elo rates:');
+    //buff += "ELO [02.05]:\n";
+
+    var i, txt;
+
+    for (i in players) {
+        //txt = i + ': ' + players[i];
+        //buff += txt + "\n";
+        //console.log(txt);
+    }
+
+    var games = [];
+
+    // 02.05
+    games.push({
+        'red': ['made', 'alter', 'tolyan', 'maldito', 'ness'],
+        'blue': ['imitator', 'gooz', 'prix', 'cold', 'loox'],
+        'redScore': 1,
+        'blueScore': 6
+    });
+
+    games.push({
+        'red': ['made', 'alter', 'tolyan', 'maldito', 'ness'],
+        'blue': ['imitator', 'gooz', 'prix', 'cold', 'loox'],
+        'redScore': 2,
+        'blueScore': 1
+    });
+
+    games.push({
+        'red': ['made', 'imitator', 'tolyan', 'maldito', 'ness'],
+        'blue': ['mnt', 'gooz', 'prix', 'cold', 'loox'],
+        'redScore': 7,
+        'blueScore': 2
+    });
+
+    games.push({
+        'red': ['made', 'imitator', 'tolyan', 'maldito', 'ness'],
+        'blue': ['mnt', 'gooz', 'prix', 'cold', 'loox'],
+        'redScore': 1,
+        'blueScore': 0
+    });
+
+    games.push({
+        'red': ['made', 'imitator', 'tolyan', 'maldito', 'ness'],
+        'blue': ['mnt', 'gooz', 'prix', 'cold', 'loox'],
+        'redScore': 4,
+        'blueScore': 0
+    });
+
+    // 07.05
+    games.push({
+        'red': ['mnt', 'gooz', 'tolyan', 'cold', 'prix'],
+        'blue': ['made', 'imitator', 'koffee', 'WG', 'ness'],
+        'redScore': 2,
+        'blueScore': 3
+    });
+
+    games.push({
+        'red': ['mnt', 'gooz', 'tolyan', 'cold', 'prix'],
+        'blue': ['made', 'imitator', 'koffee', 'WG', 'ness'],
+        'redScore': 6,
+        'blueScore': 4
+    });
+
+    games.push({
+        'red': ['mnt', 'gooz', 'tolyan', 'cold', 'prix'],
+        'blue': ['made', 'imitator', 'koffee', 'WG', 'ness'],
+        'redScore': 1,
+        'blueScore': 9
+    });
+
+    games.push({
+        'red': ['mnt', 'gooz', 'tolyan', 'cold', 'prix'],
+        'blue': ['made', 'imitator', 'koffee', 'WG', 'ness'],
+        'redScore': 7,
+        'blueScore': 4
+    });
+
+    games.push({
+        'red': ['mnt', 'gooz', 'tolyan', 'cold', 'prix'],
+        'blue': ['made', 'imitator', 'koffee', 'WG', 'ness'],
+        'redScore': 3,
+        'blueScore': 4
+    });
+
+    // 09.05
+    games.push({
+        'red': ['mnt', 'rigel', 'ness', 'imitator', 'cold'],
+        'blue': ['gooz', 'tolyan', 'pihar', 'WG', 'maldito'],
+        'redScore': 7,
+        'blueScore': 2
+    });
+
+    games.push({
+        'red': ['mnt', 'rigel', 'ness', 'imitator', 'cold'],
+        'blue': ['made', 'tolyan', 'pihar', 'WG', 'maldito'],
+        'redScore': 4,
+        'blueScore': 3
+    });
+
+    games.push({
+        'red': ['mnt', 'rigel', 'ness', 'imitator', 'cold'],
+        'blue': ['made', 'tolyan', 'pihar', 'WG', 'maldito'],
+        'redScore': 4,
+        'blueScore': 5
+    });
+
+    games.push({
+        'red': ['mnt', 'rigel', 'ness', 'imitator', 'cold'],
+        'blue': ['made', 'tolyan', 'pihar', 'WG', 'maldito'],
+        'redScore': 4,
+        'blueScore': 3
+    });
+
+    games.push({
+        'red': ['mnt', 'rigel', 'ness', 'imitator', 'pihar'],
+        'blue': ['made', 'tolyan', 'cold', 'WG', 'maldito'],
+        'redScore': 3,
+        'blueScore': 4
+    });
+
+    // 10.05
+    games.push({
+        'red': ['mnt', 'rigel', 'ness', 'imitator', 'pihar'],
+        'blue': ['made', 'tolyan', 'cold', 'WG', 'maldito'],
+        'redScore': 1,
+        'blueScore': 0
+    });
+
+    //11.05
+    games.push({
+        'red': ['koffee', 'pepper', 'cold', 'mnt', 'maldito'],
+        'blue': ['prix', 'tolyan', 'imitator', 'made', 'ness'],
+        'redScore': 5,
+        'blueScore': 7
+    });
+
+    games.push({
+        'red': ['koffee', 'pepper', 'cold', 'mnt', 'maldito'],
+        'blue': ['prix', 'tolyan', 'imitator', 'made', 'ness'],
+        'redScore': 2,
+        'blueScore': 9
+    });
+
+    games.push({
+        'red': ['koffee', 'pepper', 'cold', 'mnt', 'maldito'],
+        'blue': ['prix', 'tolyan', 'imitator', 'made', 'ness'],
+        'redScore': 2,
+        'blueScore': 5
+    });
+
+    games.push({
+        'red': ['koffee', 'pepper', 'cold', 'mnt', 'maldito'],
+        'blue': ['prix', 'tolyan', 'imitator', 'made', 'ness'],
+        'redScore': 3,
+        'blueScore': 4
+    });
+
+    //14.05
+    games.push({
+        'red': ['mnt', 'made', 'WG', 'cold', 'ness'],
+        'blue': ['prix', 'tolyan', 'imitator', 'koffee', 'simson'],
+        'redScore': 5,
+        'blueScore': 1
+    });
+
+    games.push({
+        'red': ['mnt', 'made', 'WG', 'cold', 'ness'],
+        'blue': ['prix', 'tolyan', 'imitator', 'sonic', 'simson'],
+        'redScore': 5,
+        'blueScore': 2
+    });
+
+    //16.05
+    games.push({
+        'red': ['prix', 'hodor', 'gooz', 'WG', 'imitator'],
+        'blue': ['made', 'tolyan', 'cold', 'maldito', 'ness'],
+        'redScore': 4,
+        'blueScore': 5
+    });
+
+    games.push({
+        'red': ['prix', 'hodor', 'gooz', 'WG', 'imitator'],
+        'blue': ['made', 'tolyan', 'cold', 'maldito', 'ness'],
+        'redScore': 5,
+        'blueScore': 4
+    });
+
+    games.push({
+        'red': ['prix', 'hodor', 'gooz', 'WG', 'imitator'],
+        'blue': ['made', 'tolyan', 'cold', 'maldito', 'ness'],
+        'redScore': 3,
+        'blueScore': 4
+    });
+
+    //19.05
+    games.push({
+        'red': ['tolyan', 'imitator', 'cold', 'prix', 'loox'],
+        'blue': ['made', 'ness', 'forsiets', 'koffee', 'WG'],
+        'redScore': 4,
+        'blueScore': 3
+    });
+
+    games.push({
+        'red': ['tolyan', 'imitator', 'cold', 'prix', 'loox'],
+        'blue': ['made', 'ness', 'forsiets', 'koffee', 'WG'],
+        'redScore': 5,
+        'blueScore': 4
+    });
+
+    games.push({
+        'red': ['tolyan', 'imitator', 'cold', 'prix', 'loox'],
+        'blue': ['made', 'ness', 'forsiets', 'koffee', 'WG'],
+        'redScore': 7,
+        'blueScore': 4
+    });
+
+    // 23.05
+    games.push({
+        'red': ['cold', 'mnt', 'gooz', 'hodor', 'WG'],
+        'blue': ['made', 'ness', 'tolyan', 'imitator', 'maldito'],
+        'redScore': 2,
+        'blueScore': 7
+    });
+
+    games.push({
+        'red': ['tolyan', 'mnt', 'gooz', 'hodor', 'WG'],
+        'blue': ['made', 'ness', 'cold', 'imitator', 'maldito'],
+        'redScore': 2,
+        'blueScore': 4
+    });
+
+    games.push({
+        'red': ['made', 'mnt', 'maldito', 'ness', 'forsiets'],
+        'blue': ['tolyan', 'gooz', 'cold', 'imitator', 'WG'],
+        'redScore': 6,
+        'blueScore': 5
+    });
+
+    games.push({
+        'red': ['made', 'mnt', 'maldito', 'ness', 'forsiets'],
+        'blue': ['tolyan', 'gooz', 'cold', 'imitator', 'WG'],
+        'redScore': 4,
+        'blueScore': 3
+    });
+
+    // 24.05
+    games.push({
+        'red': ['made', 'prix', 'loox', 'koffee', 'thoums'],
+        'blue': ['mnt', 'gooz', 'cold', 'bad_bond', 'what'],
+        'redScore': 7,
+        'blueScore': 0
+    });
+
+    games.push({
+        'red': ['made', 'prix', 'what', 'koffee', 'thoums'],
+        'blue': ['mnt', 'gooz', 'cold', 'bad_bond', 'loox'],
+        'redScore': 6,
+        'blueScore': 2
+    });
+
+    //26.05
+    games.push({
+        'red': ['cold', 'koffee', 'ness', 'thoums', 'imitator'],
+        'blue': ['made', 'tolyan', 'rigel', 'simson', 'loox'],
+        'redScore': 2,
+        'blueScore': 6
+    });
+
+    games.push({
+        'red': ['cold', 'koffee', 'ness', 'loox', 'imitator'],
+        'blue': ['made', 'tolyan', 'rigel', 'simson', 'thoums'],
+        'redScore': 1,
+        'blueScore': 4
+    });
+
+    games.push({
+        'red': ['gooz', 'koffee', 'rigel', 'loox', 'thoums'],
+        'blue': ['made', 'tolyan', 'imitator', 'ness', 'cold'],
+        'redScore': 5,
+        'blueScore': 7
+    });
+
+    games.push({
+        'red': ['gooz', 'koffee', 'rigel', 'loox', 'thoums'],
+        'blue': ['made', 'tolyan', 'imitator', 'ness', 'cold'],
+        'redScore': 5,
+        'blueScore': 6
+    });
+
+	// 28.05
+	games.push({
+        'red': ['made', 'cold', 'thoums', 'ness', 'imitator'],
+        'blue': ['gooz', 'loox', 'prix', 'koffee', 'krnki'],
+        'redScore': 0,
+        'blueScore': 7
+    });
+	
+	games.push({
+        'red': ['made', 'prix', 'thoums', 'ness', 'imitator'],
+        'blue': ['gooz', 'loox', 'cold', 'koffee', 'krnki'],
+        'redScore': 1,
+        'blueScore': 2
+    });
+	
+	games.push({
+        'red': ['made', 'prix', 'thoums', 'ness', 'imitator'],
+        'blue': ['gooz', 'loox', 'cold', 'koffee', 'krnki'],
+        'redScore': 0,
+        'blueScore': 7
+    });
+	
+	games.push({
+        'red': ['made', 'gooz', 'thoums', 'ness', 'rigel'],
+        'blue': ['tolyan', 'imitator', 'cold', 'koffee', 'krnki'],
+        'redScore': 3,
+        'blueScore': 4
+    });
+	
+	games.push({
+        'red': ['made', 'tolyan', 'imitator', 'ness', 'cold'],
+        'blue': ['gooz', 'small', 'thoums', 'koffee', 'rigel'],
+        'redScore': 5,
+        'blueScore': 0
+    });
+	
+	// 30.05
+	games.push({
+        'red': ['made', 'imitator', 'ness', 'pihar', 'WG'],
+        'blue': ['gooz', 'tolyan', 'cold', 'maldito', 'forsiets'],
+        'redScore': 6,
+        'blueScore': 4
+    });
+	
+	games.push({
+        'red': ['made', 'imitator', 'ness', 'pihar', 'WG'],
+        'blue': ['gooz', 'tolyan', 'cold', 'maldito', 'forsiets'],
+        'redScore': 3,
+        'blueScore': 4
+    });
+	
+	games.push({
+        'red': ['made', 'imitator', 'ness', 'pihar', 'WG'],
+        'blue': ['gooz', 'tolyan', 'cold', 'maldito', 'forsiets'],
+        'redScore': 0,
+        'blueScore': 3
+    });
+	
+	games.push({
+        'red': ['made', 'imitator', 'ness', 'pihar', 'WG'],
+        'blue': ['gooz', 'tolyan', 'cold', 'maldito', 'forsiets'],
+        'redScore': 2,
+        'blueScore': 3
+    });
+	
+	// 02.06
+	games.push({
+        'red': ['made', 'imitator', 'ness', 'pihar', 'WG'],
+        'blue': ['gooz', 'tolyan', 'cold', 'maldito', 'forsiets'],
+        'redScore': 2,
+        'blueScore': 3
+    });
+	
+	games.push({
+        'red': ['made', 'prix', 'cold', 'thoums', 'j'],
+        'blue': ['gooz', 'mnt', 'imitator', 'ness', 'rigel'],
+        'redScore': 1,
+        'blueScore': 4
+    });
+	
+	games.push({
+        'red': ['made', 'prix', 'cold', 'thoums', 'j'],
+        'blue': ['gooz', 'mnt', 'imitator', 'ness', 'rigel'],
+        'redScore': 0,
+        'blueScore': 7
+    });
+	
+	games.push({
+        'red': ['made', 'prix', 'cold', 'rigel', 'j'],
+        'blue': ['gooz', 'mnt', 'imitator', 'ness', 'thoums'],
+        'redScore': 4,
+        'blueScore': 5
+    });
+	
+	// 04.06
+	games.push({
+        'red': ['mnt', 'gooz', 'prix', 'cold', 'thoums'],
+        'blue': ['tolyan', 'koffee', 'imitator', 'ness', 'rigel'],
+        'redScore': 5,
+        'blueScore': 6
+    });
+	
+	games.push({
+        'red': ['mnt', 'gooz', 'prix', 'cold', 'thoums'],
+        'blue': ['tolyan', 'koffee', 'imitator', 'ness', 'rigel'],
+        'redScore': 3,
+        'blueScore': 9
+    });
+	
+	games.push({
+        'red': ['mnt', 'gooz', 'prix', 'cold', 'thoums'],
+        'blue': ['tolyan', 'koffee', 'imitator', 'ness', 'rigel'],
+        'redScore': 2,
+        'blueScore': 3
+    });
+	
+	games.push({
+        'red': ['mnt', 'gooz', 'prix', 'cold', 'thoums'],
+        'blue': ['tolyan', 'koffee', 'imitator', 'ness', 'rigel'],
+        'redScore': 2,
+        'blueScore': 1
+    });
+	
+    //buff += "Games:\n";
+    //console.log('Games:');
+
+    for (i in games) {
+        txt = games[i].red.join(' ') + ' [' + games[i].redScore + ':' + games[i].blueScore + '] ' + games[i].blue.join(' ');
+        //buff += txt + "\n";
+        //console.log(txt);
+    }
+
+    var calculateTeamTotalElo = function(team) {
+
+        var sum = 0;
+
+        for (var k in team) {
+            sum += players[team[k]];
+        }
+
+        return sum;
+    };
+
+    var isRedTeamPlayer = function(game, playerName) {
+
+        for (var k in game.red) {
+            if (game.red[k] === playerName) {
+                return true;
+            }
+        }
+
+        return false;
+    };
+
+    var getPlayerEloInGame = function(playerName, game) {
+
+        var oldElo = players[playerName],
+            myTeamScore,
+            opTeamScore,
+            myTeamElo,
+            opTeamElo,
+            Sa;
+
+        if (typeof players[playerName] === "undefined") {
+            console.log('Unknow player ' + playerName);
+        }
+
+        if (isRedTeamPlayer(game, playerName)) {
+            myTeamScore = game.redScore;
+            opTeamScore = game.blueScore;
+            myTeamElo = calculateTeamTotalElo(game.red);
+            opTeamElo = calculateTeamTotalElo(game.blue);
+        } else {
+            myTeamScore = game.blueScore;
+            opTeamScore = game.redScore;
+            myTeamElo = calculateTeamTotalElo(game.blue);
+            opTeamElo = calculateTeamTotalElo(game.red);
+        }
+
+        Sa = 0;
+		K = oldElo / 200;
+
+        if (myTeamElo >= opTeamElo) {
+            if (myTeamScore > opTeamScore) {
+                Sa += K / 2;
+            } else {
+                Sa -= K;
+            }
+        } else {
+            if (myTeamScore > opTeamScore) {
+                Sa += K;
+            } else {
+                Sa -= K / 2;
+            }
+        }
+
+        return oldElo + Sa;
+    };
+
+    var updateTeamsEloInGame = function(game) {
+
+        var playersInGame = game.red.concat(game.blue),
+            eloResults = [];
+
+        for (var i in playersInGame) {
+            eloResults[playersInGame[i]] = getPlayerEloInGame(playersInGame[i], game);
+        }
+
+        for (var playerName in eloResults) {
+            players[playerName] = eloResults[playerName];
+        }
+    };
+
+    for (i in games) {
+        updateTeamsEloInGame(games[i]);
+    }
+
+    function getSortedKeys(obj) {
+        var keys = keys = Object.keys(obj);
+        return keys.sort(function(a, b) {
+            return obj[b] - obj[a]
+        });
+    }
+
+    var sortedPlayers = getSortedKeys(players);
+
+    var winRates = [];
+
+    for (i in players) {
+
+        winRates[i] = {
+            wins: 0,
+            loses: 0,
+            avg: 0
+        };
+    }
+
+    var updatePlayerWinRateInGame = function(playerName, game) {
+
+        if (isRedTeamPlayer(game, playerName)) {
+            if (game.redScore > game.blueScore) {
+                ++winRates[playerName].wins;
+            } else {
+                ++winRates[playerName].loses;
+            }
+        } else {
+            if (game.blueScore > game.redScore) {
+                ++winRates[playerName].wins;
+            } else {
+                ++winRates[playerName].loses;
+            }
+        }
+    };
+
+    var updateTeamsWinRateInGame = function(game) {
+
+        var playersInGame = game.red.concat(game.blue);
+
+        for (var i in playersInGame) {
+            updatePlayerWinRateInGame(
+                playersInGame[i],
+                game
+            );
+        }
+    };
+
+    for (i in games) {
+        updateTeamsWinRateInGame(games[i]);
+    }
+
+    for (i in winRates) {
+        winRates[i].avg = Math.ceil((winRates[i].wins / (winRates[i].wins + winRates[i].loses)) * 100);
+    }
+
+    buff += "Ranks:\n";
+    //console.log('Final Elo rates:');
+
+    for (i in sortedPlayers) {
+
+        txt = sortedPlayers[i]
+            + ': ' + Math.ceil(players[sortedPlayers[i]])
+            + '. Win rate: ' + winRates[sortedPlayers[i]].wins
+            + ' wins, ' + winRates[sortedPlayers[i]].loses
+            + ' loses, avg. ' + winRates[sortedPlayers[i]].avg + '% wins.';
+
+        buff += txt + "\n";
+        //console.log(txt);
+    }
+
+    console.log(buff);
+
+</script>
+</html>

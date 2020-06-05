@@ -1,4 +1,5 @@
 <html>
+<div id="data"></div>
 <script>
     var buff = '';
     var players = [];
@@ -481,7 +482,8 @@
             opTeamScore,
             myTeamElo,
             opTeamElo,
-            Sa;
+            Sa,
+			isWin;
 
         if (typeof players[playerName] === "undefined") {
             console.log('Unknow player ' + playerName);
@@ -500,21 +502,18 @@
         }
 
         Sa = 0;
-		K = oldElo / 200;
+		K = oldElo / 400;
+		isWin = myTeamScore > opTeamScore;
 
-        if (myTeamElo >= opTeamElo) {
-            if (myTeamScore > opTeamScore) {
-                Sa += K / 2;
-            } else {
-                Sa -= K;
-            }
-        } else {
-            if (myTeamScore > opTeamScore) {
-                Sa += K;
-            } else {
-                Sa -= K / 2;
-            }
-        }
+        if (opTeamElo >= myTeamElo && isWin) {
+			Sa += 2 * K;
+		} else if (myTeamElo > opTeamElo && isWin) {
+			Sa += K;
+		} else if (opTeamElo >= myTeamElo && !isWin) {
+			Sa -= K;
+		} else {
+			Sa -= 2 * K;
+		}
 
         return oldElo + Sa;
     };
@@ -594,22 +593,40 @@
         winRates[i].avg = Math.ceil((winRates[i].wins / (winRates[i].wins + winRates[i].loses)) * 100);
     }
 
-    buff += "Ranks:\n";
-    //console.log('Final Elo rates:');
+	var data = document.getElementById('data');
 
+	buff = '<table style="border: #ccc solid 1px; border-collapse: collapse;">'
+	+ '<tbody><tr>'
+	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Rank</th>'
+	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Name</th>'
+	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Elo-Rating</th>'
+	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Wins</th>'
+	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Loses</th>'
+	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Wins %</th>'
+	+ '</tr></tbody>';
+	
     for (i in sortedPlayers) {
-
-        txt = sortedPlayers[i]
-            + ': ' + Math.ceil(players[sortedPlayers[i]])
-            + '. Win rate: ' + winRates[sortedPlayers[i]].wins
-            + ' wins, ' + winRates[sortedPlayers[i]].loses
-            + ' loses, avg. ' + winRates[sortedPlayers[i]].avg + '% wins.';
-
-        buff += txt + "\n";
-        //console.log(txt);
+		buff += '<tr>';
+		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px; text-align: right;">' + (parseInt(i, 10) + 1) + '</td>';
+		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + sortedPlayers[i] + '</td>';
+		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + Math.ceil(players[sortedPlayers[i]]) + '</td>';
+		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winRates[sortedPlayers[i]].wins + '</td>';
+		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winRates[sortedPlayers[i]].loses + '</td>';
+		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winRates[sortedPlayers[i]].avg + '</td>';
+		buff += '</tr>';
     }
-
-    console.log(buff);
+	
+	buff += '</table>';
+	
+	buff += '<br /><br /><h4>Elo-rank calculation rules:</h4>';
+	buff += 'New Elo-rating = Old Elo-rating + Pts * (Old Elo-rating / 400)<br /><br />';
+	buff += 'Pts = +2 points for winning against a team with the lower Elo-rating than your team.<br />';
+	buff += 'Pts = +1 points for winning against a team with the same or greater Elo-rating than your team.<br />';
+	buff += 'Pts = -1 points for losing against a team with the same or greater Elo-rating than your team.<br />';
+	buff += 'Pts = -2 points for losing against a team with the lower Elo-rating than your team.<br /><br />';
+	buff += '<br /><br /><br />';
+	
+	data.innerHTML = buff;
 
 </script>
 </html>

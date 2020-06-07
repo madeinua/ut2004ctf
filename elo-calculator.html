@@ -455,6 +455,21 @@
         'blueScore': 4
     });
 	
+	// 07.06
+	games.push({
+        'red': ['MVDE', 'TT-Tolyan', 'chitrox', 'Cold-M', 'Thoums'],
+        'blue': ['mnt', 'j', 'Krnki', 'pr!x', 'WG'],
+        'redScore': 5,
+        'blueScore': 4
+    });
+	
+	games.push({
+        'red': ['MVDE', 'TT-Tolyan', 'chitrox', 'Cold-M', 'Thoums'],
+        'blue': ['mnt', 'j', 'Krnki', 'pr!x', 'WG'],
+        'redScore': 5,
+        'blueScore': 3
+    });
+	
     var calculateTeamTotalElo = function(team) {
 
         var sum = 0;
@@ -550,7 +565,6 @@
     var winRates = [];
 
     for (i in players) {
-
         winRates[i] = {
             wins: 0,
             loses: 0,
@@ -597,6 +611,12 @@
 
 	var facts = {};
 	
+	// @TODO Add maps?
+	// @TODO Show best/worst map for each player?
+	// @TODO Fact: player + red/blue team highest/lowest win/lose rate?
+	// @TODO Fact: player A + player B highest/lowest win/lose rate?
+	// @TODO Fact: most win/lose map + player
+	
 	var redWins = 0,
 		blueWins = 0;
 	
@@ -637,7 +657,7 @@
 	buff += '</table>';
 	
 	buff += '<br /><br /><h4>Facts</h4>';
-	buff += '<br />Overall, Red-Blue win-rate is: ' + Math.ceil(facts.redWinRate) + '% - ' + (100 - Math.ceil(facts.redWinRate)) + '%';
+	buff += '<br />Overall, Red - Blue win-rate is: ' + Math.ceil(facts.redWinRate) + '% - ' + (100 - Math.ceil(facts.redWinRate)) + '%';
 	
 	buff += '<br /><br /><h4>Elo-rank calculation rules:</h4>';
 	buff += 'New Elo-rating = Old Elo-rating + Pts * (Old Elo-rating / 400)<br /><br />';

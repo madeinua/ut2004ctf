@@ -531,13 +531,13 @@
 		isWin = myTeamScore > opTeamScore;
 
         if (opTeamElo >= myTeamElo && isWin) {
-			Sa += 2 * K;
+			Sa += 4 * K;
 		} else if (myTeamElo > opTeamElo && isWin) {
-			Sa += K / 2;
+			Sa += K;
 		} else if (opTeamElo >= myTeamElo && !isWin) {
-			Sa -= K / 2;
+			Sa -= K;
 		} else {
-			Sa -= 2 * K;
+			Sa -= 4 * K;
 		}
 
         return oldElo + Sa;
@@ -669,10 +669,10 @@
 	
 	buff += '<br /><br /><h4>Elo-rank calculation rules:</h4>';
 	buff += 'New Elo-rating = Old Elo-rating + Pts * (Old Elo-rating / 400)<br /><br />';
-	buff += 'Pts = +2 points for winning against a team with the lower Elo-rating than your team.<br />';
+	buff += 'Pts = +4 points for winning against a team with the lower Elo-rating than your team.<br />';
 	buff += 'Pts = +1 points for winning against a team with the same or greater Elo-rating than your team.<br />';
 	buff += 'Pts = -1 points for losing against a team with the same or greater Elo-rating than your team.<br />';
-	buff += 'Pts = -2 points for losing against a team with the lower Elo-rating than your team.<br /><br />';
+	buff += 'Pts = -4 points for losing against a team with the lower Elo-rating than your team.<br /><br />';
 	buff += '<br /><br /><br />';
 	
 	data.innerHTML = buff;

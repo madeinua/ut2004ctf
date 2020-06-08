@@ -470,6 +470,14 @@
         'blueScore': 3
     });
 	
+	// 08.06
+	games.push({
+        'red': ['MVDE', 'pr!x', 'Krnki', 'Koffee', 'Thoums'],
+        'blue': ['mnt', 'j', 'Gooz', 'chitrox', 'Loox'],
+        'redScore': 5,
+        'blueScore': 3
+    });
+	
     var calculateTeamTotalElo = function(team) {
 
         var sum = 0;
@@ -525,9 +533,9 @@
         if (opTeamElo >= myTeamElo && isWin) {
 			Sa += 2 * K;
 		} else if (myTeamElo > opTeamElo && isWin) {
-			Sa += K;
+			Sa += K / 2;
 		} else if (opTeamElo >= myTeamElo && !isWin) {
-			Sa -= K;
+			Sa -= K / 2;
 		} else {
 			Sa -= 2 * K;
 		}

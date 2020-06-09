@@ -478,6 +478,35 @@
         'blueScore': 3
     });
 	
+	// 09.06
+	games.push({
+        'red': ['MVDE', 'pr!x', 'Koffee', 'TT-Tolyan', 'Thoums'],
+        'blue': ['mnt', 'Gooz', 'ImitatoR', 'chitrox', 'Cold-M'],
+        'redScore': 1,
+        'blueScore': 4
+    });
+	
+	games.push({
+        'red': ['MVDE', 'pr!x', 'Koffee', 'TT-Tolyan', 'Thoums'],
+        'blue': ['mnt', 'Gooz', 'ImitatoR', 'chitrox', 'Cold-M'],
+        'redScore': 6,
+        'blueScore': 5
+    });
+	
+	games.push({
+        'red': ['MVDE', 'Gooz', 'pepper', 'TT-Tolyan', 'Cold-M'],
+        'blue': ['mnt', 'Koffee', 'ImitatoR', 'chitrox', 'Rigel'],
+        'redScore': 2,
+        'blueScore': 5
+    });
+	
+	games.push({
+        'red': ['MVDE', 'Gooz', 'pepper', 'TT-Tolyan', 'Cold-M'],
+        'blue': ['mnt', 'Koffee', 'ImitatoR', 'chitrox', 'Rigel'],
+        'redScore': 5,
+        'blueScore': 4
+    });
+	
     var calculateTeamTotalElo = function(team) {
 
         var sum = 0;
@@ -669,8 +698,8 @@
 	
 	buff += '<br /><br /><h4>Elo-rank calculation rules:</h4>';
 	buff += 'New Elo-rating = Old Elo-rating + Pts * (Old Elo-rating / 400)<br /><br />';
-	buff += 'Pts = +4 points for winning against a team with the lower Elo-rating than your team.<br />';
-	buff += 'Pts = +1 points for winning against a team with the same or greater Elo-rating than your team.<br />';
+	buff += 'Pts = +4 points for winning against a team with the same or greater Elo-rating than your team.<br />';
+	buff += 'Pts = +1 points for winning against a team with the lower than your team.<br />';
 	buff += 'Pts = -1 points for losing against a team with the same or greater Elo-rating than your team.<br />';
 	buff += 'Pts = -4 points for losing against a team with the lower Elo-rating than your team.<br /><br />';
 	buff += '<br /><br /><br />';

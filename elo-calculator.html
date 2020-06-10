@@ -1,38 +1,39 @@
 <html>
 <div id="data"></div>
 <script>
-    var buff = '';
-    var players = [];
+    var buff = '',
+	    players = [];
 
-    players['Gooz'] = 2030;
-	players['Koffee'] = 2020;
-	players['MVDE'] = 2020;
-	players['mnt'] = 2000;
+    players['Gooz'] = 2000;
+	players['Koffee'] = 2000;
+	players['MVDE'] = 2000;
+	players['mnt'] = 1950;
     players['simson'] = 1950;
-    players['TT-Tolyan'] = 1940;
+    players['TT-Tolyan'] = 1900;
     players['ImitatoR'] = 1900;
     players['Maldito'] = 1850;
-    players['chitrox'] = 1850;
-    players['Hodor'] = 1830;
-    players['pr!x'] = 1830;
-	players['pepper'] = 1800;
-	players['Small'] = 1800;
-	players['Sonic'] = 1800;
 	players['j'] = 1800;
-    players['Alter'] = 1800;
-    players['Cold-M'] = 1800;
-    players['Rigel'] = 1780;
-    players['Loox'] = 1750;
-    players['what'] = 1740;
-    players['MoRoZ'] = 1730;
-    players['Forsiets'] = 1700;
+	players['Sonic'] = 1800;
+    players['chitrox'] = 1800;
+    players['Hodor'] = 1800;
+    players['pr!x'] = 1800;
+	players['Small'] = 1800;
+	players['pepper'] = 1750;
+    players['Alter'] = 1750;
+    players['Cold-M'] = 1750;
+    players['Rigel'] = 1750;
+    players['Loox'] = 1700;
+    players['what'] = 1700;
+    players['MoRoZ'] = 1650;
 	players['Krnki'] = 1650;
-    players['WG'] = 1650;
+    players['Forsiets'] = 1650;
+    players['WG'] = 1600;
 	players['zazuza'] = 1600;
-    players['Thoums'] = 1550;
+    players['Thoums'] = 1500;
     players['Bad_Bond'] = 1500;
 
-    var games = [];
+    var games = [],
+		oldStats = Object.assign({}, players);
 
     // 02.05
     games.push({
@@ -786,6 +787,7 @@
 	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Wins</th>'
 	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Streak +</th>'
 	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Streak -</th>'
+	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Elo-rating 01.05</th>'
 	+ '</tr></tbody>';
 	
     for (i in sortedPlayers) {
@@ -798,6 +800,7 @@
 		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winRates[sortedPlayers[i]].avg + '%</td>';
 		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winningStreak[sortedPlayers[i]].max + '</td>';
 		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + losingStreak[sortedPlayers[i]].max + '</td>';
+		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + Math.ceil(oldStats[sortedPlayers[i]]) + '</td>';
 		buff += '</tr>';
     }
 	

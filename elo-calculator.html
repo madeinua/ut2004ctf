@@ -528,7 +528,15 @@
 
         return false;
     };
-
+	
+	var playedGames = [],
+	    darkHorses = [];
+	
+	for (i in players) {
+		darkHorses[i] = 0;
+		playedGames[i] = 0;
+	}
+	
     var getPlayerEloInGame = function(playerName, game) {
 
         var oldElo = players[playerName],
@@ -559,8 +567,11 @@
 		K = oldElo / 400;
 		isWin = myTeamScore > opTeamScore;
 
+		++playedGames[playerName];
+		
         if (opTeamElo >= myTeamElo && isWin) {
 			Sa += 4 * K;
+			++darkHorses[playerName];
 		} else if (myTeamElo > opTeamElo && isWin) {
 			Sa += K;
 		} else if (opTeamElo >= myTeamElo && !isWin) {
@@ -646,15 +657,8 @@
         winRates[i].avg = Math.ceil((winRates[i].wins / (winRates[i].wins + winRates[i].loses)) * 100);
     }
 
-	var facts = {};
-	
-	// @TODO Add maps?
-	// @TODO Show best/worst map for each player?
-	// @TODO Fact: player + red/blue team highest/lowest win/lose rate?
-	// @TODO Fact: player A + player B highest/lowest win/lose rate?
-	// @TODO Fact: most win/lose map + player
-	
-	var redWins = 0,
+	var facts = {},
+		redWins = 0,
 		blueWins = 0;
 	
 	// calculate red/blue %
@@ -666,7 +670,79 @@
 		}
 	}
 
+	// calculate win/lose streak
+	var winningStreak = [],
+		losingStreak = [],
+		j;
+	
+	for (i in players) {
+		winningStreak[i] = { current: 0, max: 0 };
+		losingStreak[i] = { current: 0, max: 0 };
+	}
+	
+	for (i in games) {
+		
+		var gamePlayers = games[i].red.concat(games[i].blue);
+		
+		for (j in gamePlayers) {
+			
+			var playerName = gamePlayers[j],
+				redWin = games[i].redScore > games[i].blueScore,
+				isRedPlayer = games[i].red.includes(playerName);
+			
+			if ((redWin && isRedPlayer) || (!redWin && !isRedPlayer)) {
+				
+				if (++winningStreak[playerName].current > winningStreak[playerName].max) {
+					winningStreak[playerName].max = winningStreak[playerName].current;
+				}
+				
+				losingStreak[playerName].current = 0;
+				
+			} else {
+				
+				if (++losingStreak[playerName].current > losingStreak[playerName].max) {
+					losingStreak[playerName].max = losingStreak[playerName].current;
+				}
+				
+				winningStreak[playerName].current = 0;
+			}
+		}
+	}
+	
+	var bestWinningStreak = 0,
+		bestWinningStreakPlayer;
+	
+	for (i in winningStreak) {
+		if (winningStreak[i].max > bestWinningStreak) {
+			bestWinningStreak = winningStreak[i].max;
+			bestWinningStreakPlayer = i;
+		}
+	}
+	
+	var worstLosingStreak = 0,
+		worstLosingStreakPlayer;
+	
+	for (i in losingStreak) {
+		if (losingStreak[i].max > worstLosingStreak) {
+			worstLosingStreak = losingStreak[i].max;
+			worstLosingStreakPlayer = i;
+		}
+	}
+		
 	facts.redWinRate = (redWins / (blueWins + redWins)) * 100;
+	
+	var darkHorseValue = 0,
+		darkHorsePlayer;
+		
+	for (i in darkHorses) {
+		
+		var current = playedGames[i] > 3 ? darkHorses[i] / playedGames[i] : 0;
+		
+		if (current > darkHorseValue) {
+			darkHorsePlayer = i;
+			darkHorseValue = current;
+		}
+	}
 	
 	var data = document.getElementById('data');
 
@@ -677,7 +753,9 @@
 	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Elo-Rating</th>'
 	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Wins</th>'
 	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Loses</th>'
-	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Wins %</th>'
+	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Wins</th>'
+	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Streak +</th>'
+	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Streak -</th>'
 	+ '</tr></tbody>';
 	
     for (i in sortedPlayers) {
@@ -687,16 +765,21 @@
 		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + Math.ceil(players[sortedPlayers[i]]) + '</td>';
 		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winRates[sortedPlayers[i]].wins + '</td>';
 		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winRates[sortedPlayers[i]].loses + '</td>';
-		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winRates[sortedPlayers[i]].avg + '</td>';
+		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winRates[sortedPlayers[i]].avg + '%</td>';
+		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winningStreak[sortedPlayers[i]].max + '</td>';
+		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + losingStreak[sortedPlayers[i]].max + '</td>';
 		buff += '</tr>';
     }
 	
 	buff += '</table>';
 	
 	buff += '<br /><br /><h4>Facts</h4>';
-	buff += '<br />Overall, Red - Blue win-rate is: ' + Math.ceil(facts.redWinRate) + '% - ' + (100 - Math.ceil(facts.redWinRate)) + '%';
+	buff += '<p>Overall, Red - Blue win-rate is <b>' + Math.ceil(facts.redWinRate) + '% - ' + (100 - Math.ceil(facts.redWinRate)) + '%</b></p>';
+	buff += '<p>Best winning streak has player <b>' + bestWinningStreakPlayer + '</b> (' + bestWinningStreak + ')</p>';
+	buff += '<p>Worst losing streak has player <b>' + worstLosingStreakPlayer + '</b> (' + worstLosingStreak + ')</p>';
+	buff += '<p>Dark horse: <b>' + darkHorsePlayer + '</b></p>';
 	
-	buff += '<br /><br /><h4>Elo-rank calculation rules:</h4>';
+	buff += '<br /><h4>Elo-rank calculation rules:</h4>';
 	buff += 'New Elo-rating = Old Elo-rating + Pts * (Old Elo-rating / 400)<br /><br />';
 	buff += 'Pts = +4 points for winning against a team with the same or greater Elo-rating than your team.<br />';
 	buff += 'Pts = +1 points for winning against a team with the lower than your team.<br />';

@@ -971,15 +971,7 @@ function getGames() {
 	var bestMaps = [],
 		worstMaps = [],
 		mapsStats = [];
-		
-		function array_values(arrayObj) {
-  tempObj = {};
-  Object.keys(arrayObj).forEach((prop) => {
-    if (arrayObj[prop]) { tempObj[prop] = arrayObj[prop]; }
-  });
-  return tempObj;
-};
-		
+		console.log(playerMapStats);
 	for (playerName in playerMapStats) {
 	
 		var total = 0;
@@ -1002,8 +994,8 @@ function getGames() {
 	
 	for (playerName in mapsStats) {
 		var keys = getSortedKeys(mapsStats[playerName]);	
-		bestMaps[playerName] = keys[0];
-		worstMaps[playerName] = keys[keys.length - 1];
+		bestMaps[playerName] = mapsStats[playerName][keys[0]] < 0 ? null : keys[0];
+		worstMaps[playerName] = mapsStats[playerName][keys.length - 1] >= 0 ? null : keys[keys.length - 1];
 	}
 	
 	var data = document.getElementById('data');
@@ -1037,8 +1029,8 @@ function getGames() {
 		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winRates[playerName].avg + '%</td>';
 		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winningStreak[playerName].max + '</td>';
 		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + losingStreak[playerName].max + '</td>';
-		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + (typeof bestMaps[playerName] === 'undefined' ? '?' : bestMaps[playerName]) + '</td>';
-		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + (typeof worstMaps[playerName] === 'undefined' ? '?' : worstMaps[playerName]) + '</td>';
+		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + (typeof bestMaps[playerName] === 'undefined' || bestMaps[playerName] === null ? '?' : bestMaps[playerName]) + '</td>';
+		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + (typeof worstMaps[playerName] === 'undefined' || worstMaps[playerName] === null ? '?' : worstMaps[playerName]) + '</td>';
 		buff += '</tr>';
     }
 	

@@ -742,7 +742,7 @@ function getGames() {
 	for (i in players) {
 		darkHorses[i] = 0;
 		playedGames[i] = 0;
-		playerMapStats[i] = { wins: [], loses: [] };
+		playerMapStats[i] = { wins: [], played: [] };
 	}
 	
     var getPlayerEloInGame = function(playerName, game) {
@@ -777,23 +777,14 @@ function getGames() {
         Sa = 0;
 		K = oldElo / 400;
 		isWin = myTeamScore > opTeamScore;
-
-		if (isWin) {
 		
-			if (typeof playerMapStats[playerName].wins[game.map] === 'undefined') {
-				playerMapStats[playerName].wins[game.map] = 0;
-			}
-		
-			++ playerMapStats[playerName].wins[game.map];
-			
-		} else {
-			
-			if (typeof playerMapStats[playerName].loses[game.map] === 'undefined') {
-				playerMapStats[playerName].loses[game.map] = 0;
-			}
-		
-			++ playerMapStats[playerName].loses[game.map];			
+		if (typeof playerMapStats[playerName].played[game.map] === 'undefined') {
+			playerMapStats[playerName].played[game.map] = 0;
+			playerMapStats[playerName].wins[game.map] = 0;
 		}
+		
+		playerMapStats[playerName].played[game.map] += 1;	
+		playerMapStats[playerName].wins[game.map] += isWin ? 1 : -1;
 
 		++playedGames[playerName];
 		
@@ -978,14 +969,25 @@ function getGames() {
 	}
 	
 	var bestMaps = [],
-		worstMaps = [];
-		
-	for (i in playerMapStats) {
-		bestMaps[i] = getSortedKeys(playerMapStats[i].wins)[0];
-		worstMaps[i] = getSortedKeys(playerMapStats[i].loses)[0];
+		worstMaps = [],
+		mapsStats = [];
+
+	for (playerName in playerMapStats) {
+	
+		mapsStats[playerName] = [];
+	
+		for (mapName in playerMapStats[playerName].wins) {
+			if (playerMapStats[playerName].played[mapName] >= 3) {
+				mapsStats[playerName][mapName] = playerMapStats[playerName].wins[mapName] / playerMapStats[playerName].played[mapName];
+			}
+		}
 	}
 	
-	console.log(bestMaps, worstMaps);
+	for (playerName in mapsStats) {
+		var keys = getSortedKeys(mapsStats[playerName]);	
+		worstMaps[playerName] = keys[0];
+		bestMaps[playerName] = keys[keys.length - 1];
+	}
 	
 	var data = document.getElementById('data');
 

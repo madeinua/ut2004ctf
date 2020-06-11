@@ -971,7 +971,7 @@ function getGames() {
 	var bestMaps = [],
 		worstMaps = [],
 		mapsStats = [];
-		console.log(playerMapStats);
+		
 	for (playerName in playerMapStats) {
 	
 		var total = 0;
@@ -1013,8 +1013,6 @@ function getGames() {
 	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Wins</th>'
 	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Loses</th>'
 	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Wins</th>'
-	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Best Streak</th>'
-	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Worst Streak</th>'
 	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Best map</th>'
 	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Worst map</th>'
 	+ '</tr></tbody>';
@@ -1031,8 +1029,6 @@ function getGames() {
 		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winRates[playerName].wins + '</td>';
 		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winRates[playerName].loses + '</td>';
 		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winRates[playerName].avg + '%</td>';
-		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winningStreak[playerName].max + '</td>';
-		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + losingStreak[playerName].max + '</td>';
 		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + (typeof bestMaps[playerName] === 'undefined' || bestMaps[playerName] === null ? '?' : bestMaps[playerName]) + '</td>';
 		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + (typeof worstMaps[playerName] === 'undefined' || worstMaps[playerName] === null ? '?' : worstMaps[playerName]) + '</td>';
 		buff += '</tr>';

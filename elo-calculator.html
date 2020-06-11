@@ -972,12 +972,29 @@ function getGames() {
 		worstMaps = [],
 		mapsStats = [];
 		
+		function array_values(arrayObj) {
+  tempObj = {};
+  Object.keys(arrayObj).forEach((prop) => {
+    if (arrayObj[prop]) { tempObj[prop] = arrayObj[prop]; }
+  });
+  return tempObj;
+};
+		
 	for (playerName in playerMapStats) {
 	
+		var total = 0;
+	
+		for (mapName in playerMapStats[playerName].played) {
+			total += playerMapStats[playerName].played[mapName];
+		}
+			
 		mapsStats[playerName] = [];
 	
 		for (mapName in playerMapStats[playerName].wins) {
-			if (playerMapStats[playerName].played[mapName] >= 3) {
+		
+			var T = total > 10 ? (total > 50 ? 5 : 4) : 3;
+		
+			if (playerMapStats[playerName].played[mapName] >= T) {
 				mapsStats[playerName][mapName] = playerMapStats[playerName].wins[mapName] / playerMapStats[playerName].played[mapName];
 			}
 		}

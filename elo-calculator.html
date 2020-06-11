@@ -1,542 +1,16 @@
 <html>
 <div id="data"></div>
+<script type="text/javascript" src="database.js"></script>
 <script>
+	function getSortedKeys(obj) {
+		var keys = keys = Object.keys(obj);
+		return keys.sort(function(a,b){return obj[b]-obj[a]});
+	}
+	
     var buff = '',
-	    players = [];
-
-    players['Gooz'] = 2000;
-	players['Koffee'] = 2000;
-	players['MVDE'] = 2000;
-	players['mnt'] = 1950;
-    players['simson'] = 1950;
-    players['TT-Tolyan'] = 1900;
-    players['ImitatoR'] = 1900;
-    players['Maldito'] = 1850;
-	players['j'] = 1800;
-	players['Sonic'] = 1800;
-    players['chitrox'] = 1800;
-    players['Hodor'] = 1800;
-    players['pr!x'] = 1800;
-	players['Small'] = 1800;
-	players['pepper'] = 1750;
-    players['Alter'] = 1750;
-    players['Cold-M'] = 1750;
-    players['Rigel'] = 1750;
-    players['Loox'] = 1700;
-    players['what'] = 1700;
-    players['MoRoZ'] = 1650;
-	players['Krnki'] = 1650;
-    players['Forsiets'] = 1650;
-    players['WG'] = 1600;
-	players['zazuza'] = 1600;
-    players['Thoums'] = 1500;
-    players['Bad_Bond'] = 1500;
-
-    var games = [],
+	    players = getPlayers(),
+		games = getGames(),
 		oldStats = Object.assign({}, players);
-
-    // 02.05
-    games.push({
-        'red': ['MVDE', 'Alter', 'TT-Tolyan', 'Maldito', 'chitrox'],
-        'blue': ['ImitatoR', 'Gooz', 'pr!x', 'Cold-M', 'Loox'],
-        'redScore': 1,
-        'blueScore': 6
-    });
-
-    games.push({
-        'red': ['MVDE', 'Alter', 'TT-Tolyan', 'Maldito', 'chitrox'],
-        'blue': ['ImitatoR', 'Gooz', 'pr!x', 'Cold-M', 'Loox'],
-        'redScore': 2,
-        'blueScore': 1
-    });
-
-    games.push({
-        'red': ['MVDE', 'ImitatoR', 'TT-Tolyan', 'Maldito', 'chitrox'],
-        'blue': ['mnt', 'Gooz', 'pr!x', 'Cold-M', 'Loox'],
-        'redScore': 7,
-        'blueScore': 2
-    });
-
-    games.push({
-        'red': ['MVDE', 'ImitatoR', 'TT-Tolyan', 'Maldito', 'chitrox'],
-        'blue': ['mnt', 'Gooz', 'pr!x', 'Cold-M', 'Loox'],
-        'redScore': 1,
-        'blueScore': 0
-    });
-
-    games.push({
-        'red': ['MVDE', 'ImitatoR', 'TT-Tolyan', 'Maldito', 'chitrox'],
-        'blue': ['mnt', 'Gooz', 'pr!x', 'Cold-M', 'Loox'],
-        'redScore': 4,
-        'blueScore': 0
-    });
-
-    // 07.05
-    games.push({
-        'red': ['mnt', 'Gooz', 'TT-Tolyan', 'Cold-M', 'pr!x'],
-        'blue': ['MVDE', 'ImitatoR', 'Koffee', 'WG', 'chitrox'],
-        'redScore': 2,
-        'blueScore': 3
-    });
-
-    games.push({
-        'red': ['mnt', 'Gooz', 'TT-Tolyan', 'Cold-M', 'pr!x'],
-        'blue': ['MVDE', 'ImitatoR', 'Koffee', 'WG', 'chitrox'],
-        'redScore': 6,
-        'blueScore': 4
-    });
-
-    games.push({
-        'red': ['mnt', 'Gooz', 'TT-Tolyan', 'Cold-M', 'pr!x'],
-        'blue': ['MVDE', 'ImitatoR', 'Koffee', 'WG', 'chitrox'],
-        'redScore': 1,
-        'blueScore': 9
-    });
-
-    games.push({
-        'red': ['mnt', 'Gooz', 'TT-Tolyan', 'Cold-M', 'pr!x'],
-        'blue': ['MVDE', 'ImitatoR', 'Koffee', 'WG', 'chitrox'],
-        'redScore': 7,
-        'blueScore': 4
-    });
-
-    games.push({
-        'red': ['mnt', 'Gooz', 'TT-Tolyan', 'Cold-M', 'pr!x'],
-        'blue': ['MVDE', 'ImitatoR', 'Koffee', 'WG', 'chitrox'],
-        'redScore': 3,
-        'blueScore': 4
-    });
-
-    // 09.05
-    games.push({
-        'red': ['mnt', 'Rigel', 'chitrox', 'ImitatoR', 'Cold-M'],
-        'blue': ['Gooz', 'TT-Tolyan', 'MoRoZ', 'WG', 'Maldito'],
-        'redScore': 7,
-        'blueScore': 2
-    });
-
-    games.push({
-        'red': ['mnt', 'Rigel', 'chitrox', 'ImitatoR', 'Cold-M'],
-        'blue': ['MVDE', 'TT-Tolyan', 'MoRoZ', 'WG', 'Maldito'],
-        'redScore': 4,
-        'blueScore': 3
-    });
-
-    games.push({
-        'red': ['mnt', 'Rigel', 'chitrox', 'ImitatoR', 'Cold-M'],
-        'blue': ['MVDE', 'TT-Tolyan', 'MoRoZ', 'WG', 'Maldito'],
-        'redScore': 4,
-        'blueScore': 5
-    });
-
-    games.push({
-        'red': ['mnt', 'Rigel', 'chitrox', 'ImitatoR', 'Cold-M'],
-        'blue': ['MVDE', 'TT-Tolyan', 'MoRoZ', 'WG', 'Maldito'],
-        'redScore': 4,
-        'blueScore': 3
-    });
-
-    games.push({
-        'red': ['mnt', 'Rigel', 'chitrox', 'ImitatoR', 'MoRoZ'],
-        'blue': ['MVDE', 'TT-Tolyan', 'Cold-M', 'WG', 'Maldito'],
-        'redScore': 3,
-        'blueScore': 4
-    });
-
-    // 10.05
-    games.push({
-        'red': ['mnt', 'Rigel', 'chitrox', 'ImitatoR', 'MoRoZ'],
-        'blue': ['MVDE', 'TT-Tolyan', 'Cold-M', 'WG', 'Maldito'],
-        'redScore': 1,
-        'blueScore': 0
-    });
-
-    //11.05
-    games.push({
-        'red': ['Koffee', 'pepper', 'Cold-M', 'mnt', 'Maldito'],
-        'blue': ['pr!x', 'TT-Tolyan', 'ImitatoR', 'MVDE', 'chitrox'],
-        'redScore': 5,
-        'blueScore': 7
-    });
-
-    games.push({
-        'red': ['Koffee', 'pepper', 'Cold-M', 'mnt', 'Maldito'],
-        'blue': ['pr!x', 'TT-Tolyan', 'ImitatoR', 'MVDE', 'chitrox'],
-        'redScore': 2,
-        'blueScore': 9
-    });
-
-    games.push({
-        'red': ['Koffee', 'pepper', 'Cold-M', 'mnt', 'Maldito'],
-        'blue': ['pr!x', 'TT-Tolyan', 'ImitatoR', 'MVDE', 'chitrox'],
-        'redScore': 2,
-        'blueScore': 5
-    });
-
-    games.push({
-        'red': ['Koffee', 'pepper', 'Cold-M', 'mnt', 'Maldito'],
-        'blue': ['pr!x', 'TT-Tolyan', 'ImitatoR', 'MVDE', 'chitrox'],
-        'redScore': 3,
-        'blueScore': 4
-    });
-
-    //14.05
-    games.push({
-        'red': ['mnt', 'MVDE', 'WG', 'Cold-M', 'chitrox'],
-        'blue': ['pr!x', 'TT-Tolyan', 'ImitatoR', 'Koffee', 'simson'],
-        'redScore': 5,
-        'blueScore': 1
-    });
-
-    games.push({
-        'red': ['mnt', 'MVDE', 'WG', 'Cold-M', 'chitrox'],
-        'blue': ['pr!x', 'TT-Tolyan', 'ImitatoR', 'Sonic', 'simson'],
-        'redScore': 5,
-        'blueScore': 2
-    });
-
-    //16.05
-    games.push({
-        'red': ['pr!x', 'Hodor', 'Gooz', 'WG', 'ImitatoR'],
-        'blue': ['MVDE', 'TT-Tolyan', 'Cold-M', 'Maldito', 'chitrox'],
-        'redScore': 4,
-        'blueScore': 5
-    });
-
-    games.push({
-        'red': ['pr!x', 'Hodor', 'Gooz', 'WG', 'ImitatoR'],
-        'blue': ['MVDE', 'TT-Tolyan', 'Cold-M', 'Maldito', 'chitrox'],
-        'redScore': 5,
-        'blueScore': 4
-    });
-
-    games.push({
-        'red': ['pr!x', 'Hodor', 'Gooz', 'WG', 'ImitatoR'],
-        'blue': ['MVDE', 'TT-Tolyan', 'Cold-M', 'Maldito', 'chitrox'],
-        'redScore': 3,
-        'blueScore': 4
-    });
-
-    //19.05
-    games.push({
-        'red': ['TT-Tolyan', 'ImitatoR', 'Cold-M', 'pr!x', 'Loox'],
-        'blue': ['MVDE', 'chitrox', 'Forsiets', 'Koffee', 'WG'],
-        'redScore': 4,
-        'blueScore': 3
-    });
-
-    games.push({
-        'red': ['TT-Tolyan', 'ImitatoR', 'Cold-M', 'pr!x', 'Loox'],
-        'blue': ['MVDE', 'chitrox', 'Forsiets', 'Koffee', 'WG'],
-        'redScore': 5,
-        'blueScore': 4
-    });
-
-    games.push({
-        'red': ['TT-Tolyan', 'ImitatoR', 'Cold-M', 'pr!x', 'Loox'],
-        'blue': ['MVDE', 'chitrox', 'Forsiets', 'Koffee', 'WG'],
-        'redScore': 7,
-        'blueScore': 4
-    });
-
-    // 23.05
-    games.push({
-        'red': ['Cold-M', 'mnt', 'Gooz', 'Hodor', 'WG'],
-        'blue': ['MVDE', 'chitrox', 'TT-Tolyan', 'ImitatoR', 'Maldito'],
-        'redScore': 2,
-        'blueScore': 7
-    });
-
-    games.push({
-        'red': ['TT-Tolyan', 'mnt', 'Gooz', 'Hodor', 'WG'],
-        'blue': ['MVDE', 'chitrox', 'Cold-M', 'ImitatoR', 'Maldito'],
-        'redScore': 2,
-        'blueScore': 4
-    });
-
-    games.push({
-        'red': ['MVDE', 'mnt', 'Maldito', 'chitrox', 'Forsiets'],
-        'blue': ['TT-Tolyan', 'Gooz', 'Cold-M', 'ImitatoR', 'WG'],
-        'redScore': 6,
-        'blueScore': 5
-    });
-
-    games.push({
-        'red': ['MVDE', 'mnt', 'Maldito', 'chitrox', 'Forsiets'],
-        'blue': ['TT-Tolyan', 'Gooz', 'Cold-M', 'ImitatoR', 'WG'],
-        'redScore': 4,
-        'blueScore': 3
-    });
-
-    // 24.05
-    games.push({
-        'red': ['MVDE', 'pr!x', 'Loox', 'Koffee', 'Thoums'],
-        'blue': ['mnt', 'Gooz', 'Cold-M', 'Bad_Bond', 'what'],
-        'redScore': 7,
-        'blueScore': 0
-    });
-
-    games.push({
-        'red': ['MVDE', 'pr!x', 'what', 'Koffee', 'Thoums'],
-        'blue': ['mnt', 'Gooz', 'Cold-M', 'Bad_Bond', 'Loox'],
-        'redScore': 6,
-        'blueScore': 2
-    });
-
-    //26.05
-    games.push({
-        'red': ['Cold-M', 'Koffee', 'chitrox', 'Thoums', 'ImitatoR'],
-        'blue': ['MVDE', 'TT-Tolyan', 'Rigel', 'simson', 'Loox'],
-        'redScore': 2,
-        'blueScore': 6
-    });
-
-    games.push({
-        'red': ['Cold-M', 'Koffee', 'chitrox', 'Loox', 'ImitatoR'],
-        'blue': ['MVDE', 'TT-Tolyan', 'Rigel', 'simson', 'Thoums'],
-        'redScore': 1,
-        'blueScore': 4
-    });
-
-    games.push({
-        'red': ['Gooz', 'Koffee', 'Rigel', 'Loox', 'Thoums'],
-        'blue': ['MVDE', 'TT-Tolyan', 'ImitatoR', 'chitrox', 'Cold-M'],
-        'redScore': 5,
-        'blueScore': 7
-    });
-
-    games.push({
-        'red': ['Gooz', 'Koffee', 'Rigel', 'Loox', 'Thoums'],
-        'blue': ['MVDE', 'TT-Tolyan', 'ImitatoR', 'chitrox', 'Cold-M'],
-        'redScore': 5,
-        'blueScore': 6
-    });
-
-	// 28.05
-	games.push({
-        'red': ['MVDE', 'Cold-M', 'Thoums', 'chitrox', 'ImitatoR'],
-        'blue': ['Gooz', 'Loox', 'pr!x', 'Koffee', 'Krnki'],
-        'redScore': 0,
-        'blueScore': 7
-    });
-	
-	games.push({
-        'red': ['MVDE', 'pr!x', 'Thoums', 'chitrox', 'ImitatoR'],
-        'blue': ['Gooz', 'Loox', 'Cold-M', 'Koffee', 'Krnki'],
-        'redScore': 1,
-        'blueScore': 2
-    });
-	
-	games.push({
-        'red': ['MVDE', 'pr!x', 'Thoums', 'chitrox', 'ImitatoR'],
-        'blue': ['Gooz', 'Loox', 'Cold-M', 'Koffee', 'Krnki'],
-        'redScore': 0,
-        'blueScore': 7
-    });
-	
-	games.push({
-        'red': ['MVDE', 'Gooz', 'Thoums', 'chitrox', 'Rigel'],
-        'blue': ['TT-Tolyan', 'ImitatoR', 'Cold-M', 'Koffee', 'Krnki'],
-        'redScore': 3,
-        'blueScore': 4
-    });
-	
-	games.push({
-        'red': ['MVDE', 'TT-Tolyan', 'ImitatoR', 'chitrox', 'Cold-M'],
-        'blue': ['Gooz', 'Small', 'Thoums', 'Koffee', 'Rigel'],
-        'redScore': 5,
-        'blueScore': 0
-    });
-	
-	// 30.05
-	games.push({
-        'red': ['MVDE', 'ImitatoR', 'chitrox', 'MoRoZ', 'WG'],
-        'blue': ['Gooz', 'TT-Tolyan', 'Cold-M', 'Maldito', 'Forsiets'],
-        'redScore': 6,
-        'blueScore': 4
-    });
-	
-	games.push({
-        'red': ['MVDE', 'ImitatoR', 'chitrox', 'MoRoZ', 'WG'],
-        'blue': ['Gooz', 'TT-Tolyan', 'Cold-M', 'Maldito', 'Forsiets'],
-        'redScore': 3,
-        'blueScore': 4
-    });
-	
-	games.push({
-        'red': ['MVDE', 'ImitatoR', 'chitrox', 'MoRoZ', 'WG'],
-        'blue': ['Gooz', 'TT-Tolyan', 'Cold-M', 'Maldito', 'Forsiets'],
-        'redScore': 0,
-        'blueScore': 3
-    });
-	
-	games.push({
-        'red': ['MVDE', 'ImitatoR', 'chitrox', 'MoRoZ', 'WG'],
-        'blue': ['Gooz', 'TT-Tolyan', 'Cold-M', 'Maldito', 'Forsiets'],
-        'redScore': 2,
-        'blueScore': 3
-    });
-	
-	// 02.06
-	games.push({
-        'red': ['MVDE', 'ImitatoR', 'chitrox', 'MoRoZ', 'WG'],
-        'blue': ['Gooz', 'TT-Tolyan', 'Cold-M', 'Maldito', 'Forsiets'],
-        'redScore': 2,
-        'blueScore': 3
-    });
-	
-	games.push({
-        'red': ['MVDE', 'pr!x', 'Cold-M', 'Thoums', 'j'],
-        'blue': ['Gooz', 'mnt', 'ImitatoR', 'chitrox', 'Rigel'],
-        'redScore': 1,
-        'blueScore': 4
-    });
-	
-	games.push({
-        'red': ['MVDE', 'pr!x', 'Cold-M', 'Thoums', 'j'],
-        'blue': ['Gooz', 'mnt', 'ImitatoR', 'chitrox', 'Rigel'],
-        'redScore': 0,
-        'blueScore': 7
-    });
-	
-	games.push({
-        'red': ['MVDE', 'pr!x', 'Cold-M', 'Rigel', 'j'],
-        'blue': ['Gooz', 'mnt', 'ImitatoR', 'chitrox', 'Thoums'],
-        'redScore': 4,
-        'blueScore': 5
-    });
-	
-	// 04.06
-	games.push({
-        'red': ['mnt', 'Gooz', 'pr!x', 'Cold-M', 'Thoums'],
-        'blue': ['TT-Tolyan', 'Koffee', 'ImitatoR', 'chitrox', 'Rigel'],
-        'redScore': 5,
-        'blueScore': 6
-    });
-	
-	games.push({
-        'red': ['mnt', 'Gooz', 'pr!x', 'Cold-M', 'Thoums'],
-        'blue': ['TT-Tolyan', 'Koffee', 'ImitatoR', 'chitrox', 'Rigel'],
-        'redScore': 3,
-        'blueScore': 9
-    });
-	
-	games.push({
-        'red': ['mnt', 'Gooz', 'pr!x', 'Cold-M', 'Thoums'],
-        'blue': ['TT-Tolyan', 'Koffee', 'ImitatoR', 'chitrox', 'Rigel'],
-        'redScore': 2,
-        'blueScore': 3
-    });
-	
-	games.push({
-        'red': ['mnt', 'Gooz', 'pr!x', 'Cold-M', 'Thoums'],
-        'blue': ['TT-Tolyan', 'Koffee', 'ImitatoR', 'chitrox', 'Rigel'],
-        'redScore': 2,
-        'blueScore': 1
-    });
-	
-	// 05.06
-	games.push({
-        'red': ['MVDE', 'Gooz', 'chitrox', 'Maldito', 'Thoums'],
-        'blue': ['TT-Tolyan', 'Koffee', 'ImitatoR', 'Cold-M', 'Loox'],
-        'redScore': 3,
-        'blueScore': 1
-    });
-	
-	games.push({
-        'red': ['ImitatoR', 'Gooz', 'chitrox', 'Hodor', 'Thoums'],
-        'blue': ['TT-Tolyan', 'MVDE', 'Maldito', 'Cold-M', 'Loox'],
-        'redScore': 2,
-        'blueScore': 3
-    });
-	
-	games.push({
-        'red': ['ImitatoR', 'Gooz', 'chitrox', 'Hodor', 'Thoums'],
-        'blue': ['TT-Tolyan', 'MVDE', 'Maldito', 'Cold-M', 'Loox'],
-        'redScore': 2,
-        'blueScore': 4
-    });
-	
-	// 07.06
-	games.push({
-        'red': ['MVDE', 'TT-Tolyan', 'chitrox', 'Cold-M', 'Thoums'],
-        'blue': ['mnt', 'j', 'Krnki', 'pr!x', 'WG'],
-        'redScore': 5,
-        'blueScore': 4
-    });
-	
-	games.push({
-        'red': ['MVDE', 'TT-Tolyan', 'chitrox', 'Cold-M', 'Thoums'],
-        'blue': ['mnt', 'j', 'Krnki', 'pr!x', 'WG'],
-        'redScore': 5,
-        'blueScore': 3
-    });
-	
-	// 08.06
-	games.push({
-        'red': ['MVDE', 'pr!x', 'Krnki', 'Koffee', 'Thoums'],
-        'blue': ['mnt', 'j', 'Gooz', 'chitrox', 'Loox'],
-        'redScore': 5,
-        'blueScore': 3
-    });
-	
-	// 09.06
-	games.push({
-        'red': ['MVDE', 'pr!x', 'Koffee', 'TT-Tolyan', 'Thoums'],
-        'blue': ['mnt', 'Gooz', 'ImitatoR', 'chitrox', 'Cold-M'],
-        'redScore': 1,
-        'blueScore': 4
-    });
-	
-	games.push({
-        'red': ['MVDE', 'pr!x', 'Koffee', 'TT-Tolyan', 'Thoums'],
-        'blue': ['mnt', 'Gooz', 'ImitatoR', 'chitrox', 'Cold-M'],
-        'redScore': 6,
-        'blueScore': 5
-    });
-	
-	games.push({
-        'red': ['MVDE', 'Gooz', 'pepper', 'TT-Tolyan', 'Cold-M'],
-        'blue': ['mnt', 'Koffee', 'ImitatoR', 'chitrox', 'Rigel'],
-        'redScore': 2,
-        'blueScore': 5
-    });
-	
-	games.push({
-        'red': ['MVDE', 'Gooz', 'pepper', 'TT-Tolyan', 'Cold-M'],
-        'blue': ['mnt', 'Koffee', 'ImitatoR', 'chitrox', 'Rigel'],
-        'redScore': 5,
-        'blueScore': 4
-    });
-	
-	// 10.06
-	games.push({
-        'red': ['MVDE', 'Koffee', 'pepper', 'chitrox', 'Krnki'],
-        'blue': ['mnt', 'TT-Tolyan', 'Gooz', 'Cold-M', 'j'],
-        'redScore': 4,
-        'blueScore': 6
-    });
-	
-	games.push({
-        'red': ['MVDE', 'Koffee', 'pepper', 'chitrox', 'Krnki'],
-        'blue': ['mnt', 'TT-Tolyan', 'Gooz', 'Cold-M', 'j'],
-        'redScore': 2,
-        'blueScore': 7
-    });
-	
-	games.push({
-        'red': ['Gooz', 'Koffee', 'j', 'chitrox', 'zazuza'],
-        'blue': ['MVDE', 'mnt', 'TT-Tolyan', 'pepper', 'Cold-M'],
-        'redScore': 0,
-        'blueScore': 4
-    });
-	
-	games.push({
-        'red': ['Gooz', 'Koffee', 'j', 'chitrox', 'Cold-M'],
-        'blue': ['MVDE', 'mnt', 'TT-Tolyan', 'pepper', 'zazuza'],
-        'redScore': 5,
-        'blueScore': 1
-    });
 	
     var calculateTeamTotalElo = function(team) {
 
@@ -561,11 +35,13 @@
     };
 	
 	var playedGames = [],
-	    darkHorses = [];
+	    darkHorses = [],
+		playerMapStats = [];
 	
 	for (i in players) {
 		darkHorses[i] = 0;
 		playedGames[i] = 0;
+		playerMapStats[i] = { wins: [], loses: [] };
 	}
 	
     var getPlayerEloInGame = function(playerName, game) {
@@ -576,7 +52,10 @@
             myTeamElo,
             opTeamElo,
             Sa,
-			isWin;
+			isWin,
+			date = new Date(game.date.split('.').reverse().join('-')).getTime(),
+			minDarkHorseDay = 30,
+			minDarkHorseTs = Math.ceil((new Date().getTime()) - minDarkHorseDay * 60 * 60 * 24 * 1000);
 
         if (typeof players[playerName] === "undefined") {
             alert('Unknow player ' + playerName);
@@ -598,11 +77,33 @@
 		K = oldElo / 400;
 		isWin = myTeamScore > opTeamScore;
 
+		if (isWin) {
+		
+			if (typeof playerMapStats[playerName].wins[game.map] === 'undefined') {
+				playerMapStats[playerName].wins[game.map] = 0;
+			}
+		
+			++ playerMapStats[playerName].wins[game.map];
+			
+		} else {
+			
+			if (typeof playerMapStats[playerName].loses[game.map] === 'undefined') {
+				playerMapStats[playerName].loses[game.map] = 0;
+			}
+		
+			++ playerMapStats[playerName].loses[game.map];			
+		}
+
 		++playedGames[playerName];
 		
         if (opTeamElo >= myTeamElo && isWin) {
+			
 			Sa += 4 * K;
-			++darkHorses[playerName];
+			
+			if (date >= minDarkHorseTs) {	
+				++darkHorses[playerName];
+			}
+			
 		} else if (myTeamElo > opTeamElo && isWin) {
 			Sa += K;
 		} else if (opTeamElo >= myTeamElo && !isWin) {
@@ -767,13 +268,23 @@
 		
 	for (i in darkHorses) {
 		
-		var current = playedGames[i] > 3 ? darkHorses[i] / playedGames[i] : 0;
+		var current = playedGames[i] > 0 ? darkHorses[i] / playedGames[i] : 0;
 		
 		if (current > darkHorseValue) {
 			darkHorsePlayer = i;
 			darkHorseValue = current;
 		}
 	}
+	
+	var bestMaps = [],
+		worstMaps = [];
+		
+	for (i in playerMapStats) {
+		bestMaps[i] = getSortedKeys(playerMapStats[i].wins)[0];
+		worstMaps[i] = getSortedKeys(playerMapStats[i].loses)[0];
+	}
+	
+	console.log(bestMaps, worstMaps);
 	
 	var data = document.getElementById('data');
 
@@ -782,35 +293,43 @@
 	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Rank</th>'
 	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Name</th>'
 	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Elo-Rating</th>'
+	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Rank 01.05</th>'
 	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Wins</th>'
 	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Loses</th>'
 	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Wins</th>'
-	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Streak +</th>'
-	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Streak -</th>'
-	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Elo-rating 01.05</th>'
+	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Best Streak</th>'
+	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Worst Streak</th>'
+	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Best map</th>'
+	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Worst map</th>'
 	+ '</tr></tbody>';
 	
     for (i in sortedPlayers) {
+	
+		var playerName = sortedPlayers[i];
+	
 		buff += '<tr>';
 		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px; text-align: right;">' + (parseInt(i, 10) + 1) + '</td>';
-		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + sortedPlayers[i] + '</td>';
-		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + Math.ceil(players[sortedPlayers[i]]) + '</td>';
-		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winRates[sortedPlayers[i]].wins + '</td>';
-		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winRates[sortedPlayers[i]].loses + '</td>';
-		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winRates[sortedPlayers[i]].avg + '%</td>';
-		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winningStreak[sortedPlayers[i]].max + '</td>';
-		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + losingStreak[sortedPlayers[i]].max + '</td>';
-		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + Math.ceil(oldStats[sortedPlayers[i]]) + '</td>';
+		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + playerName + '</td>';
+		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px; font-weight: bold;">' + Math.ceil(players[playerName]) + '</td>';
+		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + Math.ceil(oldStats[playerName]) + '</td>';
+		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winRates[playerName].wins + '</td>';
+		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winRates[playerName].loses + '</td>';
+		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winRates[playerName].avg + '%</td>';
+		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winningStreak[playerName].max + '</td>';
+		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + losingStreak[playerName].max + '</td>';
+		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + (typeof bestMaps[playerName] === 'undefined' ? '?' : bestMaps[playerName]) + '</td>';
+		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + (typeof worstMaps[playerName] === 'undefined' ? '?' : worstMaps[playerName]) + '</td>';
 		buff += '</tr>';
     }
 	
 	buff += '</table>';
 	
 	buff += '<br /><br /><h4>Facts</h4>';
+	buff += '<p>Overall matches played: <b>' + games.length + '</b></p>';
 	buff += '<p>Overall, Red - Blue win-rate is <b>' + Math.ceil(facts.redWinRate) + '% - ' + (100 - Math.ceil(facts.redWinRate)) + '%</b></p>';
 	buff += '<p>Best winning streak has player <b>' + bestWinningStreakPlayer + '</b> (' + bestWinningStreak + ')</p>';
 	buff += '<p>Worst losing streak has player <b>' + worstLosingStreakPlayer + '</b> (' + worstLosingStreak + ')</p>';
-	buff += '<p>Dark horse: <b>' + darkHorsePlayer + '</b></p>';
+	buff += '<p>Dark horse: <b>' + (typeof darkHorsePlayer === 'undefined' ? '?' : darkHorsePlayer) + '</b></p>';
 	
 	buff += '<br /><h4>Elo-rank calculation rules:</h4>';
 	buff += 'New Elo-rating = Old Elo-rating + Pts * (Old Elo-rating / 400)<br /><br />';
@@ -818,6 +337,37 @@
 	buff += 'Pts = +1 points for winning against a team with the lower than your team.<br />';
 	buff += 'Pts = -1 points for losing against a team with the same or greater Elo-rating than your team.<br />';
 	buff += 'Pts = -4 points for losing against a team with the lower Elo-rating than your team.<br /><br />';
+	
+	var mapsGames = [];
+	
+	for (i in games) {
+	
+		if (typeof mapsGames[games[i].map] === 'undefined') {
+			mapsGames[games[i].map] = 0;
+		}
+		
+		++mapsGames[games[i].map];
+	}
+	
+	var sortedMapsGames = getSortedKeys(mapsGames);
+	
+	buff += '<h4>Maps</h4>';
+	
+	buff += '<table style="border: #ccc solid 1px; border-collapse: collapse;">'
+	+ '<tbody><tr>'
+	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Name</th>'
+	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Games</th>'
+	+ '</tr></tbody>';
+	
+    for (i in sortedMapsGames) {
+		buff += '<tr>';
+		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px; text-align: right;">' + sortedMapsGames[i] + '</td>';
+		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + mapsGames[sortedMapsGames[i]] + '</td>';
+		buff += '</tr>';
+    }
+	
+	buff += '</table>';
+	
 	buff += '<br /><br /><br />';
 	
 	data.innerHTML = buff;

@@ -971,7 +971,7 @@ function getGames() {
 	var bestMaps = [],
 		worstMaps = [],
 		mapsStats = [];
-
+console.log(playerMapStats);
 	for (playerName in playerMapStats) {
 	
 		mapsStats[playerName] = [];
@@ -985,8 +985,8 @@ function getGames() {
 	
 	for (playerName in mapsStats) {
 		var keys = getSortedKeys(mapsStats[playerName]);	
-		worstMaps[playerName] = keys[0];
-		bestMaps[playerName] = keys[keys.length - 1];
+		bestMaps[playerName] = keys[0];
+		worstMaps[playerName] = keys[keys.length - 1];
 	}
 	
 	var data = document.getElementById('data');

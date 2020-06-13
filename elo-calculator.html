@@ -16,21 +16,21 @@ function getPlayers() {
     players['Maldito'] = 1850;
 	players['j'] = 1800;
 	players['Sonic'] = 1800;
+	players['Rigel'] = 1800;
     players['chitrox'] = 1800;
     players['Hodor'] = 1800;
     players['pr!x'] = 1800;
-	players['Small'] = 1800;
+	players['Small'] = 1750;
 	players['pepper'] = 1750;
     players['Alter'] = 1750;
     players['Cold-M'] = 1750;
-    players['Rigel'] = 1750;
-    players['Loox'] = 1700;
-    players['what'] = 1700;
+    players['Loox'] = 1750;
+    players['what'] = 1750;
+	players['Krnki'] = 1700;
     players['MoRoZ'] = 1650;
-	players['Krnki'] = 1650;
-    players['WG'] = 1600;
-	players['Thoums'] = 1550;
-	players['Forsiets'] = 1550;
+    players['WG'] = 1550;
+	players['Thoums'] = 1500;
+	players['Forsiets'] = 1500;
 	players['zazuza'] = 1500;
     players['Bad_Bond'] = 1500;
 	
@@ -755,8 +755,7 @@ function getGames() {
 	
     var buff = '',
 	    players = getPlayers(),
-		games = getGames(),
-		oldStats = Object.assign({}, players);
+		games = getGames();
 	
     var calculateTeamTotalElo = function(team) {
 
@@ -1056,7 +1055,6 @@ function getGames() {
 	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Rank</th>'
 	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Name</th>'
 	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Elo-Rating</th>'
-	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Rank 01.05</th>'
 	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Wins</th>'
 	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Loses</th>'
 	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Wins</th>'
@@ -1072,7 +1070,6 @@ function getGames() {
 		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px; text-align: right;">' + (parseInt(i, 10) + 1) + '</td>';
 		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + playerName + '</td>';
 		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px; font-weight: bold;">' + Math.ceil(players[playerName]) + '</td>';
-		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + Math.ceil(oldStats[playerName]) + '</td>';
 		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winRates[playerName].wins + '</td>';
 		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winRates[playerName].loses + '</td>';
 		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winRates[playerName].avg + '%</td>';

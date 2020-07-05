@@ -879,6 +879,42 @@ function getGames() {
 		'date': '01.07.2020'
 	});
 	
+	games.push({
+		'red': ['Gooz', 'ImitatoR', 'chitrox', 'Cold-M', 'WG'],
+		'blue': ['MVDE', 'TT-Tolyan', 'Maldito', 'pr!x', 'Thoums'],
+		'redScore': 8,
+		'blueScore': 2,
+		'map': 'Anfractuous',
+		'date': '04.07.2020'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'ImitatoR', 'chitrox', 'Cold-M', 'WG'],
+		'blue': ['MVDE', 'TT-Tolyan', 'Maldito', 'pr!x', 'Thoums'],
+		'redScore': 6,
+		'blueScore': 3,
+		'map': 'Virility',
+		'date': '04.07.2020'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'ImitatoR', 'Thoums', 'Cold-M', 'WG'],
+		'blue': ['MVDE', 'TT-Tolyan', 'Maldito', 'pr!x', 'chitrox'],
+		'redScore': 5,
+		'blueScore': 6,
+		'map': 'Grendelkeep',
+		'date': '04.07.2020'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'ImitatoR', 'Thoums', 'Cold-M', 'WG'],
+		'blue': ['MVDE', 'TT-Tolyan', 'Maldito', 'pr!x', 'chitrox'],
+		'redScore': 3,
+		'blueScore': 6,
+		'map': 'Vault',
+		'date': '04.07.2020'
+	});
+	
 	return games;
 }
 
@@ -925,7 +961,7 @@ function getGames() {
 		playerMapStats[i] = { wins: [], played: [] };
 	}
 	
-    var getPlayerEloInGame = function(playerName, game) {
+    var getPlayerEloInGame = function(playerName, game, gameNum) {
 
         var oldElo = players[playerName],
             myTeamScore,
@@ -936,7 +972,8 @@ function getGames() {
 			isWin,
 			date = new Date(game.date.split('.').reverse().join('-')).getTime(),
 			minDarkHorseDay = 30,
-			minDarkHorseTs = Math.ceil((new Date().getTime()) - minDarkHorseDay * 60 * 60 * 24 * 1000);
+			minDarkHorseTs = Math.ceil((new Date().getTime()) - minDarkHorseDay * 60 * 60 * 24 * 1000),
+			K;
 
         if (typeof players[playerName] === "undefined") {
             alert('Unknow player ' + playerName);
@@ -987,13 +1024,14 @@ function getGames() {
         return oldElo + Sa;
     };
 
-    var updateTeamsEloInGame = function(game) {
+    var updateTeamsEloInGame = function(gameNum) {
 
-        var playersInGame = game.red.concat(game.blue),
+        var game = games[gameNum],
+			playersInGame = game.red.concat(game.blue),
             eloResults = [];
 
         for (var i in playersInGame) {
-            eloResults[playersInGame[i]] = getPlayerEloInGame(playersInGame[i], game);
+            eloResults[playersInGame[i]] = getPlayerEloInGame(playersInGame[i], game, gameNum);
         }
 
         for (var playerName in eloResults) {
@@ -1002,7 +1040,7 @@ function getGames() {
     };
 
     for (i in games) {
-        updateTeamsEloInGame(games[i]);
+        updateTeamsEloInGame(i);
     }
 
     function getSortedKeys(obj) {

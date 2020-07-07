@@ -915,6 +915,51 @@ function getGames() {
 		'date': '04.07.2020'
 	});
 	
+	games.push({
+		'red': ['Gooz', 'chitrox', 'Krnki', 'pr!x', 'Thoums'],
+		'blue': ['MVDE', 'TT-Tolyan', 'ImitatoR', 'Cold-M', 'Rigel'],
+		'redScore': 4,
+		'blueScore': 6,
+		'map': 'Grendelkeep',
+		'date': '08.07.2020'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'chitrox', 'Krnki', 'pr!x', 'Thoums'],
+		'blue': ['MVDE', 'TT-Tolyan', 'ImitatoR', 'Cold-M', 'Rigel'],
+		'redScore': 2,
+		'blueScore': 6,
+		'map': 'Vault',
+		'date': '08.07.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Thoums', 'ImitatoR', 'Cold-M', 'Rigel'],
+		'blue': ['Gooz', 'chitrox', 'Krnki', 'pr!x', 'TT-Tolyan'],
+		'redScore': 2,
+		'blueScore': 5,
+		'map': 'Virility',
+		'date': '08.07.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Thoums', 'ImitatoR', 'Cold-M', 'Rigel'],
+		'blue': ['Gooz', 'chitrox', 'Krnki', 'pr!x', 'TT-Tolyan'],
+		'redScore': 1,
+		'blueScore': 7,
+		'map': 'Archanastre',
+		'date': '08.07.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Thoums', 'ImitatoR', 'chitrox', 'Rigel'],
+		'blue': ['Gooz', 'Cold-M', 'Krnki', 'pr!x', 'TT-Tolyan'],
+		'redScore': 1,
+		'blueScore': 2,
+		'map': 'Anfractuous',
+		'date': '09.07.2020'
+	});
+	
 	return games;
 }
 
@@ -973,7 +1018,9 @@ function getGames() {
 			date = new Date(game.date.split('.').reverse().join('-')).getTime(),
 			minDarkHorseDay = 30,
 			minDarkHorseTs = Math.ceil((new Date().getTime()) - minDarkHorseDay * 60 * 60 * 24 * 1000),
-			K;
+			K,
+			FDK,
+			flagsDiff = Math.abs(game.redScore - game.blueScore);
 
         if (typeof players[playerName] === "undefined") {
             alert('Unknow player ' + playerName);

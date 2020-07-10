@@ -18,6 +18,7 @@ function getPlayers() {
     players['chitrox'] = 1500;
     players['Hodor'] = 1500;
     players['pr!x'] = 1500;
+	players['viking'] = 1450;
 	players['j'] = 1450;
 	players['Rigel'] = 1450;
 	players['Vernon'] = 1450;
@@ -27,12 +28,12 @@ function getPlayers() {
     players['Cold-M'] = 1400;
     players['Loox'] = 1400;
 	players['Krnki'] = 1400;
-	players['RM'] = 1300;
     players['what'] = 1300;
     players['MoRoZ'] = 1300;
 	players['Forsiets'] = 1100;
 	players['WG'] = 1000;
 	players['Thoums'] = 1000;
+	players['RM'] = 1000;
 	players['zazuza'] = 900;
     players['Bad_Bond'] = 800;
 	
@@ -988,6 +989,24 @@ function getGames() {
 		'date': '08.07.2020'
 	});
 	
+	games.push({
+		'red': ['Gooz', 'viking', 'j', 'ImitatoR', 'Thoums'],
+		'blue': ['MVDE', 'Rigel', 'Cold-M', 'chitrox', 'pr!x'],
+		'redScore': 2,
+		'blueScore': 6,
+		'map': 'Vault',
+		'date': '09.07.2020'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'viking', 'j', 'ImitatoR', 'Thoums'],
+		'blue': ['MVDE', 'Rigel', 'Cold-M', 'chitrox', 'pr!x'],
+		'redScore': 11,
+		'blueScore': 0,
+		'map': 'Grendelkeep',
+		'date': '09.07.2020'
+	});
+	
 	return games;
 }
 
@@ -1042,6 +1061,7 @@ function getGames() {
             myTeamElo,
             opTeamElo,
             Sa,
+			Sp,
 			isWin,
 			date = new Date(game.date.split('.').reverse().join('-')).getTime(),
 			minDarkHorseDay = 30,
@@ -1067,7 +1087,9 @@ function getGames() {
         }
 
         Sa = 0;
+		Sp = 0;
 		K = oldElo / 400;
+		Ks = K * gameNum * 0.1;
 		isWin = myTeamScore > opTeamScore;
 		
 		if (typeof playerMapStats[playerName].played[game.map] === 'undefined') {
@@ -1095,7 +1117,7 @@ function getGames() {
 		} else {
 			Sa -= 4 * K;
 		}
-
+		
         return oldElo + Sa;
     };
 

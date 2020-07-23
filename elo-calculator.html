@@ -6,7 +6,7 @@ function getPlayers() {
 	
 	var players = [];
 
-    players['Gooz'] = 2000;
+    players['Gooz'] = 2100;
 	players['Koffee'] = 2000;
 	players['MVDE'] = 2000;
 	players['mnt'] = 1900;
@@ -1229,6 +1229,42 @@ function getGames() {
 		'date': '22.07.2020'
 	});
 	
+	games.push({
+		'red': ['MVDE', 'simson', 'Loox', 'Krnki', 'raynn'],
+		'blue': ['Gooz', 'Hodor', 'Cold-M', 'chitrox', 'pr!x'],
+		'redScore': 2,
+		'blueScore': 4,
+		'map': 'Virility',
+		'date': '23.07.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'simson', 'Loox', 'Krnki', 'raynn'],
+		'blue': ['Gooz', 'Hodor', 'Cold-M', 'chitrox', 'pr!x'],
+		'redScore': 3,
+		'blueScore': 4,
+		'map': 'Archanastre',
+		'date': '23.07.2020'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'simson', 'Cold-M', 'chitrox', 'pr!x'],
+		'blue': ['MVDE', 'ImitatoR', 'TT-Tolyan', 'Loox', 'raynn'],
+		'redScore': 2,
+		'blueScore': 1,
+		'map': 'Anfractuous',
+		'date': '23.07.2020'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'simson', 'Cold-M', 'chitrox', 'pr!x'],
+		'blue': ['MVDE', 'ImitatoR', 'TT-Tolyan', 'Loox', 'raynn'],
+		'redScore': 5,
+		'blueScore': 3,
+		'map': 'Grendelkeep',
+		'date': '23.07.2020'
+	});
+	
 	return games;
 }
 
@@ -1336,7 +1372,7 @@ function getGames() {
 			Sa += K;
 		} else if (opTeamElo >= myTeamElo && !isWin) {
 			Sa -= K;
-		} else {
+		} else {			
 			Sa -= 4 * K;
 		}
 		

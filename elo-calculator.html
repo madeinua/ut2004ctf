@@ -1283,6 +1283,51 @@ function getGames() {
 		'date': '24.07.2020'
 	});
 	
+	games.push({
+		'red': ['Gooz', 'ImitatoR', 'Cold-M', 'Maldito', 'MoRoZ'],
+		'blue': ['MVDE', 'chitrox', 'TT-Tolyan', 'Rigel', 'Loox'],
+		'redScore': 0,
+		'blueScore': 1,
+		'map': 'Pistola',
+		'date': '25.07.2020'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'ImitatoR', 'Cold-M', 'Maldito', 'MoRoZ'],
+		'blue': ['MVDE', 'chitrox', 'TT-Tolyan', 'Rigel', 'Loox'],
+		'redScore': 4,
+		'blueScore': 0,
+		'map': 'Grendelkeep',
+		'date': '25.07.2020'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'ImitatoR', 'Cold-M', 'Maldito', 'MoRoZ'],
+		'blue': ['MVDE', 'chitrox', 'TT-Tolyan', 'Rigel', 'Loox'],
+		'redScore': 4,
+		'blueScore': 0,
+		'map': 'Vault',
+		'date': '25.07.2020'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'chitrox', 'Cold-M', 'Maldito', 'MoRoZ'],
+		'blue': ['MVDE', 'ImitatoR', 'TT-Tolyan', 'Rigel', 'Loox'],
+		'redScore': 1,
+		'blueScore': 3,
+		'map': 'Archanastre',
+		'date': '25.07.2020'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'chitrox', 'Cold-M', 'Maldito', 'MoRoZ'],
+		'blue': ['MVDE', 'ImitatoR', 'TT-Tolyan', 'Rigel', 'Loox'],
+		'redScore': 2,
+		'blueScore': 6,
+		'map': 'Virility',
+		'date': '25.07.2020'
+	});
+	
 	return games;
 }
 
@@ -1396,7 +1441,7 @@ function getGames() {
 		
         return oldElo + Sa;
     };
-
+	
     var updateTeamsEloInGame = function(gameNum) {
 
         var game = games[gameNum],

@@ -1428,6 +1428,17 @@ function getGames() {
         return false;
     };
 	
+	var isBlueTeamPlayer = function(game, playerName) {
+
+        for (var k in game.blue) {
+            if (game.blue[k] === playerName) {
+                return true;
+            }
+        }
+
+        return false;
+    };
+	
 	var playedGames = [],
 	    darkHorses = [],
 		playerMapStats = [];
@@ -1778,7 +1789,149 @@ function getGames() {
 		buff += '</tr>';
     }
 	
-	buff += '</table>';
+	buff += '</table><br /><br />';
+	
+	// teams info
+	
+	var findGames = function () {
+	
+		var teams = [];
+	
+		for (var t=0; t<2; t++) {
+
+			teams[t] = [];
+
+			for (var p=0; p<5; p++) {
+		
+				var v = document.getElementsByClassName('player-' + t + '-' + p)[0].value.trim();
+			
+				if(v.length) {
+					teams[t].push(v);
+				}				
+			}
+		}
+		
+		var matchedGames = [],
+			matchesWins = 0,
+			totalElo = [];
+		
+		for (var i in games) {
+			
+			var game = games[i],
+				match = true;
+			
+			for (var t=0; t<2; t++) {
+				for (var p in teams[t]) {
+					if (t === 0) {
+						if (!isRedTeamPlayer(game, teams[t][p])) {
+							match = false;
+						}
+					} else if (!isBlueTeamPlayer(game, teams[t][p])) {
+						match = false;
+					}
+				}
+			}
+			
+			if (match) {
+			
+				matchedGames.push(game);
+				
+				if (game.redScore > game.blueScore) {
+					matchesWins ++;
+				}
+			}
+			
+			var match2 = true;
+			
+			for (var t=0; t<2; t++) {
+				for (var p in teams[t]) {
+					if (t === 0) {
+						if (!isBlueTeamPlayer(game, teams[t][p])) {
+							match2 = false;
+						}
+					} else if (!isRedTeamPlayer(game, teams[t][p])) {
+						match2 = false;
+					}
+				}
+			}
+			
+			if (match2) {
+			
+				matchedGames.push(game);
+				
+				if (game.blueScore > game.redScore) {
+					matchesWins ++;
+				}
+			}
+		}
+		
+		for (var t=0; t<2; t++) {
+		
+			totalElo[t] = 0;
+		
+			for (var p in teams[t]) {
+				totalElo[t] += players[teams[t][p]];
+			}
+		}
+		
+		var txt = '';
+		
+		txt += '<br /><br />Found ' + matchedGames.length + ' games.<br />';
+		
+		if (matchesWins > 0) {
+			txt += 'Team #1 won ' + matchesWins + ' of ' + matchedGames.length + ' games agains Team #2 in these games.<br />';
+		}
+		
+		txt += 'Team #1 ELO: ' +  Math.ceil(totalElo[0]) + '<br />Team #2 ELO: ' +  Math.ceil(totalElo[1]) + '<br />';
+		txt += '<br />';
+				
+		for (var g in matchedGames) {
+			var game = matchedGames[g];
+			txt += '<div>[' + game.date + '] <strong>' + game.map + '</strong> ' + game.redScore + ':' + game.blueScore + '</div>';
+			txt += '<div style="font-style: italic; font-size: 14px;">'
+			for (var p in game.red) {
+				txt += ' <span style="color: red;">' + game.red[p] + '</span> ';
+			}
+			txt += ' vs ';
+			for (var p in game.red) {
+				txt += ' <span style="color: blue;">' + game.blue[p] + '</span> ';
+			}
+			txt += '</div><br />';
+		}
+		
+		document.getElementById('findGamesResult').innerHTML = txt;
+	};
+	
+	var getSelect = function (t, p) {
+	
+		var txt = '<select class="player-' + t + '-' + p + '">';
+		
+		txt += '<option value="">- Player ' + (p + 1) + ' -</option>';
+		
+		for (var p in players) {
+			txt += '<option value="' + p + '">' + p + '</option>';
+		}
+		
+		txt += '</select>';
+		
+		return txt;
+	};
+	
+	buff += '<h4>Analytics</h4>';
+	
+	for (var t=0; t<2; t++) {
+	
+		buff += '<p>Team #' + (t + 1) + '</p>';
+	
+		for (var p=0; p<5; p++) {
+			buff += getSelect(t, p) + '&nbsp;';
+		}
+		
+		buff += '<br />';
+	}
+	
+	buff += '<br /><input type="button" value="Find games" onclick="findGames();" />';
+	buff += '<br /><div id="findGamesResult"></div>';
 	
 	buff += '<br /><br /><br />';
 	

@@ -1550,14 +1550,19 @@ function getGames() {
 
 </script>
 <script>
-	function getSortedKeys(obj) {
-		var keys = keys = Object.keys(obj);
-		return keys.sort(function(a,b){return obj[b]-obj[a]});
-	}
 	
     var buff = '',
 	    players = getPlayers(),
 		games = getGames();
+		
+	var getSortedKeys = function(obj) {
+		
+		var keys = Object.keys(obj);
+		
+		return keys.sort(function(a, b) {
+			return obj[b] - obj[a];
+		});
+	};
 	
     var calculateTeamTotalElo = function(team) {
 
@@ -1594,12 +1599,24 @@ function getGames() {
 	
 	var playedGames = [],
 	    darkHorses = [],
-		playerMapStats = [];
+		playerMapStats = [],
+		winRates = [];
 	
 	for (i in players) {
+	
 		darkHorses[i] = 0;
 		playedGames[i] = 0;
-		playerMapStats[i] = { wins: [], played: [] };
+		
+		playerMapStats[i] = { 
+			wins: [], 
+			played: [] 
+		};
+		
+		winRates[i] = {
+            wins: 0,
+            loses: 0,
+            avg: 0
+        };
 	}
 	
     var getPlayerEloInGame = function(playerName, game, gameNum) {
@@ -1667,6 +1684,20 @@ function getGames() {
 			Sa -= 4 * K;
 		}
 		
+		if (isRedTeamPlayer(game, playerName)) {
+            if (game.redScore > game.blueScore) {
+                ++winRates[playerName].wins;
+            } else {
+                ++winRates[playerName].loses;
+            }
+        } else {
+            if (game.blueScore > game.redScore) {
+                ++winRates[playerName].wins;
+            } else {
+                ++winRates[playerName].loses;
+            }
+        }
+		
         return oldElo + Sa;
     };
 	
@@ -1689,57 +1720,7 @@ function getGames() {
         updateTeamsEloInGame(i);
     }
 
-    function getSortedKeys(obj) {
-        var keys = keys = Object.keys(obj);
-        return keys.sort(function(a, b) {
-            return obj[b] - obj[a]
-        });
-    }
-
     var sortedPlayers = getSortedKeys(players);
-
-    var winRates = [];
-
-    for (i in players) {
-        winRates[i] = {
-            wins: 0,
-            loses: 0,
-            avg: 0
-        };
-    }
-
-    var updatePlayerWinRateInGame = function(playerName, game) {
-
-        if (isRedTeamPlayer(game, playerName)) {
-            if (game.redScore > game.blueScore) {
-                ++winRates[playerName].wins;
-            } else {
-                ++winRates[playerName].loses;
-            }
-        } else {
-            if (game.blueScore > game.redScore) {
-                ++winRates[playerName].wins;
-            } else {
-                ++winRates[playerName].loses;
-            }
-        }
-    };
-
-    var updateTeamsWinRateInGame = function(game) {
-
-        var playersInGame = game.red.concat(game.blue);
-
-        for (var i in playersInGame) {
-            updatePlayerWinRateInGame(
-                playersInGame[i],
-                game
-            );
-        }
-    };
-
-    for (i in games) {
-        updateTeamsWinRateInGame(games[i]);
-    }
 
     for (i in winRates) {
         winRates[i].avg = Math.ceil((winRates[i].wins / (winRates[i].wins + winRates[i].loses)) * 100);
@@ -1866,7 +1847,7 @@ function getGames() {
 		}
 	}
 	
-	worstMaps['chitrox'] = 'Ages'; // Ha-Ha :)
+	//worstMaps['chitrox'] = 'Ages'; // Ha-Ha :)
 	
 	var data = document.getElementById('data');
 

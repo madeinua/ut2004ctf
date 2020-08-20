@@ -15,31 +15,31 @@ function getPlayers() {
     players['ImitatoR'] = 1750;
     players['Maldito'] = 1650;
 	players['chitrox'] = 1500;
-	players['Sonic'] = 1500;
     players['Hodor'] = 1500;
-	players['Small'] = 1500;
+	players['Small'] = 1450;
     players['pr!x'] = 1450;
 	players['viking'] = 1450;
 	players['j'] = 1450;
 	players['Rigel'] = 1450;
 	players['Vernon'] = 1450;
+	players['Sonic'] = 1400;
 	players['raynn'] = 1400;
 	players['pepper'] = 1400;
     players['Alter'] = 1400;
     players['Cold-M'] = 1400;
     players['Loox'] = 1400;
-	players['Krnki'] = 1400;
-	players['RM'] = 1350;
+	players['Krnki'] = 1300;
 	players['Keeper'] = 1300;
 	players['oak'] = 1300;
     players['what'] = 1300;
     players['MoRoZ'] = 1300;
 	players['RoMoLo'] = 1300;
+	players['RM'] = 1250;
 	players['Fridrih'] = 1200;
 	players['Forsiets'] = 1100;
 	players['rug:dude'] = 1000;
-	players['WG'] = 1000;
-	players['Thoums'] = 1000;
+	players['Thoums'] = 900;
+	players['WG'] = 900;
 	players['zazuza'] = 900;
     players['Bad_Bond'] = 800;
 	players['vozhyk'] = 300;
@@ -759,7 +759,8 @@ function getGames() {
 		'redScore': 4,
 		'blueScore': 3,
 		'map': 'Anfractuous',
-		'date': '21.06.2020'
+		'date': '21.06.2020',
+		'fixes': [['Thoums', +100]]
 	});
 	
 	games.push({
@@ -822,7 +823,8 @@ function getGames() {
 		'redScore': 4,
 		'blueScore': 6,
 		'map': 'Vault',
-		'date': '27.06.2020'
+		'date': '27.06.2020',
+		'fixes': [['WG', +100]]
 	});
 	
 	games.push({
@@ -966,7 +968,8 @@ function getGames() {
 		'redScore': 1,
 		'blueScore': 2,
 		'map': 'Anfractuous',
-		'date': '08.07.2020'
+		'date': '08.07.2020',
+		'fixes': [['Krnki', +100]]
 	});
 	
 	games.push({
@@ -993,7 +996,8 @@ function getGames() {
 		'redScore': 5,
 		'blueScore': 4,
 		'map': 'Vault',
-		'date': '08.07.2020'
+		'date': '08.07.2020',
+		'fixes': [['RM', +100]]
 	});
 	
 	games.push({
@@ -1488,7 +1492,8 @@ function getGames() {
 		'redScore': 4,
 		'blueScore': 5,
 		'map': 'DeepSprinta',
-		'date': '02.07.2020'
+		'date': '02.07.2020',
+		'fixes': [['Small', +100]]
 	});
 	
 	games.push({
@@ -1542,7 +1547,8 @@ function getGames() {
 		'redScore': 1,
 		'blueScore': 2,
 		'map': 'Anfractouos',
-		'date': '15.07.2020'
+		'date': '15.07.2020',
+		'fixes': [['j', +100], ['Rigel', -50]]
 	});
 	
 	games.push({
@@ -1724,6 +1730,15 @@ function getGames() {
                 ++winRates[playerName].loses;
             }
         }
+		
+		// Apply fixes to the player score
+		if (typeof game.fixes !== 'undefined') {
+			for (var f in game.fixes) {
+				if (game.fixes[f][0] === playerName) {
+					Sa += game.fixes[f][1];
+				}
+			}
+		}
 		
         return oldElo + Sa;
     };

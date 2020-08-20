@@ -23,13 +23,13 @@ function getPlayers() {
 	players['j'] = 1450;
 	players['Rigel'] = 1450;
 	players['Vernon'] = 1450;
+	players['raynn'] = 1400;
 	players['pepper'] = 1400;
     players['Alter'] = 1400;
     players['Cold-M'] = 1400;
     players['Loox'] = 1400;
 	players['Krnki'] = 1400;
 	players['RM'] = 1350;
-	players['raynn'] = 1350;
 	players['Keeper'] = 1300;
 	players['oak'] = 1300;
     players['what'] = 1300;
@@ -1545,6 +1545,33 @@ function getGames() {
 		'date': '15.07.2020'
 	});
 	
+	games.push({
+		'red': ['MVDE', 'pr!x', 'j', 'Krnki', 'rug:dude'],
+		'blue': ['ImitatoR', 'TT-Tolyan', 'Cold-M', 'Rigel', 'Keeper'],
+		'redScore': 6,
+		'blueScore': 5,
+		'map': 'Grendelkeep',
+		'date': '19.07.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'pr!x', 'j', 'Krnki', 'rug:dude'],
+		'blue': ['ImitatoR', 'TT-Tolyan', 'Cold-M', 'Rigel', 'Keeper'],
+		'redScore': 3,
+		'blueScore': 5,
+		'map': 'Vault',
+		'date': '19.07.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'pr!x', 'j', 'Krnki', 'rug:dude'],
+		'blue': ['ImitatoR', 'TT-Tolyan', 'Cold-M', 'Rigel', 'Keeper'],
+		'redScore': 6,
+		'blueScore': 2,
+		'map': 'Anfractuous',
+		'date': '19.07.2020'
+	});
+	
 	return games;
 }
 
@@ -1839,7 +1866,7 @@ function getGames() {
 	
 	for (playerName in mapsStats) {
 
-	var keys = getSortedKeys(mapsStats[playerName]);	
+		var keys = getSortedKeys(mapsStats[playerName]);	
 
 		if (keys[0] !== keys[keys.length - 1]) {
 			bestMaps[playerName] = keys[0];

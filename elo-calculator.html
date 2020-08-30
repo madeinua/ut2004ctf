@@ -41,6 +41,7 @@
 		players['Thoums'] = 900;
 		players['WG'] = 900;
 		players['zazuza'] = 900;
+		players['Lasunii'] = 850;
 		players['rug:dude'] = 800;
 		players['Bad_Bond'] = 800;
 		players['vozhyk'] = 300;
@@ -1633,7 +1634,7 @@
 			'blueScore': 3,
 			'map': 'Grendelkeep',
 			'date': '29.07.2020',
-			'fixes': [['WG', +100], ['rug:dude', -50]]
+			'fixes': [['WG', +100], ['rug:dude', -0]]
 		});
 		
 		games.push({
@@ -1679,6 +1680,33 @@
 			'redScore': 3,
 			'blueScore': 1,
 			'map': 'Pistola',
+			'date': '30.07.2020'
+		});
+		
+		games.push({
+			'red': ['Gooz', 'ImitatoR', 'Cold-M', 'Lasunii', 'rug:dude'],
+			'blue': ['MVDE', 'TT-Tolyan', 'j', 'Loox', 'chitrox'],
+			'redScore': 3,
+			'blueScore': 7,
+			'map': 'Grendelkeep',
+			'date': '30.07.2020'
+		});
+		
+		games.push({
+			'red': ['Gooz', 'ImitatoR', 'Cold-M', 'Lasunii', 'chitrox'],
+			'blue': ['MVDE', 'TT-Tolyan', 'j', 'Loox', 'rug:dude'],
+			'redScore': 0,
+			'blueScore': 2,
+			'map': 'Archanastre',
+			'date': '30.07.2020'
+		});
+		
+		games.push({
+			'red': ['Gooz', 'ImitatoR', 'Cold-M', 'Lasunii', 'chitrox'],
+			'blue': ['MVDE', 'TT-Tolyan', 'j', 'Loox', 'rug:dude'],
+			'redScore': 4,
+			'blueScore': 5,
+			'map': 'Vault',
 			'date': '30.07.2020'
 		});
 		
@@ -1734,7 +1762,9 @@
 	var playedGames = [],
 	    darkHorses = [],
 		playerMapStats = [],
-		winRates = [];
+		winRates = [],
+		minDarkHorseDay = 30,
+		minDarkHorseTs = Math.ceil((new Date().getTime()) - minDarkHorseDay * 60 * 60 * 24 * 1000);
 	
 	for (i in players) {
 	
@@ -1764,8 +1794,6 @@
 			Sp,
 			isWin,
 			date = new Date(game.date.split('.').reverse().join('-')).getTime(),
-			minDarkHorseDay = 30,
-			minDarkHorseTs = Math.ceil((new Date().getTime()) - minDarkHorseDay * 60 * 60 * 24 * 1000),
 			K,
 			FDK,
 			flagsDiff = Math.abs(game.redScore - game.blueScore);
@@ -1803,10 +1831,10 @@
 		++playedGames[playerName];
 		
         if (opTeamElo >= myTeamElo && isWin) {
-			
+		
 			Sa += 4 * K;
 			
-			if (date >= minDarkHorseTs) {	
+			if (date >= minDarkHorseTs) {
 				++darkHorses[playerName];
 			}
 			
@@ -2029,7 +2057,7 @@
 	buff += '<p>Overall, Red - Blue win-rate is <b>' + Math.ceil(facts.redWinRate) + '% - ' + (100 - Math.ceil(facts.redWinRate)) + '%</b></p>';
 	buff += '<p>Best winning streak has player <b>' + bestWinningStreakPlayer + '</b> (' + bestWinningStreak + ')</p>';
 	buff += '<p>Worst losing streak has player <b>' + worstLosingStreakPlayer + '</b> (' + worstLosingStreak + ')</p>';
-	buff += '<p>Dark horse: <b>' + (typeof darkHorsePlayer === 'undefined' ? '?' : darkHorsePlayer) + '</b></p>';
+	buff += '<p>Dark horse: <b>' + (typeof darkHorsePlayer === 'undefined' ? 'nobody atm' : darkHorsePlayer) + '</b></p>';
 	
 	buff += '<br /><h4>Elo-rank calculation rules:</h4>';
 	buff += 'New Elo-rating = Old Elo-rating + Pts * (Old Elo-rating / 400)<br /><br />';

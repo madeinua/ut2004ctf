@@ -1835,21 +1835,21 @@
 		
 		teamsBonusDiff = ((myTeamElo + opTeamElo) / 2) * 0.05; // 5% diff between teams
 		
-        if (isWin && opTeamElo > (myTeamElo + teamsBonusDiff)) {
-			bonus = 4;
+        if (isWin && opTeamElo >= (myTeamElo + teamsBonusDiff)) {
+			bonus = 4 * K;
 			dhBonus = 2;
 		} else if (isWin) {
-			bonus = 1;
+			bonus = K;
 			dhBonus = 1;
-		} else if (!isWin && myTeamElo > (opTeamElo + teamsBonusDiff)) {			
-			bonus = -4;	
+		} else if (!isWin && myTeamElo >= (opTeamElo + teamsBonusDiff)) {			
+			bonus = -4 * K;	
 			dhBonus	= -1;
 		} else {
-			bonus = -1;
+			bonus = -K;
 			dhBonus = 0;
 		}
 		
-		Sa += K * bonus;
+		Sa += bonus;
 			
 		if (date >= minDarkHorseTs) {
 			darkHorses[playerName] += dhBonus;
@@ -2070,9 +2070,9 @@
 	
 	buff += '<br /><h4>Elo-rank calculation rules:</h4>';
 	buff += 'New Elo-rating = Old Elo-rating + Pts * (Old Elo-rating / 400)<br /><br />';
-	buff += 'Pts = +4 points for winning against a team with the same or greater Elo-rating than your team.<br />';
+	buff += 'Pts = +4 points for winning against a team with 5%+ Elo-rating bigger than your team.<br />';
 	buff += 'Pts = +1 points for winning against a team with the lower than your team.<br />';
-	buff += 'Pts = -1 points for losing against a team with the same or greater Elo-rating than your team.<br />';
+	buff += 'Pts = -1 points for losing against a team with the 5%+ Elo-rating lower than your team.<br />';
 	buff += 'Pts = -4 points for losing against a team with the lower Elo-rating than your team.<br /><br />';
 	
 	var mapsGames = [];

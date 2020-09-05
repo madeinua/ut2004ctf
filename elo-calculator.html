@@ -1864,18 +1864,17 @@
 		
 		teamsBonusDiff = ((myTeamElo + opTeamElo) / 2) * 0.05; // 5% diff between teams
 		
+		dhBonus = 0;
+		
         if (isWin && opTeamElo >= (myTeamElo + teamsBonusDiff)) {
 			bonus = 4 * K;
-			dhBonus = 2;
+			dhBonus = 1;
 		} else if (isWin) {
 			bonus = K;
-			dhBonus = 1;
 		} else if (!isWin && myTeamElo >= (opTeamElo + teamsBonusDiff)) {			
-			bonus = -4 * K;	
-			dhBonus	= -1;
+			bonus = -4 * K;
 		} else {
 			bonus = -K;
-			dhBonus = 0;
 		}
 		
 		Sa += bonus;

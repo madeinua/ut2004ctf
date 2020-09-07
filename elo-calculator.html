@@ -1911,13 +1911,10 @@
             opTeamScore,
             myTeamElo,
             opTeamElo,
-            Sa,
-			Sp,
 			isWin,
 			date = new Date(game.date.split('.').reverse().join('-')).getTime(),
 			K,
 			bonus,
-			dhBonus,
 			FDK,
 			teamsBonusDiff,
 			flagsDiff = Math.abs(game.redScore - game.blueScore);
@@ -1938,10 +1935,6 @@
             opTeamElo = calculateTeamTotalElo(game.red);
         }
 
-        Sa = 0;
-		Sp = 0;
-		K = oldElo / 400;
-		Ks = K * gameNum * 0.1;
 		isWin = myTeamScore > opTeamScore;
 		
 		if (typeof playerMapStats[playerName].played[game.map] === 'undefined') {
@@ -1954,25 +1947,24 @@
 
 		++playedGames[playerName];
 		
-		teamsBonusDiff = ((myTeamElo + opTeamElo) / 2) * 0.1; // 10% diff between teams
-		
-		dhBonus = 0;
+		teamsBonusDiff = ((myTeamElo + opTeamElo) / 2) * 0.05; // 5% diff between teams		
+		K = oldElo / 400;
 		
         if (isWin && opTeamElo >= (myTeamElo + teamsBonusDiff)) {
+
 			bonus = 4 * K;
-			dhBonus = 1;
+			console.log(date, minDarkHorseTs);
+			if (date >= minDarkHorseTs) {
+			
+				darkHorses[playerName] ++;
+			}
+			
 		} else if (isWin) {
 			bonus = K;
 		} else if (!isWin && myTeamElo >= (opTeamElo + teamsBonusDiff)) {			
 			bonus = -4 * K;
 		} else {
 			bonus = -K;
-		}
-		
-		Sa += bonus;
-			
-		if (date >= minDarkHorseTs) {
-			darkHorses[playerName] += dhBonus;
 		}
 		
 		if (isRedTeamPlayer(game, playerName)) {
@@ -1993,12 +1985,12 @@
 		if (typeof game.fixes !== 'undefined') {
 			for (var f in game.fixes) {
 				if (game.fixes[f][0] === playerName) {
-					Sa += game.fixes[f][1];
+					bonus += game.fixes[f][1];
 				}
 			}
 		}
 		
-        return oldElo + Sa;
+        return oldElo + bonus;
     };
 	
     var updateTeamsEloInGame = function(gameNum) {
@@ -2187,9 +2179,9 @@
 	
 	buff += '<br /><h4>Elo-rank calculation rules:</h4>';
 	buff += 'New Elo-rating = Old Elo-rating + Pts * (Old Elo-rating / 400)<br /><br />';
-	buff += 'Pts = +4 points for winning against a team with 10%+ Elo-rating bigger than your team.<br />';
+	buff += 'Pts = +4 points for winning against a team with 5%+ Elo-rating bigger than your team.<br />';
 	buff += 'Pts = +1 points for winning against a team with the lower than your team.<br />';
-	buff += 'Pts = -1 points for losing against a team with the 10%+ Elo-rating lower than your team.<br />';
+	buff += 'Pts = -1 points for losing against a team with the 5%+ Elo-rating lower than your team.<br />';
 	buff += 'Pts = -4 points for losing against a team with the lower Elo-rating than your team.<br /><br />';
 	
 	var mapsGames = [];

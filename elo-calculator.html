@@ -45,7 +45,7 @@
 		players['zazuza'] = 900;
 		players['rug:dude'] = 800;
 		players['Bad_Bond'] = 800;
-		players['hida'] = 800;
+		players['hida'] = 600;
 		players['vozhyk'] = 300;
 		
 		return players;
@@ -1719,7 +1719,7 @@
 			'blueScore': 1,
 			'map': 'Vault',
 			'date': '03.09.2020',
-			'fixes': [['Lasunii', +100]]
+			'fixes': [['Lasunii', +150]]
 		});
 		
 		games.push({
@@ -1829,6 +1829,43 @@
 			'blueScore': 5,
 			'map': 'Grendelkeep',
 			'date': '06.09.2020'
+		});
+		
+		games.push({
+			'red': ['Gooz', 'TT-Tolyan', 'Lasunii', 'Cold-M', 'hida'],
+			'blue': ['MVDE', 'Rigel', 'chitrox', 'pr!x', 'Forsiets'],
+			'redScore': 0,
+			'blueScore': 4,
+			'map': 'Vault',
+			'date': '07.09.2020',
+			'fixes': [['Lasunii', +150]]
+		});
+		
+		games.push({
+			'red': ['Gooz', 'TT-Tolyan', 'Lasunii', 'Cold-M', 'hida'],
+			'blue': ['MVDE', 'Rigel', 'chitrox', 'pr!x', 'Forsiets'],
+			'redScore': 2,
+			'blueScore': 4,
+			'map': 'Grendelkeep',
+			'date': '07.09.2020'
+		});
+		
+		games.push({
+			'red': ['ImitatoR', 'TT-Tolyan', 'Lasunii', 'Cold-M', 'pr!x'],
+			'blue': ['MVDE', 'Rigel', 'chitrox', 'hida', 'Forsiets'],
+			'redScore': 5,
+			'blueScore': 2,
+			'map': 'Archanastre',
+			'date': '07.09.2020'
+		});
+		
+		games.push({
+			'red': ['ImitatoR', 'TT-Tolyan', 'Lasunii', 'Cold-M', 'Forsiets'],
+			'blue': ['MVDE', 'Rigel', 'chitrox', 'hida', 'pr!x'],
+			'redScore': 4,
+			'blueScore': 2,
+			'map': 'Anfractuous',
+			'date': '07.09.2020'
 		});
 		
 		return games;
@@ -1953,9 +1990,8 @@
         if (isWin && opTeamElo >= (myTeamElo + teamsBonusDiff)) {
 
 			bonus = 4 * K;
-			console.log(date, minDarkHorseTs);
-			if (date >= minDarkHorseTs) {
 			
+			if (date >= minDarkHorseTs) {
 				darkHorses[playerName] ++;
 			}
 			

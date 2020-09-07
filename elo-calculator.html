@@ -38,6 +38,7 @@
 		players['RM'] = 1250;
 		players['Fridrih'] = 1150;
 		players['Forsiets'] = 1100;
+		players['mind'] = 1050;
 		players['Lasunii'] = 1000;
 		players['Thoums'] = 900;
 		players['WG'] = 900;
@@ -1802,6 +1803,34 @@
 			'date': '05.09.2020'
 		});
 		
+		games.push({
+			'red': ['Gooz', 'TT-Tolyan', 'Loox', 'Cold-M', 'hida'],
+			'blue': ['MVDE', 'Small', 'chitrox', 'pepper', 'mind'],
+			'redScore': 2,
+			'blueScore': 4,
+			'map': 'Anfractuous',
+			'date': '06.09.2020',
+			'fixes': [['Pepper', +50]]
+		});
+		
+		games.push({
+			'red': ['Gooz', 'TT-Tolyan', 'Loox', 'Cold-M', 'hida'],
+			'blue': ['MVDE', 'Small', 'chitrox', 'pepper', 'mind'],
+			'redScore': 1,
+			'blueScore': 2,
+			'map': 'Archanastre',
+			'date': '06.09.2020'
+		});
+		
+		games.push({
+			'red': ['Gooz', 'TT-Tolyan', 'Loox', 'Cold-M', 'hida'],
+			'blue': ['MVDE', 'Small', 'chitrox', 'pepper', 'mind'],
+			'redScore': 2,
+			'blueScore': 5,
+			'map': 'Grendelkeep',
+			'date': '06.09.2020'
+		});
+		
 		return games;
 	}
 	
@@ -1925,7 +1954,7 @@
 
 		++playedGames[playerName];
 		
-		teamsBonusDiff = ((myTeamElo + opTeamElo) / 2) * 0.05; // 5% diff between teams
+		teamsBonusDiff = ((myTeamElo + opTeamElo) / 2) * 0.1; // 10% diff between teams
 		
 		dhBonus = 0;
 		
@@ -2158,9 +2187,9 @@
 	
 	buff += '<br /><h4>Elo-rank calculation rules:</h4>';
 	buff += 'New Elo-rating = Old Elo-rating + Pts * (Old Elo-rating / 400)<br /><br />';
-	buff += 'Pts = +4 points for winning against a team with 5%+ Elo-rating bigger than your team.<br />';
+	buff += 'Pts = +4 points for winning against a team with 10%+ Elo-rating bigger than your team.<br />';
 	buff += 'Pts = +1 points for winning against a team with the lower than your team.<br />';
-	buff += 'Pts = -1 points for losing against a team with the 5%+ Elo-rating lower than your team.<br />';
+	buff += 'Pts = -1 points for losing against a team with the 10%+ Elo-rating lower than your team.<br />';
 	buff += 'Pts = -4 points for losing against a team with the lower Elo-rating than your team.<br /><br />';
 	
 	var mapsGames = [];

@@ -40,6 +40,7 @@
 		players['Forsiets'] = 1100;
 		players['mind'] = 1050;
 		players['Lasunii'] = 1000;
+		players['Swogu'] = 1000;
 		players['Thoums'] = 900;
 		players['WG'] = 900;
 		players['zazuza'] = 900;
@@ -1868,6 +1869,33 @@
 			'date': '07.09.2020'
 		});
 		
+		games.push({
+			'red': ['MVDE', 'Cold-M', 'Krnki', 'Swogu', 'rug:dude'],
+			'blue': ['chitrox', 'TT-Tolyan', 'pr!x', 'raynn', 'hida'],
+			'redScore': 2,
+			'blueScore': 6,
+			'map': 'Grendelkeep',
+			'date': '08.09.2020'
+		});
+		
+		games.push({
+			'red': ['MVDE', 'Cold-M', 'Krnki', 'Swogu', 'rug:dude'],
+			'blue': ['chitrox', 'TT-Tolyan', 'pr!x', 'raynn', 'hida'],
+			'redScore': 5,
+			'blueScore': 3,
+			'map': 'Anfractuous',
+			'date': '08.09.2020'
+		});
+		
+		games.push({
+			'red': ['MVDE', 'Cold-M', 'Krnki', 'Swogu', 'rug:dude'],
+			'blue': ['chitrox', 'TT-Tolyan', 'pr!x', 'raynn', 'hida'],
+			'redScore': 1,
+			'blueScore': 4,
+			'map': 'Archanastre',
+			'date': '08.09.2020'
+		});
+		
 		return games;
 	}
 	
@@ -1950,10 +1978,10 @@
             opTeamElo,
 			isWin,
 			date = new Date(game.date.split('.').reverse().join('-')).getTime(),
-			K,
+			maxElo,
+			teamDiff,
 			bonus,
 			FDK,
-			teamsBonusDiff,
 			flagsDiff = Math.abs(game.redScore - game.blueScore);
 
         if (typeof players[playerName] === "undefined") {
@@ -1984,23 +2012,23 @@
 
 		++playedGames[playerName];
 		
-		teamsBonusDiff = ((myTeamElo + opTeamElo) / 2) * 0.05; // 5% diff between teams		
-		K = oldElo / 400;
+		teamDiff = Math.max(myTeamElo, opTeamElo) / Math.min(myTeamElo, opTeamElo);
+		teamDiff = teamDiff * 100 - 100;
+		teamDiff = isWin && myTeamElo > opTeamElo ? 1 / teamDiff : teamDiff;
+		teamDiff = !isWin && opTeamElo > myTeamElo ? 1 / teamDiff : teamDiff;
 		
-        if (isWin && opTeamElo >= (myTeamElo + teamsBonusDiff)) {
-
-			bonus = 4 * K;
-			
-			if (date >= minDarkHorseTs) {
-				darkHorses[playerName] ++;
-			}
-			
-		} else if (isWin) {
-			bonus = K;
-		} else if (!isWin && myTeamElo >= (opTeamElo + teamsBonusDiff)) {			
-			bonus = -4 * K;
-		} else {
-			bonus = -K;
+		maxElo = 0;
+		
+		for(var p in players) {
+		    if(players[p] > maxElo) {
+			    maxElo = players[p];
+		    }
+		}
+		
+		bonus = (isWin ? 1 : -1) * (1 + teamDiff * oldElo / maxElo);
+		
+        if (isWin && teamDiff > 3 && date >= minDarkHorseTs) {
+			darkHorses[playerName] ++;
 		}
 		
 		if (isRedTeamPlayer(game, playerName)) {
@@ -2213,12 +2241,10 @@
 	buff += '<p>Worst losing streak has player <b>' + worstLosingStreakPlayer + '</b> (' + worstLosingStreak + ')</p>';
 	buff += '<p>Dark horse: <b>' + (typeof darkHorsePlayer === 'undefined' ? 'nobody atm' : darkHorsePlayer) + '</b></p>';
 	
-	buff += '<br /><h4>Elo-rank calculation rules:</h4>';
-	buff += 'New Elo-rating = Old Elo-rating + Pts * (Old Elo-rating / 400)<br /><br />';
-	buff += 'Pts = +4 points for winning against a team with 5%+ Elo-rating bigger than your team.<br />';
-	buff += 'Pts = +1 points for winning against a team with the lower than your team.<br />';
-	buff += 'Pts = -1 points for losing against a team with the 5%+ Elo-rating lower than your team.<br />';
-	buff += 'Pts = -4 points for losing against a team with the lower Elo-rating than your team.<br /><br />';
+	buff += '<br /><h4>Elo-rank calculation rule:</h4>';
+	buff += 'Player new rating = [Player old rating] + W * K * [Player old rating] / [MAX rating];<br />'
+	+ 'W = 1 (if player won the map) or -1 (if player lose the map)<br />'
+	+ 'K = floating coefficient depending on the difference in team ratings: higher rating of your team than the opponent team -> lower the coefficient; Lower rating of your team -> higher the coefficient.<br /><br />';
 	
 	var mapsGames = [];
 	

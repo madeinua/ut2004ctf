@@ -2026,7 +2026,9 @@
 		    }
 		}
 		
-		bonus = (isWin ? 1 : -1) * teamDiff * oldElo / maxElo;
+		bonus = (isWin ? 1 : -1) * teamDiff;
+		
+		console.log(playerName, isWin, myTeamElo, opTeamElo, bonus);
 		
         if (isWin && teamDiff > 4 && date >= minDarkHorseTs) {
 			darkHorses[playerName] ++;
@@ -2243,7 +2245,7 @@
 	buff += '<p>Dark horse: <b>' + (typeof darkHorsePlayer === 'undefined' ? 'nobody atm' : darkHorsePlayer) + '</b></p>';
 	
 	buff += '<br /><h4>Elo-rank calculation rule:</h4>';
-	buff += 'Player new rating = [Player old rating] + W * K * [Player old rating] / [MAX rating]<br />'
+	buff += 'Player new rating = [Player old rating] + W * K<br />'
 	+ 'W = 1 (if player won the map) or -1 (if player lose the map)<br />'
 	+ 'K = floating coefficient depending on the difference in team ratings: higher rating of your team than the opponent team -> lower the coefficient; Lower rating of your team -> higher the coefficient.<br /><br />';
 	

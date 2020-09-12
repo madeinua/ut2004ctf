@@ -2042,9 +2042,9 @@
 		
 		teamDiff = Math.max(myTeamElo, opTeamElo) / Math.min(myTeamElo, opTeamElo);
 		teamDiff = teamDiff * 100 - 100;
+		teamDiff = teamDiff < 1 ? 1 : teamDiff;
 		teamDiff = isWin && myTeamElo > opTeamElo ? 1 : teamDiff;
 		teamDiff = !isWin && opTeamElo > myTeamElo ? 1 : teamDiff;
-		teamDiff ++;
 		
 		maxElo = 0;
 		
@@ -2054,7 +2054,7 @@
 		    }
 		}
 		
-		bonus = (isWin ? 1 : -1) * teamDiff;
+		bonus = (isWin ? 1 : -1) * teamDiff * 2;
 		
         if (isWin && teamDiff > 4 && date >= minDarkHorseTs) {
 			darkHorses[playerName] ++;

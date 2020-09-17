@@ -2138,7 +2138,7 @@
 		
 		bonus = (isWin ? 1 : -1) * teamDiff * 2;
 		
-        if (isWin && teamDiff > 4 && date >= minDarkHorseTs) {
+        if (isWin && bonus > 4 && date >= minDarkHorseTs) {
 			darkHorses[playerName] ++;
 		}
 		

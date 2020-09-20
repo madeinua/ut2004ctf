@@ -2297,7 +2297,8 @@
 
 	var facts = {},
 		redWins = 0,
-		blueWins = 0;
+		blueWins = 0,
+		lastMap;
 	
 	// calculate red/blue %
 	for (i in games) {
@@ -2345,6 +2346,8 @@
 				winningStreak[playerName].current = 0;
 			}
 		}
+		
+		lastMap = games[i];
 	}
 	
 	var bestWinningStreak = 0,
@@ -2446,6 +2449,8 @@
     }
 	
 	buff += '</table>';
+	
+	buff += '<br /><i>Last update: ' + lastMap.date + '</i><br /><br />';
 	
 	buff += '<br /><br /><h4>Facts</h4>';
 	buff += '<p>Overall matches played: <b>' + games.length + '</b></p>';

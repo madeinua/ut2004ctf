@@ -428,10 +428,15 @@
 	buff += '<p>Worst losing streak has player <b>' + worstLosingStreakPlayer + '</b> (' + worstLosingStreak + ')</p>';
 	buff += '<p>Dark horse: <b>' + (typeof darkHorsePlayer === 'undefined' ? 'nobody atm' : darkHorsePlayer) + '</b></p>';
 	
-	buff += '<br /><h4>Elo-rank calculation rule:</h4>';
+	buff += '<br /><h4>Rank/ratings calculation rules:</h4>';
 	buff += 'Player new rating = [Player old rating] + W * K<br />'
 	+ 'W = 1 (if player won the map) or -1 (if player lose the map)<br />'
 	+ 'K = floating coefficient depending on the difference in team ratings: higher rating of your team than the opponent team -> lower the coefficient; Lower rating of your team -> higher the coefficient.<br /><br />';
+	
+	buff += '<br /><h4>Scores calculation rules:</h4>';
+	buff += '- Each player starts with the same score (1000).<br />';
+	buff += '- If a player wins the match, it gets X points, depending on the difference between the elo-ranks of both teams in the match.<br />';
+	buff += '- If a player loses the match, it remains with the same score as before.<br />';
 	
 	var mapsGames = [];
 	
@@ -446,7 +451,7 @@
 	
 	var sortedMapsGames = getSortedKeys(mapsGames);
 	
-	buff += '<h4>Maps</h4>';
+	buff += '<br /><h4>Maps</h4>';
 	
 	buff += '<table style="border: #ccc solid 1px; border-collapse: collapse;">'
 	+ '<tbody><tr>'

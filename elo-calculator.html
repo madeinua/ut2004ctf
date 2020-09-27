@@ -1,5 +1,8 @@
 <html>
 <div id="data"></div>
+<script src="https://mottie.github.io/tablesorter/docs/js/jquery-latest.min.js"></script>
+<script src="https://mottie.github.io/tablesorter/js/jquery.tablesorter.js"></script>
+<link rel="stylesheet" href="https://mottie.github.io/tablesorter/css/theme.blue.css">
 <script>
 
 	function getPlayers() {
@@ -2293,6 +2296,29 @@
 		});
 	};
 	
+	var getMaxKeyInArray = function (arr, key) {
+		
+		var max = 0,
+			result,
+			val;
+		
+		for (var i in arr) {
+		
+			if (typeof key === 'undefined') {
+				val = arr[i];
+			} else {
+				val = arr[i][key];
+			}
+		
+			if (val > max) {
+				result = i;
+				max = val;
+			}
+		}
+		
+		return result;
+	};
+	
     var calculateTeamTotalElo = function(team) {
 
         var sum = 0;
@@ -2331,7 +2357,8 @@
 		playerMapStats = [],
 		winRates = [],
 		minDarkHorseDay = 30,
-		minDarkHorseTs = Math.ceil((new Date().getTime()) - minDarkHorseDay * 60 * 60 * 24 * 1000);
+		minDarkHorseTs = Math.ceil((new Date().getTime()) - minDarkHorseDay * 60 * 60 * 24 * 1000),
+		scores = [];
 	
 	for (i in players) {
 	
@@ -2348,6 +2375,8 @@
             loses: 0,
             avg: 0
         };
+		
+		scores[i] = 1000;
 	}
 	
     var getPlayerEloInGame = function(playerName, game, gameNum) {
@@ -2359,11 +2388,8 @@
             opTeamElo,
 			isWin,
 			date = new Date(game.date.split('.').reverse().join('-')).getTime(),
-			maxElo,
 			teamDiff,
-			bonus,
-			FDK,
-			flagsDiff = Math.abs(game.redScore - game.blueScore);
+			bonus;
 
         if (typeof players[playerName] === "undefined") {
             alert('Unknow player ' + playerName);
@@ -2398,15 +2424,7 @@
 		teamDiff = teamDiff < 1 ? 1 : teamDiff;
 		teamDiff = isWin && myTeamElo > opTeamElo ? 1 : teamDiff;
 		teamDiff = !isWin && opTeamElo > myTeamElo ? 1 : teamDiff;
-		
-		maxElo = 0;
-		
-		for(var p in players) {
-		    if(players[p] > maxElo) {
-			    maxElo = players[p];
-		    }
-		}
-		
+	
 		bonus = (isWin ? 1 : -1) * teamDiff * 2;
 		
         if (isWin && bonus > 4 && date >= minDarkHorseTs) {
@@ -2453,9 +2471,56 @@
             players[playerName] = eloResults[playerName];
         }
     };
+	
+	var getPlayerScore = function (game, playerName) {
+		
+		var myTeamScore,
+            opTeamScore,
+            myTeamElo,
+            opTeamElo,
+			isWin,
+			bonus;
+
+        if (isRedTeamPlayer(game, playerName)) {
+            myTeamScore = game.redScore;
+            opTeamScore = game.blueScore;
+            myTeamElo = calculateTeamTotalElo(game.red);
+            opTeamElo = calculateTeamTotalElo(game.blue);
+        } else {
+            myTeamScore = game.blueScore;
+            opTeamScore = game.redScore;
+            myTeamElo = calculateTeamTotalElo(game.blue);
+            opTeamElo = calculateTeamTotalElo(game.red);
+        }
+
+		var teamDiff = opTeamElo - myTeamElo,
+			isWin = myTeamScore > opTeamScore;
+		
+		if (isWin) {
+			if (teamDiff < 1) {
+				bonus = 1;
+			} else {
+				bonus = 1 + (teamDiff * teamDiff) / (10 * Math.max(myTeamElo, opTeamElo));
+			}
+		} else {
+			bonus = 0;
+		}
+				
+        return bonus;
+	};
+	
+	var updatePlayersScores = function (game, players) {
+	
+		var playersInGame = game.red.concat(game.blue);
+	
+		for (var i in playersInGame) {
+            scores[playersInGame[i]] += getPlayerScore(game, playersInGame[i]);
+        }
+	};
 
     for (i in games) {
         updateTeamsEloInGame(i);
+		updatePlayersScores(games[i], players);
     }
 
     var sortedPlayers = getSortedKeys(players);
@@ -2585,43 +2650,47 @@
 		}
 	}
 	
-	//worstMaps['chitrox'] = 'Ages'; // Ha-Ha :)
-	
+	var maxRatingPlayer = getMaxKeyInArray(players),
+		maxScorePlayer = getMaxKeyInArray(scores),
+		maxWinsPlayer = getMaxKeyInArray(winRates, 'wins');
+		
 	var data = document.getElementById('data');
 
-	buff = '<table style="border: #ccc solid 1px; border-collapse: collapse;">'
-	+ '<tbody><tr>'
-	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Rank</th>'
-	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Name</th>'
-	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Elo-Rating</th>'
-	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Wins</th>'
-	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Loses</th>'
-	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Wins</th>'
-	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Best map</th>'
-	+ '<th style="border: #ccc solid 1px; padding: 5px 10px;">Worst map</th>'
-	+ '</tr></tbody>';
-	
+	buff = '<table id="ranksTable" class="tablesorter" style="max-width: 1000px;">'
+	+ '<thead><tr>'
+	+ '<th>Rank</th>'
+	+ '<th>Name</th>'
+	+ '<th>Rating</th>'
+	+ '<th>Score</th>'
+	+ '<th>Wins</th>'
+	+ '<th>Loses</th>'
+	+ '<th>Wins</th>'
+	+ '<th>Best map</th>'
+	+ '<th>Worst map</th>'
+	+ '</tr></thead><tbody>';
+
     for (i in sortedPlayers) {
 	
 		var playerName = sortedPlayers[i];
 	
 		buff += '<tr>';
-		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px; text-align: right;">' + (parseInt(i, 10) + 1) + '</td>';
-		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + playerName + '</td>';
-		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px; font-weight: bold;">' + Math.ceil(players[playerName]) + '</td>';
-		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winRates[playerName].wins + '</td>';
-		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winRates[playerName].loses + '</td>';
-		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + winRates[playerName].avg + '%</td>';
-		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + (typeof bestMaps[playerName] === 'undefined' || bestMaps[playerName] === null ? '?' : bestMaps[playerName]) + '</td>';
-		buff += '<td style="border: #ccc solid 1px; padding: 5px 10px;">' + (typeof worstMaps[playerName] === 'undefined' || worstMaps[playerName] === null ? '?' : worstMaps[playerName]) + '</td>';
+		buff += '<td>' + (parseInt(i, 10) + 1) + '</td>';
+		buff += '<td>' + playerName + '</td>';
+		buff += '<td' + (maxRatingPlayer === playerName ? ' style="background-color: #ffe377;"' : '') + '><strong>' + Math.ceil(players[playerName]) + '</strong></td>';
+		buff += '<td' + (maxScorePlayer === playerName ? ' style="background-color: #ffe377;"' : '') + '>' + Math.ceil(scores[playerName]) + '</td>';
+		buff += '<td' + (maxWinsPlayer === playerName ? ' style="background-color: #ffe377;"' : '') + '>' + winRates[playerName].wins + '</td>';
+		buff += '<td>' + winRates[playerName].loses + '</td>';
+		buff += '<td>' + winRates[playerName].avg + '%</td>';
+		buff += '<td>' + (typeof bestMaps[playerName] === 'undefined' || bestMaps[playerName] === null ? '?' : bestMaps[playerName]) + '</td>';
+		buff += '<td>' + (typeof worstMaps[playerName] === 'undefined' || worstMaps[playerName] === null ? '?' : worstMaps[playerName]) + '</td>';
 		buff += '</tr>';
     }
 	
-	buff += '</table>';
+	buff += '</tbody></table>';
 	
 	buff += '<br /><i>Last update: ' + lastMap.date + '</i><br /><br />';
 	
-	buff += '<br /><br /><h4>Facts</h4>';
+	buff += '<br /><h4>Facts</h4>';
 	buff += '<p>Overall matches played: <b>' + games.length + '</b></p>';
 	buff += '<p>Overall, Red - Blue win-rate is <b>' + Math.ceil(facts.redWinRate) + '% - ' + (100 - Math.ceil(facts.redWinRate)) + '%</b></p>';
 	buff += '<p>Best winning streak has player <b>' + bestWinningStreakPlayer + '</b> (' + bestWinningStreak + ')</p>';
@@ -2810,6 +2879,10 @@
 	buff += '<br /><br /><br />';
 	
 	data.innerHTML = buff;
+	
+	$("#ranksTable").tablesorter({
+		theme : 'blue'
+	});
 
 </script>
 </html>

@@ -2296,10 +2296,9 @@
 		});
 	};
 	
-	var getMaxKeyInArray = function (arr, key) {
+	var getMaxInArray = function (arr, key) {
 		
 		var max = 0,
-			result,
 			val;
 		
 		for (var i in arr) {
@@ -2311,12 +2310,11 @@
 			}
 		
 			if (val > max) {
-				result = i;
 				max = val;
 			}
 		}
 		
-		return result;
+		return max;
 	};
 	
     var calculateTeamTotalElo = function(team) {
@@ -2650,10 +2648,10 @@
 		}
 	}
 	
-	var maxRatingPlayer = getMaxKeyInArray(players),
-		maxScorePlayer = getMaxKeyInArray(scores),
-		maxWinsPlayer = getMaxKeyInArray(winRates, 'wins');
-		
+	var maxRating = getMaxInArray(players),
+		maxScore = getMaxInArray(scores),
+		maxWins = getMaxInArray(winRates, 'wins');
+		console.log(maxRating);
 	var data = document.getElementById('data');
 
 	buff = '<table id="ranksTable" class="tablesorter" style="max-width: 1000px;">'
@@ -2676,9 +2674,9 @@
 		buff += '<tr>';
 		buff += '<td>' + (parseInt(i, 10) + 1) + '</td>';
 		buff += '<td>' + playerName + '</td>';
-		buff += '<td' + (maxRatingPlayer === playerName ? ' style="background-color: #ffe377;"' : '') + '><strong>' + Math.ceil(players[playerName]) + '</strong></td>';
-		buff += '<td' + (maxScorePlayer === playerName ? ' style="background-color: #ffe377;"' : '') + '>' + Math.ceil(scores[playerName]) + '</td>';
-		buff += '<td' + (maxWinsPlayer === playerName ? ' style="background-color: #ffe377;"' : '') + '>' + winRates[playerName].wins + '</td>';
+		buff += '<td' + (maxRating === players[playerName] ? ' style="background-color: #ffe377;"' : '') + '><strong>' + Math.ceil(players[playerName]) + '</strong></td>';
+		buff += '<td' + (maxScore === scores[playerName] ? ' style="background-color: #ffe377;"' : '') + '>' + Math.ceil(scores[playerName]) + '</td>';
+		buff += '<td' + (maxWins === winRates[playerName].wins ? ' style="background-color: #ffe377;"' : '') + '>' + winRates[playerName].wins + '</td>';
 		buff += '<td>' + winRates[playerName].loses + '</td>';
 		buff += '<td>' + winRates[playerName].avg + '%</td>';
 		buff += '<td>' + (typeof bestMaps[playerName] === 'undefined' || bestMaps[playerName] === null ? '?' : bestMaps[playerName]) + '</td>';

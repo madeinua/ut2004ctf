@@ -32,6 +32,7 @@ function getPlayers() {
 	players['MoRoZ'] = 1300;
 	players['RoMoLo'] = 1300;
 	players['RM'] = 1250;
+	players['ShX'] = 1250;
 	players['Fridrih'] = 1150;
 	players['Forsiets'] = 1100;
 	players['mind'] = 1050;
@@ -39,6 +40,7 @@ function getPlayers() {
 	players['Swogu'] = 1000;
 	players['Thoums'] = 900;
 	players['Mistic'] = 900;
+	players['brizzle'] = 900;
 	players['zazuza'] = 700;
 	players['rug:dude'] = 700;
 	players['Bad_Bond'] = 700;

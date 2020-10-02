@@ -2304,5 +2304,33 @@ function getGames() {
 		'date': '01.10.2020'
 	});
 	
+	games.push({
+		'red': ['Gooz', 'ImitatoR', 'Cold-M', 'Rigel', 'hida'],
+		'blue': ['MVDE', 'TT-Tolyan', 'chitrox', 'Krnki', 'Keeper'],
+		'redScore': 5,
+		'blueScore': 4,
+		'map': 'Vault',
+		'date': '01.10.2020',
+		'fixes': [['Keeper', -50]]
+	});
+	
+	games.push({
+		'red': ['Gooz', 'ImitatoR', 'Cold-M', 'Rigel', 'hida'],
+		'blue': ['MVDE', 'TT-Tolyan', 'chitrox', 'Krnki', 'Keeper'],
+		'redScore': 1,
+		'blueScore': 2,
+		'map': 'Archanastre',
+		'date': '01.10.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Cold-M', 'Rigel', 'Swogu', 'hida'],
+		'blue': ['ImitatoR', 'TT-Tolyan', 'chitrox', 'mind', 'Keeper'],
+		'redScore': 5,
+		'blueScore': 6,
+		'map': 'Virility',
+		'date': '02.10.2020'
+	});
+	
 	return games;
 }

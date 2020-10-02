@@ -2329,7 +2329,8 @@ function getGames() {
 		'redScore': 5,
 		'blueScore': 6,
 		'map': 'Virility',
-		'date': '02.10.2020'
+		'date': '02.10.2020',
+		'fixes': [['mind', +50]]
 	});
 	
 	return games;

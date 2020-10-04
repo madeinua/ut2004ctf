@@ -384,19 +384,55 @@
 		maxScore = getMaxInArray(scores),
 		maxWins = getMaxInArray(winRates, 'wins'),
 		maxLoses = getMaxInArray(winRates, 'loses'),
-		activePlayers = [];
+		avgPlayersRates = [];
 		
 	for (i in playedGames) {
 		if (playedGames[i] > (games.length / 20)) {
-			activePlayers[i] = winRates[i].avg;
+			avgPlayersRates[i] = winRates[i].avg;
 		}
 	}
 
-	var maxActiveWins = getMaxInArray(activePlayers);
-
+	var maxAvgRates = getMaxInArray(avgPlayersRates);
+	
+	// calculate active players
+	var activePlayersDates = [];
+	
+	for (i in games) {
+	
+		var gamePlayers = games[i].red.concat(games[i].blue);
+		
+		for (j in gamePlayers) {
+			
+			var playerName = gamePlayers[j];
+			
+			if (typeof activePlayersDates[playerName] === 'undefined') {
+				activePlayersDates[playerName] = 0;
+			}
+			
+			activePlayersDates[playerName] = games[i].date;
+		}
+	}
+	
+	var activePlayers = [],
+		minActivePlayersDays = 60,
+		minActivePlayersTs = Math.ceil((new Date().getTime()) - minActivePlayersDays * 60 * 60 * 24 * 1000);
+	
+	for (i in activePlayersDates) {
+		
+		var apdate = new Date(activePlayersDates[i].split('.').reverse().join('-')).getTime();
+		
+		if (apdate > minActivePlayersTs) {
+			activePlayers.push(i);
+		}
+	}
+	
 	var data = document.getElementById('data');
+	
+	buff = '';
 
-	buff = '<table id="ranksTable" class="tablesorter" style="max-width: 1000px;">'
+	buff += '<p><label for="showActiveOnly" style="cursor:pointer;"><input type="checkbox" id="showActiveOnly" checked="checked" /> Show active players only (who have played in the last ' + minActivePlayersDays + ' days).</label></p>';
+	
+	buff += '<table id="ranksTable" class="tablesorter" style="max-width: 1000px;">'
 	+ '<thead><tr>'
 	+ '<th>Rank</th>'
 	+ '<th>Name</th>'
@@ -409,21 +445,27 @@
 	+ '<th>Worst map</th>'
 	+ '</tr></thead><tbody>';
 
+	var line = 1;
+	
     for (i in sortedPlayers) {
 	
 		var playerName = sortedPlayers[i];
 	
-		buff += '<tr>';
-		buff += '<td>' + (parseInt(i, 10) + 1) + '</td>';
+		buff += '<tr' + (activePlayers.includes(playerName) ? '' : ' style="display:none;" class="inactive"') + '>';
+		buff += '<td>' + line + '</td>';
 		buff += '<td>' + playerName + '</td>';
 		buff += '<td' + (maxRating === players[playerName] ? ' style="background-color: #65f1ff;"' : '') + '><strong>' + Math.ceil(players[playerName]) + '</strong></td>';
 		buff += '<td' + (maxScore === scores[playerName] ? ' style="background-color: #ffe377;"' : '') + '>' + Math.ceil(scores[playerName]) + '</td>';
 		buff += '<td' + (maxWins === winRates[playerName].wins ? ' style="background-color: #ffe377;"' : '') + '>' + winRates[playerName].wins + '</td>';
 		buff += '<td' + (maxLoses === winRates[playerName].loses ? ' style="background-color: #ff672b;"' : '') + '>' + winRates[playerName].loses + '</td>';
-		buff += '<td' + (maxActiveWins === winRates[playerName].avg ? ' style="background-color: #ffe377;"' : '') + '>' + winRates[playerName].avg + '%</td>';
+		buff += '<td' + (maxAvgRates === winRates[playerName].avg ? ' style="background-color: #ffe377;"' : '') + '>' + winRates[playerName].avg + '%</td>';
 		buff += '<td>' + (typeof bestMaps[playerName] === 'undefined' || bestMaps[playerName] === null ? '?' : bestMaps[playerName]) + '</td>';
 		buff += '<td>' + (typeof worstMaps[playerName] === 'undefined' || worstMaps[playerName] === null ? '?' : worstMaps[playerName]) + '</td>';
 		buff += '</tr>';
+		
+		if (activePlayers.includes(playerName)) {
+			line++;
+		}
     }
 	
 	buff += '</tbody></table>';
@@ -627,6 +669,26 @@
 	
 	jQuery('#ranksTable').tablesorter({
 		theme: 'blue'
+	});
+	
+	$('#showActiveOnly').on('change', function(event) {
+	
+		if (event.target.checked) {
+			$('#ranksTable tr.inactive').hide();
+		} else {
+			$('#ranksTable tr').show();
+		}
+		
+		var line = 1;
+	
+		$('#ranksTable tr td:first-child').each(function() {
+			
+			if (event.target.checked && $(this).parent().hasClass('inactive')) {
+				return;
+			}
+			
+			$(this).html(line++);
+		});
 	});
 
 </script>

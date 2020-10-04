@@ -383,7 +383,6 @@
 	var maxRating = getMaxInArray(players),
 		maxScore = getMaxInArray(scores),
 		maxWins = getMaxInArray(winRates, 'wins'),
-		maxLoses = getMaxInArray(winRates, 'loses'),
 		avgPlayersRates = [];
 		
 	for (i in playedGames) {
@@ -457,7 +456,7 @@
 		buff += '<td' + (maxRating === players[playerName] ? ' style="background-color: #65f1ff;"' : '') + '><strong>' + Math.ceil(players[playerName]) + '</strong></td>';
 		buff += '<td' + (maxScore === scores[playerName] ? ' style="background-color: #ffe377;"' : '') + '>' + Math.ceil(scores[playerName]) + '</td>';
 		buff += '<td' + (maxWins === winRates[playerName].wins ? ' style="background-color: #ffe377;"' : '') + '>' + winRates[playerName].wins + '</td>';
-		buff += '<td' + (maxLoses === winRates[playerName].loses ? ' style="background-color: #ff672b;"' : '') + '>' + winRates[playerName].loses + '</td>';
+		buff += '<td>' + winRates[playerName].loses + '</td>';
 		buff += '<td' + (maxAvgRates === winRates[playerName].avg ? ' style="background-color: #ffe377;"' : '') + '>' + winRates[playerName].avg + '%</td>';
 		buff += '<td>' + (typeof bestMaps[playerName] === 'undefined' || bestMaps[playerName] === null ? '?' : bestMaps[playerName]) + '</td>';
 		buff += '<td>' + (typeof worstMaps[playerName] === 'undefined' || worstMaps[playerName] === null ? '?' : worstMaps[playerName]) + '</td>';

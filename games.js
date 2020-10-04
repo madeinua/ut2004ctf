@@ -2340,7 +2340,7 @@ function getGames() {
 		'blueScore': 5,
 		'map': 'Vault',
 		'date': '03.10.2020',
-		'fixes': [['Rigel', +50], ['Gooz', +50], ['TT-Tolyan', -25]]
+		'fixes': [['Rigel', +25], ['Gooz', +50], ['TT-Tolyan', -25]]
 	});
 		
 	games.push({
@@ -2386,6 +2386,15 @@ function getGames() {
 		'blueScore': 4,
 		'map': 'DeepSprinta',
 		'date': '03.10.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'chitrox', 'Cold-M', 'Lasunii', 'rug:dude'],
+		'blue': ['TT-Tolyan', 'Maldito', 'pepper', 'Rigel', 'Krnki'],
+		'redScore': 4,
+		'blueScore': 2,
+		'map': 'Archanastre',
+		'date': '05.10.2020'
 	});
 	
 	return games;

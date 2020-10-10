@@ -2413,7 +2413,8 @@ function getGames() {
 		'redScore': 4,
 		'blueScore': 2,
 		'map': 'Anfractuous',
-		'date': '06.10.2020'
+		'date': '06.10.2020',
+		'fixes': [['Krnki', +25]]
 	});
 	
 	games.push({
@@ -2461,7 +2462,7 @@ function getGames() {
 		'blueScore': 5,
 		'map': 'Vault',
 		'date': '08.10.2020',
-		'fixes': [['Gooz', +25]]
+		'fixes': [['Gooz', +25], ['Thoums', +125]]
 	});
 	
 	games.push({
@@ -2507,6 +2508,60 @@ function getGames() {
 		'redScore': 4,
 		'blueScore': 1,
 		'map': 'Campers Crossing',
+		'date': '10.10.2020'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'j', 'ImitatoR', 'Maldito', 'Thoums'],
+		'blue': ['MVDE', 'TT-Tolyan', 'chitrox', 'Cold-M', 'Lasunii'],
+		'redScore': 3,
+		'blueScore': 4,
+		'map': 'Anfractuous',
+		'date': '10.10.2020'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'j', 'ImitatoR', 'Maldito', 'Thoums'],
+		'blue': ['MVDE', 'TT-Tolyan', 'chitrox', 'Cold-M', 'Lasunii'],
+		'redScore': 6,
+		'blueScore': 4,
+		'map': 'Grendelkeep',
+		'date': '10.10.2020'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'j', 'ImitatoR', 'Maldito', 'Thoums'],
+		'blue': ['MVDE', 'TT-Tolyan', 'chitrox', 'Cold-M', 'Lasunii'],
+		'redScore': 2,
+		'blueScore': 5,
+		'map': 'Vault',
+		'date': '10.10.2020'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'j', 'ImitatoR', 'Maldito', 'Thoums'],
+		'blue': ['MVDE', 'TT-Tolyan', 'chitrox', 'Cold-M', 'Lasunii'],
+		'redScore': 2,
+		'blueScore': 3,
+		'map': 'Archanastre',
+		'date': '10.10.2020'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'j', 'ImitatoR', 'Maldito', 'Thoums'],
+		'blue': ['MVDE', 'TT-Tolyan', 'chitrox', 'Cold-M', 'Lasunii'],
+		'redScore': 5,
+		'blueScore': 3,
+		'map': 'Ages',
+		'date': '10.10.2020'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'j', 'ImitatoR', 'Maldito', 'Thoums'],
+		'blue': ['MVDE', 'TT-Tolyan', 'chitrox', 'Cold-M', 'Lasunii'],
+		'redScore': 5,
+		'blueScore': 3,
+		'map': 'Virility',
 		'date': '10.10.2020'
 	});
 	

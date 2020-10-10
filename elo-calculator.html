@@ -68,6 +68,10 @@
 		return players;
 	}
 	
+	var data = document.getElementById('data');
+	
+	data.innerHTML = 'Loading............';
+	
     var buff = '',
 	    players = getPlayers(),
 		games = getGames();
@@ -468,8 +472,6 @@
 			activePlayers.push(i);
 		}
 	}
-	
-	var data = document.getElementById('data');
 	
 	buff = '';
 

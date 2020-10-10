@@ -2473,5 +2473,42 @@ function getGames() {
 		'date': '09.10.2020'
 	});
 	
+	games.push({
+		'red': ['MVDE', 'j', 'chitrox', 'pepper', 'Forsiets'],
+		'blue': ['Gooz', 'TT-Tolyan', 'Maldito', 'Swogu', 'hida'],
+		'redScore': 3,
+		'blueScore': 1,
+		'map': 'Grendelkeep',
+		'date': '09.10.2020',
+		'fixes': [['j', +25], ['Gooz', -25], ['MVDE', +25]]
+	});
+	
+	games.push({
+		'red': ['MVDE', 'j', 'chitrox', 'Swogu', 'Forsiets'],
+		'blue': ['Gooz', 'TT-Tolyan', 'Maldito', 'pepper', 'hida'],
+		'redScore': 4,
+		'blueScore': 0,
+		'map': 'Virility',
+		'date': '09.10.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'TT-Tolyan', 'Maldito', 'pepper', 'hida'],
+		'blue': ['chitrox', 'ImitatoR', 'Cold-M', 'Swogu', 'Forsiets'],
+		'redScore': 4,
+		'blueScore': 1,
+		'map': 'Vault',
+		'date': '09.10.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'TT-Tolyan', 'Maldito', 'Swogu', 'hida'],
+		'blue': ['chitrox', 'ImitatoR', 'Cold-M', 'pepper', 'Forsiets'],
+		'redScore': 4,
+		'blueScore': 1,
+		'map': 'Campers Crossing',
+		'date': '10.10.2020'
+	});
+	
 	return games;
 }

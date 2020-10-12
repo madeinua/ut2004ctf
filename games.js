@@ -2565,5 +2565,32 @@ function getGames() {
 		'date': '10.10.2020'
 	});
 	
+	games.push({
+		'red': ['MVDE', 'chitrox', 'Cold-M', 'Lasunii', 'Swogu'],
+		'blue': ['Gooz', 'TT-Tolyan', 'Rigel', 'hida', 'satanspy'],
+		'redScore': 2,
+		'blueScore': 1,
+		'map': 'Grendelkeep',
+		'date': '12.10.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'TT-Tolyan', 'Rigel', 'Keeper', 'hida'],
+		'blue': ['ImitatoR', 'chitrox', 'Cold-M', 'Lasunii', 'Swogu'],
+		'redScore': 5,
+		'blueScore': 6,
+		'map': 'Vault',
+		'date': '12.10.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'TT-Tolyan', 'Rigel', 'Keeper', 'hida'],
+		'blue': ['ImitatoR', 'chitrox', 'Cold-M', 'Lasunii', 'Swogu'],
+		'redScore': 3,
+		'blueScore': 2,
+		'map': 'Camper Crossing',
+		'date': '13.10.2020'
+	});
+	
 	return games;
 }

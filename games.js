@@ -2629,5 +2629,14 @@ function getGames() {
 		'date': '17.10.2020'
 	});
 	
+	games.push({
+		'red': ['TT-Tolyan', 'Maldito', 'Cold-M', 'Krnki', 'Mistic'],
+		'blue': ['ImitatoR', 'chitrox', 'Rigel', 'mind', 'Lasunii'],
+		'redScore': 5,
+		'blueScore': 2,
+		'map': 'Grendelkeep',
+		'date': '17.10.2020'
+	});
+	
 	return games;
 }

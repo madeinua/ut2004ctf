@@ -2638,5 +2638,41 @@ function getGames() {
 		'date': '17.10.2020'
 	});
 	
+	games.push({
+		'red': ['ImitatoR', 'chitrox', 'Cold-M', 'Thoums', 'Lasunii'],
+		'blue': ['MVDE', 'pr!x', 'MoRoZ', 'rug:dude', 'fortis_cor'],
+		'redScore': 4,
+		'blueScore': 0,
+		'map': 'Archanastre',
+		'date': '22.10.2020'
+	});
+	
+	games.push({
+		'red': ['ImitatoR', 'chitrox', 'Cold-M', 'fortis_cor', 'Lasunii'],
+		'blue': ['MVDE', 'pr!x', 'MoRoZ', 'rug:dude', 'Thoums'],
+		'redScore': 2,
+		'blueScore': 5,
+		'map': 'Anfractuous',
+		'date': '22.10.2020'
+	});
+	
+	games.push({
+		'red': ['ImitatoR', 'chitrox', 'TT-Tolyan', 'Swogu', 'Lasunii'],
+		'blue': ['MVDE', 'Cold-M', 'MoRoZ', 'rug:dude', 'Thoums'],
+		'redScore': 3,
+		'blueScore': 4,
+		'map': 'Vault',
+		'date': '22.10.2020'
+	});
+	
+	games.push({
+		'red': ['ImitatoR', 'chitrox', 'TT-Tolyan', 'Swogu', 'Lasunii'],
+		'blue': ['MVDE', 'Cold-M', 'MoRoZ', 'rug:dude', 'Thoums'],
+		'redScore': 7,
+		'blueScore': 9,
+		'map': 'Grendelkeep',
+		'date': '22.10.2020'
+	});
+	
 	return games;
 }

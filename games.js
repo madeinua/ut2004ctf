@@ -2681,7 +2681,7 @@ function getGames() {
 		'blueScore': 2,
 		'map': 'Vault',
 		'date': '24.10.2020',
-		'fixes': [['Rigel', +50], ['chitrox', -50]]
+		'fixes': [['Rigel', +25], ['chitrox', -50]]
 	});
 	
 	games.push({

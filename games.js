@@ -2674,5 +2674,51 @@ function getGames() {
 		'date': '22.10.2020'
 	});
 	
+	games.push({
+		'red': ['MVDE', 'Maldito', 'Rigel', 'Lasunii', 'Mistic'],
+		'blue': ['ImitatoR', 'Cold-M', 'chitrox', 'TT-Tolyan', 'Naut'],
+		'redScore': 5,
+		'blueScore': 2,
+		'map': 'Vault',
+		'date': '24.10.2020',
+		'fixes': [['Rigel', +50]]
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Maldito', 'Rigel', 'Lasunii', 'Mistic'],
+		'blue': ['ImitatoR', 'Cold-M', 'chitrox', 'TT-Tolyan', 'Naut'],
+		'redScore': 6,
+		'blueScore': 0,
+		'map': 'Virility',
+		'date': '24.10.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Maldito', 'chitrox', 'Lasunii', 'Mistic'],
+		'blue': ['ImitatoR', 'Cold-M', 'Rigel', 'TT-Tolyan', 'Naut'],
+		'redScore': 4,
+		'blueScore': 5,
+		'map': 'Grendelkeep',
+		'date': '24.10.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Maldito', 'chitrox', 'Lasunii', 'Mistic'],
+		'blue': ['ImitatoR', 'Cold-M', 'Rigel', 'TT-Tolyan', 'Naut'],
+		'redScore': 0,
+		'blueScore': 4,
+		'map': 'Anfractuous',
+		'date': '24.10.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Maldito', 'chitrox', 'Lasunii', 'Mistic'],
+		'blue': ['ImitatoR', 'Cold-M', 'Rigel', 'TT-Tolyan', 'Naut'],
+		'redScore': 3,
+		'blueScore': 4,
+		'map': 'Archanastre',
+		'date': '24.10.2020'
+	});
+	
 	return games;
 }

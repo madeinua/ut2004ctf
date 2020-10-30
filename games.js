@@ -2588,7 +2588,7 @@ function getGames() {
 		'blue': ['ImitatoR', 'chitrox', 'Cold-M', 'Lasunii', 'Swogu'],
 		'redScore': 3,
 		'blueScore': 2,
-		'map': 'Camper Crossing',
+		'map': 'Campers Crossing',
 		'date': '13.10.2020'
 	});
 	

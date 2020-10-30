@@ -2748,5 +2748,33 @@ function getGames() {
 		'date': '28.10.2020'
 	});
 	
+	games.push({
+		'red': ['MVDE', 'ImitatoR', 'MoRoZ', 'chitrox', 'rug:dude'],
+		'blue': ['Gooz', 'Cold-M', 'pr!x', 'Rigel', 'Lasunii'],
+		'redScore': 0,
+		'blueScore': 6,
+		'map': 'Vault',
+		'date': '28.10.2020',
+		'fixes': [['Lasunii', +75], ['pr!x', -50]]
+	});
+	
+	games.push({
+		'red': ['MVDE', 'ImitatoR', 'MoRoZ', 'chitrox', 'Lasunii'],
+		'blue': ['Gooz', 'Cold-M', 'pr!x', 'Rigel', 'rug:dude'],
+		'redScore': 5,
+		'blueScore': 4,
+		'map': 'Archanastre',
+		'date': '28.10.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'ImitatoR', 'MoRoZ', 'chitrox', 'Lasunii'],
+		'blue': ['Gooz', 'Cold-M', 'pr!x', 'Rigel', 'rug:dude'],
+		'redScore': 6,
+		'blueScore': 3,
+		'map': 'Grendelkeep',
+		'date': '28.10.2020'
+	});
+	
 	return games;
 }

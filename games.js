@@ -2754,7 +2754,7 @@ function getGames() {
 		'redScore': 0,
 		'blueScore': 6,
 		'map': 'Vault',
-		'date': '28.10.2020',
+		'date': '30.10.2020',
 		'fixes': [['Lasunii', +75], ['pr!x', -50]]
 	});
 	
@@ -2764,7 +2764,7 @@ function getGames() {
 		'redScore': 5,
 		'blueScore': 4,
 		'map': 'Archanastre',
-		'date': '28.10.2020'
+		'date': '30.10.2020'
 	});
 	
 	games.push({
@@ -2773,7 +2773,7 @@ function getGames() {
 		'redScore': 6,
 		'blueScore': 3,
 		'map': 'Grendelkeep',
-		'date': '28.10.2020'
+		'date': '30.10.2020'
 	});
 	
 	return games;

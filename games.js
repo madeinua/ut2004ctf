@@ -2823,6 +2823,16 @@ function getGames() {
 		'fixes': [['Gooz', -100], ['Lasunii', +25]]
 	});
 	
+	// @TODO Check score!
+	games.push({
+		'red': ['MVDE', 'TT-Tolyan', 'Cold-M', 'Lasunii', 'Thoums'],
+		'blue': ['Gooz', 'Maldito', 'chitrox', 'Rigel', 'pr!x'],
+		'redScore': 5,
+		'blueScore': 2,
+		'map': 'DeepSprinta',
+		'date': '03.11.2020'
+	});
+	
 	games.push({
 		'red': ['MVDE', 'TT-Tolyan', 'Cold-M', 'Lasunii', 'Thoums'],
 		'blue': ['Gooz', 'Maldito', 'chitrox', 'Rigel', 'pr!x'],

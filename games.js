@@ -2819,7 +2819,7 @@ function getGames() {
 		'redScore': 6,
 		'blueScore': 5,
 		'map': 'Vault',
-		'date': '03.10.2020',
+		'date': '03.11.2020',
 		'fixes': [['Gooz', -100], ['Lasunii', +25]]
 	});
 	
@@ -2829,7 +2829,7 @@ function getGames() {
 		'redScore': 5,
 		'blueScore': 0,
 		'map': 'Archanastre',
-		'date': '03.10.2020'
+		'date': '03.11.2020'
 	});
 	
 	games.push({
@@ -2838,7 +2838,7 @@ function getGames() {
 		'redScore': 6,
 		'blueScore': 3,
 		'map': 'Virility',
-		'date': '03.10.2020'
+		'date': '03.11.2020'
 	});
 	
 	return games;

@@ -2851,5 +2851,51 @@ function getGames() {
 		'date': '03.11.2020'
 	});
 	
+	games.push({
+		'red': ['MVDE', 'TT-Tolyan', 'Lasunii', 'Mistic', 'Thoums'],
+		'blue': ['ImitatoR', 'Maldito', 'chitrox', 'Cold-M', 'Rigel'],
+		'redScore': 5,
+		'blueScore': 8,
+		'map': 'Vault',
+		'date': '07.11.2020',
+		'fixes': [['Mistic', +50], ['TT-Tolyan', -25]]
+	});
+	
+	games.push({
+		'red': ['MVDE', 'TT-Tolyan', 'Lasunii', 'Mistic', 'Thoums'],
+		'blue': ['ImitatoR', 'Maldito', 'chitrox', 'Cold-M', 'Rigel'],
+		'redScore': 3,
+		'blueScore': 2,
+		'map': 'Archanastre',
+		'date': '07.11.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'TT-Tolyan', 'Lasunii', 'Mistic', 'Thoums'],
+		'blue': ['ImitatoR', 'Maldito', 'chitrox', 'Cold-M', 'Rigel'],
+		'redScore': 4,
+		'blueScore': 0,
+		'map': 'Virility',
+		'date': '07.11.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'TT-Tolyan', 'Lasunii', 'Mistic', 'Thoums'],
+		'blue': ['ImitatoR', 'Maldito', 'chitrox', 'Cold-M', 'Rigel'],
+		'redScore': 5,
+		'blueScore': 4,
+		'map': 'Grendelkeep',
+		'date': '07.11.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Cold-M', 'Lasunii', 'Mistic', 'Thoums'],
+		'blue': ['ImitatoR', 'TT-Tolyan', 'Maldito', 'chitrox', 'Rigel'],
+		'redScore': 1,
+		'blueScore': 0,
+		'map': 'Pistola',
+		'date': '07.11.2020'
+	});
+	
 	return games;
 }

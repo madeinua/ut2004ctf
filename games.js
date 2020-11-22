@@ -1951,8 +1951,7 @@ function getGames() {
 		'redScore': 1,
 		'blueScore': 3,
 		'map': 'Anfractuous',
-		'date': '17.09.2020',
-		'fixes': [['Koffee', -50]]
+		'date': '17.09.2020'
 	});
 	
 	games.push({
@@ -2850,7 +2849,7 @@ function getGames() {
 		'blueScore': 3,
 		'map': 'Virility',
 		'date': '03.11.2020',
-		'fixes': [['Gooz', -100]]
+		'fixes': [['Gooz', -50]]
 	});
 	
 	games.push({
@@ -3027,7 +3026,7 @@ function getGames() {
 		'blueScore': 8,
 		'map': 'Grendelkeep',
 		'date': '22.11.2020',
-		'fixes': [['MVDE', -100], ['Rigel', +25], ['Loox', +25], ['Lasunii', -100], ['Thoums', -100], ['MoroZ', -100]]
+		'fixes': [['MVDE', -50], ['Rigel', +25], ['Loox', +25], ['Lasunii', -50], ['Thoums', -100], ['MoroZ', -100]]
 	});
 	
 	games.push({

@@ -2953,5 +2953,69 @@ function getGames() {
 		'date': '14.11.2020'
 	});
 	
+	games.push({
+		'red': ['MVDE', 'Rigel', 'Mistic', 'MoRoZ', 'Forsiets'],
+		'blue': ['TT-Tolyan', 'Maldito', 'Cold-M', 'Lasunii', 'chitrox'],
+		'redScore': 3,
+		'blueScore': 5,
+		'map': 'Vault',
+		'date': '21.11.2020',
+		'fixes': [['Mistic', +25], ['TT-Tolyan', -25], ['chitrox', -25]]
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Rigel', 'Mistic', 'MoRoZ', 'Forsiets'],
+		'blue': ['TT-Tolyan', 'Maldito', 'Cold-M', 'Lasunii', 'chitrox'],
+		'redScore': 5,
+		'blueScore': 1,
+		'map': 'Grendelkeep',
+		'date': '21.11.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Rigel', 'Mistic', 'MoRoZ', 'Forsiets'],
+		'blue': ['TT-Tolyan', 'Maldito', 'Cold-M', 'Lasunii', 'chitrox'],
+		'redScore': 3,
+		'blueScore': 5,
+		'map': 'Archanastre',
+		'date': '21.11.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Rigel', 'Mistic', 'MoRoZ', 'Forsiets'],
+		'blue': ['TT-Tolyan', 'Maldito', 'Cold-M', 'Lasunii', 'chitrox'],
+		'redScore': 5,
+		'blueScore': 1,
+		'map': 'Anfractuous',
+		'date': '21.11.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Rigel', 'Mistic', 'MoRoZ', 'Forsiets'],
+		'blue': ['TT-Tolyan', 'Maldito', 'Cold-M', 'Lasunii', 'chitrox'],
+		'redScore': 8,
+		'blueScore': 3,
+		'map': 'Virility',
+		'date': '21.11.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Rigel', 'Lasunii', 'MoRoZ', 'Forsiets'],
+		'blue': ['TT-Tolyan', 'Maldito', 'Cold-M', 'Mistic', 'chitrox'],
+		'redScore': 1,
+		'blueScore': 3,
+		'map': 'Pistola',
+		'date': '21.11.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Rigel', 'Lasunii', 'MoRoZ', 'Forsiets'],
+		'blue': ['TT-Tolyan', 'Maldito', 'Cold-M', 'Mistic', 'chitrox'],
+		'redScore': 0,
+		'blueScore': 5,
+		'map': 'Campers Crossing',
+		'date': '21.11.2020'
+	});
+	
 	return games;
 }

@@ -1952,7 +1952,7 @@ function getGames() {
 		'blueScore': 3,
 		'map': 'Anfractuous',
 		'date': '17.09.2020',
-		'fixes': [['Koffee', +50]]
+		'fixes': [['Koffee', -50]]
 	});
 	
 	games.push({
@@ -2810,7 +2810,8 @@ function getGames() {
 		'redScore': 1,
 		'blueScore': 5,
 		'map': 'Grendelkeep',
-		'date': '31.10.2020'
+		'date': '31.10.2020',
+		'fixes': [['j', -50]]
 	});
 	
 	games.push({
@@ -2848,7 +2849,8 @@ function getGames() {
 		'redScore': 6,
 		'blueScore': 3,
 		'map': 'Virility',
-		'date': '03.11.2020'
+		'date': '03.11.2020',
+		'fixes': [['Gooz', -100]]
 	});
 	
 	games.push({
@@ -2960,7 +2962,7 @@ function getGames() {
 		'blueScore': 5,
 		'map': 'Vault',
 		'date': '21.11.2020',
-		'fixes': [['Mistic', +25], ['TT-Tolyan', -25], ['chitrox', -25]]
+		'fixes': [['Mistic', +25], ['chitrox', -25]]
 	});
 	
 	games.push({
@@ -3014,7 +3016,54 @@ function getGames() {
 		'redScore': 0,
 		'blueScore': 5,
 		'map': 'Campers Crossing',
-		'date': '21.11.2020'
+		'date': '21.11.2020',
+		'fixes': [['Forsiets', -50]]
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Lasunii', 'MoRoZ', 'chitrox', 'Thoums'],
+		'blue': ['TT-Tolyan', 'Cold-M', 'ImitatoR', 'Loox', 'Rigel'],
+		'redScore': 3,
+		'blueScore': 8,
+		'map': 'Grendelkeep',
+		'date': '22.11.2020',
+		'fixes': [['MVDE', -100], ['Rigel', +25], ['Loox', +25], ['Lasunii', -100], ['Thoums', -100], ['MoroZ', -100]]
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Lasunii', 'MoRoZ', 'chitrox', 'Thoums'],
+		'blue': ['TT-Tolyan', 'Cold-M', 'ImitatoR', 'Loox', 'Rigel'],
+		'redScore': 6,
+		'blueScore': 5,
+		'map': 'Vault',
+		'date': '22.11.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Lasunii', 'MoRoZ', 'chitrox', 'Thoums'],
+		'blue': ['TT-Tolyan', 'Cold-M', 'ImitatoR', 'Loox', 'Rigel'],
+		'redScore': 3,
+		'blueScore': 4,
+		'map': 'Archanastre',
+		'date': '22.11.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Lasunii', 'MoRoZ', 'chitrox', 'Thoums'],
+		'blue': ['TT-Tolyan', 'Cold-M', 'ImitatoR', 'Loox', 'Rigel'],
+		'redScore': 2,
+		'blueScore': 4,
+		'map': 'Virility',
+		'date': '22.11.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Lasunii', 'MoRoZ', 'chitrox', 'Thoums'],
+		'blue': ['TT-Tolyan', 'Cold-M', 'ImitatoR', 'Loox', 'Rigel'],
+		'redScore': 2,
+		'blueScore': 4,
+		'map': 'Virility',
+		'date': '22.11.2020'
 	});
 	
 	return games;

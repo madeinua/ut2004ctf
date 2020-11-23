@@ -3050,8 +3050,8 @@ function getGames() {
 	games.push({
 		'red': ['MVDE', 'Lasunii', 'MoRoZ', 'chitrox', 'Thoums'],
 		'blue': ['TT-Tolyan', 'Cold-M', 'ImitatoR', 'Loox', 'Rigel'],
-		'redScore': 2,
-		'blueScore': 4,
+		'redScore': 3,
+		'blueScore': 6,
 		'map': 'Virility',
 		'date': '22.11.2020'
 	});
@@ -3061,7 +3061,7 @@ function getGames() {
 		'blue': ['TT-Tolyan', 'Cold-M', 'ImitatoR', 'Loox', 'Rigel'],
 		'redScore': 2,
 		'blueScore': 4,
-		'map': 'Virility',
+		'map': 'Campers Crossing',
 		'date': '22.11.2020'
 	});
 	

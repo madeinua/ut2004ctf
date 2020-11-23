@@ -2941,7 +2941,7 @@ function getGames() {
 		'blue': ['ImitatoR', 'Maldito', 'TT-Tolyan', 'Cold-M', 'chitrox'],
 		'redScore': 7,
 		'blueScore': 3,
-		'map': 'Deep Sprinta',
+		'map': 'DeepSprinta',
 		'date': '14.11.2020'
 	});
 	

@@ -3062,7 +3062,8 @@ function getGames() {
 		'redScore': 2,
 		'blueScore': 4,
 		'map': 'Campers Crossing',
-		'date': '22.11.2020'
+		'date': '22.11.2020',
+		'fixes': [['MoroZ', -50]]
 	});
 	
 	return games;

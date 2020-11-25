@@ -1758,7 +1758,7 @@ function getGames() {
 		'blueScore': 4,
 		'map': 'Anfractuous',
 		'date': '06.09.2020',
-		'fixes': [['pepper', +50], ['Small', +50]]
+		'fixes': [['Small', +50]]
 	});
 	
 	games.push({

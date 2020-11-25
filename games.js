@@ -49,7 +49,7 @@ function getGames() {
 
 	games.push({
 		'red': ['TT-Tolyan', 'Cold-M', 'mnt', 'Gooz', 'pr!x'],
-		'blue': ['Koffee', 'Mistic', 'MVDE', 'chitrox', 'ImitatoR'],
+		'blue': ['Koffee', 'Mystic', 'MVDE', 'chitrox', 'ImitatoR'],
 		'redScore': 2,
 		'blueScore': 3,
 		'map': 'Virility',
@@ -58,7 +58,7 @@ function getGames() {
 
 	games.push({
 		'red': ['mnt', 'Gooz', 'TT-Tolyan', 'Cold-M', 'pr!x'],
-		'blue': ['MVDE', 'ImitatoR', 'Koffee', 'Mistic', 'chitrox'],
+		'blue': ['MVDE', 'ImitatoR', 'Koffee', 'Mystic', 'chitrox'],
 		'redScore': 6,
 		'blueScore': 4,
 		'map': 'Grendelkeep',
@@ -67,7 +67,7 @@ function getGames() {
 
 	games.push({
 		'red': ['mnt', 'Gooz', 'TT-Tolyan', 'Cold-M', 'pr!x'],
-		'blue': ['MVDE', 'ImitatoR', 'Koffee', 'Mistic', 'chitrox'],
+		'blue': ['MVDE', 'ImitatoR', 'Koffee', 'Mystic', 'chitrox'],
 		'redScore': 1,
 		'blueScore': 9,
 		'map': 'Anfractuous',
@@ -76,7 +76,7 @@ function getGames() {
 
 	games.push({
 		'red': ['mnt', 'Gooz', 'TT-Tolyan', 'Cold-M', 'pr!x'],
-		'blue': ['MVDE', 'ImitatoR', 'Koffee', 'Mistic', 'chitrox'],
+		'blue': ['MVDE', 'ImitatoR', 'Koffee', 'Mystic', 'chitrox'],
 		'redScore': 7,
 		'blueScore': 4,
 		'map': 'Ages',
@@ -85,7 +85,7 @@ function getGames() {
 
 	games.push({
 		'red': ['mnt', 'Gooz', 'TT-Tolyan', 'Cold-M', 'pr!x'],
-		'blue': ['MVDE', 'ImitatoR', 'Koffee', 'Mistic', 'chitrox'],
+		'blue': ['MVDE', 'ImitatoR', 'Koffee', 'Mystic', 'chitrox'],
 		'redScore': 3,
 		'blueScore': 4,
 		'map': 'Archanastre',
@@ -94,7 +94,7 @@ function getGames() {
 
 	games.push({
 		'red': ['mnt', 'Rigel', 'chitrox', 'ImitatoR', 'Cold-M'],
-		'blue': ['Gooz', 'TT-Tolyan', 'MoRoZ', 'Mistic', 'Maldito'],
+		'blue': ['Gooz', 'TT-Tolyan', 'MoRoZ', 'Mystic', 'Maldito'],
 		'redScore': 7,
 		'blueScore': 2,
 		'map': 'Grendelkeep',
@@ -103,7 +103,7 @@ function getGames() {
 
 	games.push({
 		'red': ['mnt', 'Rigel', 'chitrox', 'ImitatoR', 'Cold-M'],
-		'blue': ['MVDE', 'TT-Tolyan', 'MoRoZ', 'Mistic', 'Maldito'],
+		'blue': ['MVDE', 'TT-Tolyan', 'MoRoZ', 'Mystic', 'Maldito'],
 		'redScore': 4,
 		'blueScore': 3,
 		'map': 'Archanastre',
@@ -112,7 +112,7 @@ function getGames() {
 
 	games.push({
 		'red': ['mnt', 'Rigel', 'chitrox', 'ImitatoR', 'Cold-M'],
-		'blue': ['MVDE', 'TT-Tolyan', 'MoRoZ', 'Mistic', 'Maldito'],
+		'blue': ['MVDE', 'TT-Tolyan', 'MoRoZ', 'Mystic', 'Maldito'],
 		'redScore': 4,
 		'blueScore': 5,
 		'map': 'Anfractuous',
@@ -121,7 +121,7 @@ function getGames() {
 	
 	games.push({
 		'red': ['mnt', 'Rigel', 'chitrox', 'ImitatoR', 'Cold-M'],
-		'blue': ['MVDE', 'TT-Tolyan', 'MoRoZ', 'Mistic', 'Maldito'],
+		'blue': ['MVDE', 'TT-Tolyan', 'MoRoZ', 'Mystic', 'Maldito'],
 		'redScore': 4,
 		'blueScore': 1,
 		'map': 'Vault',
@@ -130,7 +130,7 @@ function getGames() {
 
 	games.push({
 		'red': ['mnt', 'Rigel', 'chitrox', 'ImitatoR', 'Cold-M'],
-		'blue': ['MVDE', 'TT-Tolyan', 'MoRoZ', 'Mistic', 'Maldito'],
+		'blue': ['MVDE', 'TT-Tolyan', 'MoRoZ', 'Mystic', 'Maldito'],
 		'redScore': 4,
 		'blueScore': 3,
 		'map': 'Virility',
@@ -139,7 +139,7 @@ function getGames() {
 
 	games.push({
 		'red': ['mnt', 'Rigel', 'chitrox', 'ImitatoR', 'MoRoZ'],
-		'blue': ['MVDE', 'TT-Tolyan', 'Cold-M', 'Mistic', 'Maldito'],
+		'blue': ['MVDE', 'TT-Tolyan', 'Cold-M', 'Mystic', 'Maldito'],
 		'redScore': 3,
 		'blueScore': 4,
 		'map': 'Pistola',
@@ -148,7 +148,7 @@ function getGames() {
 
 	games.push({
 		'red': ['mnt', 'Rigel', 'chitrox', 'ImitatoR', 'MoRoZ'],
-		'blue': ['MVDE', 'TT-Tolyan', 'Cold-M', 'Mistic', 'Maldito'],
+		'blue': ['MVDE', 'TT-Tolyan', 'Cold-M', 'Mystic', 'Maldito'],
 		'redScore': 1,
 		'blueScore': 0,
 		'map': 'Vault',
@@ -192,7 +192,7 @@ function getGames() {
 	});
 
 	games.push({
-		'red': ['mnt', 'MVDE', 'Mistic', 'Cold-M', 'chitrox'],
+		'red': ['mnt', 'MVDE', 'Mystic', 'Cold-M', 'chitrox'],
 		'blue': ['pr!x', 'TT-Tolyan', 'ImitatoR', 'Koffee', 'simson'],
 		'redScore': 5,
 		'blueScore': 1,
@@ -201,7 +201,7 @@ function getGames() {
 	});
 
 	games.push({
-		'red': ['mnt', 'MVDE', 'Mistic', 'Cold-M', 'chitrox'],
+		'red': ['mnt', 'MVDE', 'Mystic', 'Cold-M', 'chitrox'],
 		'blue': ['pr!x', 'TT-Tolyan', 'ImitatoR', 'Sonic', 'simson'],
 		'redScore': 5,
 		'blueScore': 2,
@@ -210,7 +210,7 @@ function getGames() {
 	});
 
 	games.push({
-		'red': ['pr!x', 'Hodor', 'Gooz', 'Mistic', 'ImitatoR'],
+		'red': ['pr!x', 'Hodor', 'Gooz', 'Mystic', 'ImitatoR'],
 		'blue': ['MVDE', 'TT-Tolyan', 'Cold-M', 'Maldito', 'chitrox'],
 		'redScore': 4,
 		'blueScore': 5,
@@ -219,7 +219,7 @@ function getGames() {
 	});
 
 	games.push({
-		'red': ['pr!x', 'Hodor', 'Gooz', 'Mistic', 'ImitatoR'],
+		'red': ['pr!x', 'Hodor', 'Gooz', 'Mystic', 'ImitatoR'],
 		'blue': ['MVDE', 'TT-Tolyan', 'Cold-M', 'Maldito', 'chitrox'],
 		'redScore': 5,
 		'blueScore': 4,
@@ -228,7 +228,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['pr!x', 'Hodor', 'Gooz', 'Mistic', 'ImitatoR'],
+		'red': ['pr!x', 'Hodor', 'Gooz', 'Mystic', 'ImitatoR'],
 		'blue': ['MVDE', 'TT-Tolyan', 'Cold-M', 'Maldito', 'chitrox'],
 		'redScore': 1,
 		'blueScore': 6,
@@ -237,7 +237,7 @@ function getGames() {
 	});
 
 	games.push({
-		'red': ['pr!x', 'Hodor', 'Gooz', 'Mistic', 'ImitatoR'],
+		'red': ['pr!x', 'Hodor', 'Gooz', 'Mystic', 'ImitatoR'],
 		'blue': ['MVDE', 'TT-Tolyan', 'Cold-M', 'Maldito', 'chitrox'],
 		'redScore': 3,
 		'blueScore': 4,
@@ -247,7 +247,7 @@ function getGames() {
 
 	games.push({
 		'red': ['TT-Tolyan', 'ImitatoR', 'Cold-M', 'pr!x', 'Loox'],
-		'blue': ['MVDE', 'chitrox', 'Forsiets', 'Koffee', 'Mistic'],
+		'blue': ['MVDE', 'chitrox', 'Forsiets', 'Koffee', 'Mystic'],
 		'redScore': 4,
 		'blueScore': 3,
 		'map': 'Archanastre',
@@ -256,7 +256,7 @@ function getGames() {
 	
 	games.push({
 		'red': ['TT-Tolyan', 'ImitatoR', 'Cold-M', 'Koffee', 'Loox'],
-		'blue': ['MVDE', 'chitrox', 'Forsiets', 'pr!x', 'Mistic'],
+		'blue': ['MVDE', 'chitrox', 'Forsiets', 'pr!x', 'Mystic'],
 		'redScore': 4,
 		'blueScore': 0,
 		'map': 'Pistola',
@@ -265,7 +265,7 @@ function getGames() {
 
 	games.push({
 		'red': ['TT-Tolyan', 'ImitatoR', 'Cold-M', 'pr!x', 'Loox'],
-		'blue': ['MVDE', 'chitrox', 'Forsiets', 'Koffee', 'Mistic'],
+		'blue': ['MVDE', 'chitrox', 'Forsiets', 'Koffee', 'Mystic'],
 		'redScore': 5,
 		'blueScore': 4,
 		'map': 'Anfractuous',
@@ -274,7 +274,7 @@ function getGames() {
 
 	games.push({
 		'red': ['TT-Tolyan', 'ImitatoR', 'Cold-M', 'pr!x', 'Loox'],
-		'blue': ['MVDE', 'chitrox', 'Forsiets', 'Koffee', 'Mistic'],
+		'blue': ['MVDE', 'chitrox', 'Forsiets', 'Koffee', 'Mystic'],
 		'redScore': 7,
 		'blueScore': 4,
 		'map': 'Vault',
@@ -282,7 +282,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['Cold-M', 'mnt', 'Gooz', 'Hodor', 'Mistic'],
+		'red': ['Cold-M', 'mnt', 'Gooz', 'Hodor', 'Mystic'],
 		'blue': ['MVDE', 'chitrox', 'TT-Tolyan', 'ImitatoR', 'Maldito'],
 		'redScore': 2,
 		'blueScore': 7,
@@ -291,7 +291,7 @@ function getGames() {
 	});
 
 	games.push({
-		'red': ['TT-Tolyan', 'mnt', 'Gooz', 'Hodor', 'Mistic'],
+		'red': ['TT-Tolyan', 'mnt', 'Gooz', 'Hodor', 'Mystic'],
 		'blue': ['MVDE', 'chitrox', 'Cold-M', 'ImitatoR', 'Maldito'],
 		'redScore': 2,
 		'blueScore': 4,
@@ -300,7 +300,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['TT-Tolyan', 'mnt', 'Gooz', 'Hodor', 'Mistic'],
+		'red': ['TT-Tolyan', 'mnt', 'Gooz', 'Hodor', 'Mystic'],
 		'blue': ['MVDE', 'chitrox', 'Cold-M', 'ImitatoR', 'Maldito'],
 		'redScore': 9,
 		'blueScore': 1,
@@ -310,7 +310,7 @@ function getGames() {
 
 	games.push({
 		'red': ['MVDE', 'mnt', 'Maldito', 'chitrox', 'Forsiets'],
-		'blue': ['TT-Tolyan', 'Gooz', 'Cold-M', 'ImitatoR', 'Mistic'],
+		'blue': ['TT-Tolyan', 'Gooz', 'Cold-M', 'ImitatoR', 'Mystic'],
 		'redScore': 6,
 		'blueScore': 5,
 		'map': 'Vault',
@@ -319,7 +319,7 @@ function getGames() {
 
 	games.push({
 		'red': ['MVDE', 'mnt', 'Maldito', 'chitrox', 'Forsiets'],
-		'blue': ['TT-Tolyan', 'Gooz', 'Cold-M', 'ImitatoR', 'Mistic'],
+		'blue': ['TT-Tolyan', 'Gooz', 'Cold-M', 'ImitatoR', 'Mystic'],
 		'redScore': 4,
 		'blueScore': 3,
 		'map': 'Virility',
@@ -426,7 +426,7 @@ function getGames() {
 	});
 
 	games.push({
-		'red': ['MVDE', 'ImitatoR', 'chitrox', 'MoRoZ', 'Mistic'],
+		'red': ['MVDE', 'ImitatoR', 'chitrox', 'MoRoZ', 'Mystic'],
 		'blue': ['Gooz', 'TT-Tolyan', 'Cold-M', 'Maldito', 'Forsiets'],
 		'redScore': 6,
 		'blueScore': 4,
@@ -435,7 +435,7 @@ function getGames() {
 	});
 
 	games.push({
-		'red': ['MVDE', 'ImitatoR', 'chitrox', 'MoRoZ', 'Mistic'],
+		'red': ['MVDE', 'ImitatoR', 'chitrox', 'MoRoZ', 'Mystic'],
 		'blue': ['Gooz', 'TT-Tolyan', 'Cold-M', 'Maldito', 'Forsiets'],
 		'redScore': 3,
 		'blueScore': 4,
@@ -444,7 +444,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'ImitatoR', 'chitrox', 'MoRoZ', 'Mistic'],
+		'red': ['MVDE', 'ImitatoR', 'chitrox', 'MoRoZ', 'Mystic'],
 		'blue': ['Gooz', 'TT-Tolyan', 'Cold-M', 'Maldito', 'Forsiets'],
 		'redScore': 0,
 		'blueScore': 3,
@@ -453,7 +453,7 @@ function getGames() {
 	});
 
 	games.push({
-		'red': ['MVDE', 'ImitatoR', 'chitrox', 'MoRoZ', 'Mistic'],
+		'red': ['MVDE', 'ImitatoR', 'chitrox', 'MoRoZ', 'Mystic'],
 		'blue': ['Gooz', 'TT-Tolyan', 'Cold-M', 'Maldito', 'Forsiets'],
 		'redScore': 2,
 		'blueScore': 3,
@@ -462,7 +462,7 @@ function getGames() {
 	});
 
 	games.push({
-		'red': ['MVDE', 'ImitatoR', 'chitrox', 'MoRoZ', 'Mistic'],
+		'red': ['MVDE', 'ImitatoR', 'chitrox', 'MoRoZ', 'Mystic'],
 		'blue': ['Gooz', 'TT-Tolyan', 'Cold-M', 'Maldito', 'Forsiets'],
 		'redScore': 2,
 		'blueScore': 3,
@@ -471,7 +471,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'ImitatoR', 'chitrox', 'MoRoZ', 'Mistic'],
+		'red': ['MVDE', 'ImitatoR', 'chitrox', 'MoRoZ', 'Mystic'],
 		'blue': ['Gooz', 'TT-Tolyan', 'Cold-M', 'Maldito', 'Forsiets'],
 		'redScore': 2,
 		'blueScore': 3,
@@ -562,7 +562,7 @@ function getGames() {
 
 	games.push({
 		'red': ['MVDE', 'TT-Tolyan', 'chitrox', 'Cold-M', 'Thoums'],
-		'blue': ['mnt', 'j', 'Krnki', 'pr!x', 'Mistic'],
+		'blue': ['mnt', 'j', 'Krnki', 'pr!x', 'Mystic'],
 		'redScore': 5,
 		'blueScore': 4,
 		'map': 'Grendelkeep',
@@ -571,7 +571,7 @@ function getGames() {
 
 	games.push({
 		'red': ['MVDE', 'TT-Tolyan', 'chitrox', 'Cold-M', 'Thoums'],
-		'blue': ['mnt', 'j', 'Krnki', 'pr!x', 'Mistic'],
+		'blue': ['mnt', 'j', 'Krnki', 'pr!x', 'Mystic'],
 		'redScore': 5,
 		'blueScore': 3,
 		'map': 'Sulphur',
@@ -769,17 +769,17 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['TT-Tolyan', 'Maldito', 'pr!x', 'Hodor', 'Mistic'],
+		'red': ['TT-Tolyan', 'Maldito', 'pr!x', 'Hodor', 'Mystic'],
 		'blue': ['MVDE', 'chitrox', 'Cold-M', 'Thoums', 'Forsiets'],
 		'redScore': 4,
 		'blueScore': 6,
 		'map': 'Vault',
 		'date': '27.06.2020',
-		'fixes': [['Mistic', +100]]
+		'fixes': [['Mystic', +100]]
 	});
 	
 	games.push({
-		'red': ['TT-Tolyan', 'Maldito', 'pr!x', 'Hodor', 'Mistic'],
+		'red': ['TT-Tolyan', 'Maldito', 'pr!x', 'Hodor', 'Mystic'],
 		'blue': ['MVDE', 'chitrox', 'Cold-M', 'Thoums', 'Forsiets'],
 		'redScore': 5,
 		'blueScore': 6,
@@ -789,7 +789,7 @@ function getGames() {
 	
 	games.push({
 		'red': ['TT-Tolyan', 'Maldito', 'pr!x', 'Hodor', 'Thoums'],
-		'blue': ['MVDE', 'chitrox', 'Cold-M', 'Mistic', 'Forsiets'],
+		'blue': ['MVDE', 'chitrox', 'Cold-M', 'Mystic', 'Forsiets'],
 		'redScore': 2,
 		'blueScore': 1,
 		'map': 'Pistola',
@@ -798,7 +798,7 @@ function getGames() {
 	
 	games.push({
 		'red': ['TT-Tolyan', 'Maldito', 'pr!x', 'Hodor', 'Thoums'],
-		'blue': ['MVDE', 'chitrox', 'Cold-M', 'Mistic', 'Forsiets'],
+		'blue': ['MVDE', 'chitrox', 'Cold-M', 'Mystic', 'Forsiets'],
 		'redScore': 6,
 		'blueScore': 2,
 		'map': 'Archanastre',
@@ -842,7 +842,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['Gooz', 'ImitatoR', 'chitrox', 'Cold-M', 'Mistic'],
+		'red': ['Gooz', 'ImitatoR', 'chitrox', 'Cold-M', 'Mystic'],
 		'blue': ['MVDE', 'TT-Tolyan', 'Maldito', 'pr!x', 'Thoums'],
 		'redScore': 8,
 		'blueScore': 2,
@@ -851,7 +851,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['Gooz', 'ImitatoR', 'chitrox', 'Cold-M', 'Mistic'],
+		'red': ['Gooz', 'ImitatoR', 'chitrox', 'Cold-M', 'Mystic'],
 		'blue': ['MVDE', 'TT-Tolyan', 'Maldito', 'pr!x', 'Thoums'],
 		'redScore': 6,
 		'blueScore': 3,
@@ -860,7 +860,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['Gooz', 'ImitatoR', 'Thoums', 'Cold-M', 'Mistic'],
+		'red': ['Gooz', 'ImitatoR', 'Thoums', 'Cold-M', 'Mystic'],
 		'blue': ['MVDE', 'TT-Tolyan', 'Maldito', 'pr!x', 'chitrox'],
 		'redScore': 5,
 		'blueScore': 6,
@@ -869,7 +869,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['Gooz', 'ImitatoR', 'Thoums', 'Cold-M', 'Mistic'],
+		'red': ['Gooz', 'ImitatoR', 'Thoums', 'Cold-M', 'Mystic'],
 		'blue': ['MVDE', 'TT-Tolyan', 'Maldito', 'pr!x', 'chitrox'],
 		'redScore': 3,
 		'blueScore': 6,
@@ -1042,7 +1042,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['Gooz', 'j', 'TT-Tolyan', 'Cold-M', 'Mistic'],
+		'red': ['Gooz', 'j', 'TT-Tolyan', 'Cold-M', 'Mystic'],
 		'blue': ['MVDE', 'ImitatoR', 'chitrox', 'Maldito', 'Thoums'],
 		'redScore': 0,
 		'blueScore': 1,
@@ -1051,7 +1051,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['Gooz', 'j', 'TT-Tolyan', 'Cold-M', 'Mistic'],
+		'red': ['Gooz', 'j', 'TT-Tolyan', 'Cold-M', 'Mystic'],
 		'blue': ['MVDE', 'ImitatoR', 'chitrox', 'Maldito', 'Thoums'],
 		'redScore': 6,
 		'blueScore': 2,
@@ -1060,7 +1060,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['Gooz', 'j', 'TT-Tolyan', 'Cold-M', 'Mistic'],
+		'red': ['Gooz', 'j', 'TT-Tolyan', 'Cold-M', 'Mystic'],
 		'blue': ['MVDE', 'ImitatoR', 'chitrox', 'Maldito', 'Thoums'],
 		'redScore': 2,
 		'blueScore': 1,
@@ -1069,7 +1069,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['Gooz', 'j', 'TT-Tolyan', 'oak', 'Mistic'],
+		'red': ['Gooz', 'j', 'TT-Tolyan', 'oak', 'Mystic'],
 		'blue': ['MVDE', 'ImitatoR', 'chitrox', 'Maldito', 'Cold-M'],
 		'redScore': 0,
 		'blueScore': 1,
@@ -1078,7 +1078,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['Gooz', 'j', 'TT-Tolyan', 'Cold-M', 'Mistic'],
+		'red': ['Gooz', 'j', 'TT-Tolyan', 'Cold-M', 'Mystic'],
 		'blue': ['MVDE', 'ImitatoR', 'chitrox', 'Maldito', 'Forsiets'],
 		'redScore': 5,
 		'blueScore': 7,
@@ -1531,17 +1531,17 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'Cold-M', 'Maldito', 'Hodor', 'Mistic'],
+		'red': ['MVDE', 'Cold-M', 'Maldito', 'Hodor', 'Mystic'],
 		'blue': ['ImitatoR', 'TT-Tolyan', 'chitrox', 'konstves', 'Forsiets'],
 		'redScore': 3,
 		'blueScore': 4,
 		'map': 'Grendelkeep',
 		'date': '22.08.2020',
-		'fixes': [['Mistic', +100]]
+		'fixes': [['Mystic', +100]]
 	});
 	
 	games.push({
-		'red': ['MVDE', 'Cold-M', 'Maldito', 'Hodor', 'Mistic'],
+		'red': ['MVDE', 'Cold-M', 'Maldito', 'Hodor', 'Mystic'],
 		'blue': ['ImitatoR', 'TT-Tolyan', 'chitrox', 'konstves', 'Forsiets'],
 		'redScore': 6,
 		'blueScore': 1,
@@ -1550,7 +1550,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'Cold-M', 'Maldito', 'Hodor', 'Mistic'],
+		'red': ['MVDE', 'Cold-M', 'Maldito', 'Hodor', 'Mystic'],
 		'blue': ['ImitatoR', 'TT-Tolyan', 'chitrox', 'konstves', 'Forsiets'],
 		'redScore': 4,
 		'blueScore': 3,
@@ -1559,7 +1559,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'Cold-M', 'Maldito', 'Hodor', 'Mistic'],
+		'red': ['MVDE', 'Cold-M', 'Maldito', 'Hodor', 'Mystic'],
 		'blue': ['ImitatoR', 'TT-Tolyan', 'chitrox', 'konstves', 'Forsiets'],
 		'redScore': 3,
 		'blueScore': 2,
@@ -1569,7 +1569,7 @@ function getGames() {
 	
 	games.push({
 		'red': ['Gooz', 'ImitatoR', 'Cold-M', 'chitrox', 'Forsiets'],
-		'blue': ['MVDE', 'TT-Tolyan', 'Maldito', 'Hodor', 'Mistic'],
+		'blue': ['MVDE', 'TT-Tolyan', 'Maldito', 'Hodor', 'Mystic'],
 		'redScore': 5,
 		'blueScore': 4,
 		'map': 'Anfractuous',
@@ -1578,17 +1578,17 @@ function getGames() {
 	
 	games.push({
 		'red': ['ImitatoR', 'Cold-M', 'chitrox', 'Loox', 'pr!x'],
-		'blue': ['MVDE', 'TT-Tolyan', 'j', 'Mistic', 'rug:dude'],
+		'blue': ['MVDE', 'TT-Tolyan', 'j', 'Mystic', 'rug:dude'],
 		'redScore': 7,
 		'blueScore': 3,
 		'map': 'Grendelkeep',
 		'date': '29.08.2020',
-		'fixes': [['Mistic', +100]]
+		'fixes': [['Mystic', +100]]
 	});
 	
 	games.push({
 		'red': ['ImitatoR', 'Cold-M', 'chitrox', 'Loox', 'pr!x'],
-		'blue': ['MVDE', 'TT-Tolyan', 'j', 'Mistic', 'rug:dude'],
+		'blue': ['MVDE', 'TT-Tolyan', 'j', 'Mystic', 'rug:dude'],
 		'redScore': 2,
 		'blueScore': 7,
 		'map': 'Vault',
@@ -1597,7 +1597,7 @@ function getGames() {
 	
 	games.push({
 		'red': ['ImitatoR', 'Cold-M', 'chitrox', 'Loox', 'Krnki'],
-		'blue': ['MVDE', 'TT-Tolyan', 'j', 'Mistic', 'rug:dude'],
+		'blue': ['MVDE', 'TT-Tolyan', 'j', 'Mystic', 'rug:dude'],
 		'redScore': 2,
 		'blueScore': 7,
 		'map': 'Archanastre',
@@ -1605,7 +1605,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['ImitatoR', 'Cold-M', 'chitrox', 'Rigel', 'Mistic'],
+		'red': ['ImitatoR', 'Cold-M', 'chitrox', 'Rigel', 'Mystic'],
 		'blue': ['MVDE', 'TT-Tolyan', 'j', 'Krnki', 'rug:dude'],
 		'redScore': 0,
 		'blueScore': 5,
@@ -1615,7 +1615,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['ImitatoR', 'j', 'chitrox', 'Rigel', 'Mistic'],
+		'red': ['ImitatoR', 'j', 'chitrox', 'Rigel', 'Mystic'],
 		'blue': ['MVDE', 'TT-Tolyan', 'Cold-M', 'Krnki', 'rug:dude'],
 		'redScore': 2,
 		'blueScore': 3,
@@ -1624,7 +1624,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['ImitatoR', 'j', 'chitrox', 'Rigel', 'Mistic'],
+		'red': ['ImitatoR', 'j', 'chitrox', 'Rigel', 'Mystic'],
 		'blue': ['MVDE', 'TT-Tolyan', 'Cold-M', 'Krnki', 'rug:dude'],
 		'redScore': 3,
 		'blueScore': 1,
@@ -1872,7 +1872,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'chitrox', 'Maldito', 'Forsiets', 'Mistic'],
+		'red': ['MVDE', 'chitrox', 'Maldito', 'Forsiets', 'Mystic'],
 		'blue': ['ImitatoR', 'TT-Tolyan', 'j', 'Cold-M', 'Swogu'],
 		'redScore': 4,
 		'blueScore': 3,
@@ -1881,7 +1881,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'chitrox', 'Maldito', 'Forsiets', 'Mistic'],
+		'red': ['MVDE', 'chitrox', 'Maldito', 'Forsiets', 'Mystic'],
 		'blue': ['ImitatoR', 'TT-Tolyan', 'j', 'Cold-M', 'Swogu'],
 		'redScore': 8,
 		'blueScore': 2,
@@ -1890,7 +1890,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'chitrox', 'Maldito', 'Forsiets', 'Mistic'],
+		'red': ['MVDE', 'chitrox', 'Maldito', 'Forsiets', 'Mystic'],
 		'blue': ['ImitatoR', 'TT-Tolyan', 'j', 'Cold-M', 'Swogu'],
 		'redScore': 4,
 		'blueScore': 6,
@@ -1899,7 +1899,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'chitrox', 'Maldito', 'Forsiets', 'Mistic'],
+		'red': ['MVDE', 'chitrox', 'Maldito', 'Forsiets', 'Mystic'],
 		'blue': ['ImitatoR', 'TT-Tolyan', 'j', 'Cold-M', 'Swogu'],
 		'redScore': 3,
 		'blueScore': 4,
@@ -1908,7 +1908,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'chitrox', 'Maldito', 'Forsiets', 'Mistic'],
+		'red': ['MVDE', 'chitrox', 'Maldito', 'Forsiets', 'Mystic'],
 		'blue': ['ImitatoR', 'TT-Tolyan', 'j', 'Cold-M', 'Swogu'],
 		'redScore': 3,
 		'blueScore': 4,
@@ -2011,7 +2011,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['Gooz', 'ImitatoR', 'TT-Tolyan', 'Lasunii', 'Mistic'],
+		'red': ['Gooz', 'ImitatoR', 'TT-Tolyan', 'Lasunii', 'Mystic'],
 		'blue': ['MVDE', 'j', 'chitrox', 'Maldito', 'Cold-M'],
 		'redScore': 1,
 		'blueScore': 6,
@@ -2020,7 +2020,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['Gooz', 'ImitatoR', 'TT-Tolyan', 'Lasunii', 'Mistic'],
+		'red': ['Gooz', 'ImitatoR', 'TT-Tolyan', 'Lasunii', 'Mystic'],
 		'blue': ['MVDE', 'j', 'chitrox', 'Maldito', 'Cold-M'],
 		'redScore': 6,
 		'blueScore': 7,
@@ -2030,7 +2030,7 @@ function getGames() {
 	
 	games.push({
 		'red': ['Gooz', 'ImitatoR', 'TT-Tolyan', 'Lasunii', 'Cold-M'],
-		'blue': ['MVDE', 'j', 'chitrox', 'Maldito', 'Mistic'],
+		'blue': ['MVDE', 'j', 'chitrox', 'Maldito', 'Mystic'],
 		'redScore': 4,
 		'blueScore': 6,
 		'map': 'Archanastre',
@@ -2177,17 +2177,17 @@ function getGames() {
 	
 	games.push({
 		'red': ['MVDE', 'Maldito', 'chitrox', 'Cold-M', 'Thoums'],
-		'blue': ['Gooz', 'TT-Tolyan', 'ImitatoR', 'Lasunii', 'Mistic'],
+		'blue': ['Gooz', 'TT-Tolyan', 'ImitatoR', 'Lasunii', 'Mystic'],
 		'redScore': 1,
 		'blueScore': 2,
 		'map': 'Archanastre',
 		'date': '26.09.2020',
-		'fixes': [['Gooz', +100], ['Lasunii', +50], ['Mistic', +50], ['Thoums', +50]]
+		'fixes': [['Gooz', +100], ['Lasunii', +50], ['Mystic', +50], ['Thoums', +50]]
 	});
 	
 	games.push({
 		'red': ['MVDE', 'Maldito', 'chitrox', 'Cold-M', 'Thoums'],
-		'blue': ['Gooz', 'TT-Tolyan', 'ImitatoR', 'Lasunii', 'Mistic'],
+		'blue': ['Gooz', 'TT-Tolyan', 'ImitatoR', 'Lasunii', 'Mystic'],
 		'redScore': 4,
 		'blueScore': 1,
 		'map': 'Vault',
@@ -2196,7 +2196,7 @@ function getGames() {
 	
 	games.push({
 		'red': ['MVDE', 'Maldito', 'chitrox', 'Cold-M', 'Thoums'],
-		'blue': ['Gooz', 'TT-Tolyan', 'ImitatoR', 'Lasunii', 'Mistic'],
+		'blue': ['Gooz', 'TT-Tolyan', 'ImitatoR', 'Lasunii', 'Mystic'],
 		'redScore': 0,
 		'blueScore': 5,
 		'map': 'Grendelkeep',
@@ -2205,7 +2205,7 @@ function getGames() {
 	
 	games.push({
 		'red': ['MVDE', 'Maldito', 'chitrox', 'Cold-M', 'Thoums'],
-		'blue': ['Gooz', 'TT-Tolyan', 'ImitatoR', 'Lasunii', 'Mistic'],
+		'blue': ['Gooz', 'TT-Tolyan', 'ImitatoR', 'Lasunii', 'Mystic'],
 		'redScore': 8,
 		'blueScore': 6,
 		'map': 'DeepSprinta',
@@ -2214,7 +2214,7 @@ function getGames() {
 	
 	games.push({
 		'red': ['MVDE', 'Maldito', 'chitrox', 'Cold-M', 'Thoums'],
-		'blue': ['Gooz', 'TT-Tolyan', 'ImitatoR', 'Lasunii', 'Mistic'],
+		'blue': ['Gooz', 'TT-Tolyan', 'ImitatoR', 'Lasunii', 'Mystic'],
 		'redScore': 1,
 		'blueScore': 2,
 		'map': 'Virility',
@@ -2334,7 +2334,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'TT-Tolyan', 'Cold-M', 'Maldito', 'Mistic'],
+		'red': ['MVDE', 'TT-Tolyan', 'Cold-M', 'Maldito', 'Mystic'],
 		'blue': ['Gooz', 'ImitatoR', 'chitrox', 'Rigel', 'Lasunii'],
 		'redScore': 3,
 		'blueScore': 5,
@@ -2344,7 +2344,7 @@ function getGames() {
 	});
 		
 	games.push({
-		'red': ['MVDE', 'TT-Tolyan', 'Cold-M', 'Maldito', 'Mistic'],
+		'red': ['MVDE', 'TT-Tolyan', 'Cold-M', 'Maldito', 'Mystic'],
 		'blue': ['Gooz', 'ImitatoR', 'chitrox', 'Rigel', 'Lasunii'],
 		'redScore': 2,
 		'blueScore': 6,
@@ -2353,7 +2353,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'TT-Tolyan', 'chitrox', 'Maldito', 'Mistic'],
+		'red': ['MVDE', 'TT-Tolyan', 'chitrox', 'Maldito', 'Mystic'],
 		'blue': ['Gooz', 'ImitatoR', 'Cold-M', 'Rigel', 'Lasunii'],
 		'redScore': 1,
 		'blueScore': 4,
@@ -2362,7 +2362,7 @@ function getGames() {
 	});
 
 	games.push({
-		'red': ['Gooz', 'TT-Tolyan', 'Cold-M', 'Maldito', 'Mistic'],
+		'red': ['Gooz', 'TT-Tolyan', 'Cold-M', 'Maldito', 'Mystic'],
 		'blue': ['MVDE', 'ImitatoR', 'chitrox', 'Rigel', 'Lasunii'],
 		'redScore': 1,
 		'blueScore': 3,
@@ -2371,7 +2371,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['Gooz', 'TT-Tolyan', 'Cold-M', 'Maldito', 'Mistic'],
+		'red': ['Gooz', 'TT-Tolyan', 'Cold-M', 'Maldito', 'Mystic'],
 		'blue': ['MVDE', 'ImitatoR', 'chitrox', 'Rigel', 'Lasunii'],
 		'redScore': 4,
 		'blueScore': 0,
@@ -2380,7 +2380,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['Gooz', 'TT-Tolyan', 'Cold-M', 'Maldito', 'Mistic'],
+		'red': ['Gooz', 'TT-Tolyan', 'Cold-M', 'Maldito', 'Mystic'],
 		'blue': ['MVDE', 'ImitatoR', 'chitrox', 'Rigel', 'Lasunii'],
 		'redScore': 5,
 		'blueScore': 4,
@@ -2593,7 +2593,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'Cold-M', 'Rigel', 'Krnki', 'Mistic'],
+		'red': ['MVDE', 'Cold-M', 'Rigel', 'Krnki', 'Mystic'],
 		'blue': ['ImitatoR', 'chitrox', 'TT-Tolyan', 'Maldito', 'Lasunii'],
 		'redScore': 6,
 		'blueScore': 2,
@@ -2603,7 +2603,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'Cold-M', 'Rigel', 'Krnki', 'Mistic'],
+		'red': ['MVDE', 'Cold-M', 'Rigel', 'Krnki', 'Mystic'],
 		'blue': ['ImitatoR', 'chitrox', 'TT-Tolyan', 'Maldito', 'Lasunii'],
 		'redScore': 4,
 		'blueScore': 3,
@@ -2612,7 +2612,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'Cold-M', 'Rigel', 'Krnki', 'Mistic'],
+		'red': ['MVDE', 'Cold-M', 'Rigel', 'Krnki', 'Mystic'],
 		'blue': ['ImitatoR', 'chitrox', 'TT-Tolyan', 'Maldito', 'Lasunii'],
 		'redScore': 3,
 		'blueScore': 0,
@@ -2621,7 +2621,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'Cold-M', 'Lasunii', 'Krnki', 'Mistic'],
+		'red': ['MVDE', 'Cold-M', 'Lasunii', 'Krnki', 'Mystic'],
 		'blue': ['ImitatoR', 'chitrox', 'TT-Tolyan', 'Maldito', 'Rigel'],
 		'redScore': 1,
 		'blueScore': 4,
@@ -2630,7 +2630,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['TT-Tolyan', 'Maldito', 'Cold-M', 'Krnki', 'Mistic'],
+		'red': ['TT-Tolyan', 'Maldito', 'Cold-M', 'Krnki', 'Mystic'],
 		'blue': ['ImitatoR', 'chitrox', 'Rigel', 'mind', 'Lasunii'],
 		'redScore': 5,
 		'blueScore': 2,
@@ -2675,7 +2675,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'Maldito', 'Rigel', 'Lasunii', 'Mistic'],
+		'red': ['MVDE', 'Maldito', 'Rigel', 'Lasunii', 'Mystic'],
 		'blue': ['ImitatoR', 'Cold-M', 'chitrox', 'TT-Tolyan', 'Naut'],
 		'redScore': 5,
 		'blueScore': 2,
@@ -2685,7 +2685,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'Maldito', 'Rigel', 'Lasunii', 'Mistic'],
+		'red': ['MVDE', 'Maldito', 'Rigel', 'Lasunii', 'Mystic'],
 		'blue': ['ImitatoR', 'Cold-M', 'chitrox', 'TT-Tolyan', 'Naut'],
 		'redScore': 6,
 		'blueScore': 0,
@@ -2694,7 +2694,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'Maldito', 'chitrox', 'Lasunii', 'Mistic'],
+		'red': ['MVDE', 'Maldito', 'chitrox', 'Lasunii', 'Mystic'],
 		'blue': ['ImitatoR', 'Cold-M', 'Rigel', 'TT-Tolyan', 'Naut'],
 		'redScore': 4,
 		'blueScore': 5,
@@ -2703,7 +2703,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'Maldito', 'chitrox', 'Lasunii', 'Mistic'],
+		'red': ['MVDE', 'Maldito', 'chitrox', 'Lasunii', 'Mystic'],
 		'blue': ['ImitatoR', 'Cold-M', 'Rigel', 'TT-Tolyan', 'Naut'],
 		'redScore': 0,
 		'blueScore': 4,
@@ -2712,7 +2712,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'Maldito', 'chitrox', 'Lasunii', 'Mistic'],
+		'red': ['MVDE', 'Maldito', 'chitrox', 'Lasunii', 'Mystic'],
 		'blue': ['ImitatoR', 'Cold-M', 'Rigel', 'TT-Tolyan', 'Naut'],
 		'redScore': 3,
 		'blueScore': 4,
@@ -2777,7 +2777,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['j', 'ImitatoR', 'Cold-M', 'TT-Tolyan', 'Mistic'],
+		'red': ['j', 'ImitatoR', 'Cold-M', 'TT-Tolyan', 'Mystic'],
 		'blue': ['MVDE', 'Maldito', 'chitrox', 'Naut', 'Lasunii'],
 		'redScore': 4,
 		'blueScore': 6,
@@ -2787,7 +2787,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['j', 'ImitatoR', 'Cold-M', 'TT-Tolyan', 'Mistic'],
+		'red': ['j', 'ImitatoR', 'Cold-M', 'TT-Tolyan', 'Mystic'],
 		'blue': ['MVDE', 'Maldito', 'chitrox', 'Naut', 'Lasunii'],
 		'redScore': 6,
 		'blueScore': 1,
@@ -2797,7 +2797,7 @@ function getGames() {
 	
 	games.push({
 		'red': ['j', 'ImitatoR', 'Cold-M', 'TT-Tolyan', 'Keeper'],
-		'blue': ['MVDE', 'Maldito', 'chitrox', 'Mistic', 'Lasunii'],
+		'blue': ['MVDE', 'Maldito', 'chitrox', 'Mystic', 'Lasunii'],
 		'redScore': 1,
 		'blueScore': 2,
 		'map': 'Virility',
@@ -2806,7 +2806,7 @@ function getGames() {
 	
 	games.push({
 		'red': ['j', 'ImitatoR', 'Cold-M', 'TT-Tolyan', 'Keeper'],
-		'blue': ['MVDE', 'Maldito', 'chitrox', 'Mistic', 'Lasunii'],
+		'blue': ['MVDE', 'Maldito', 'chitrox', 'Mystic', 'Lasunii'],
 		'redScore': 1,
 		'blueScore': 5,
 		'map': 'Grendelkeep',
@@ -2853,17 +2853,17 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'TT-Tolyan', 'Lasunii', 'Mistic', 'Thoums'],
+		'red': ['MVDE', 'TT-Tolyan', 'Lasunii', 'Mystic', 'Thoums'],
 		'blue': ['ImitatoR', 'Maldito', 'chitrox', 'Cold-M', 'Rigel'],
 		'redScore': 5,
 		'blueScore': 8,
 		'map': 'Vault',
 		'date': '07.11.2020',
-		'fixes': [['Mistic', +50], ['TT-Tolyan', -25]]
+		'fixes': [['Mystic', +50], ['TT-Tolyan', -25]]
 	});
 	
 	games.push({
-		'red': ['MVDE', 'TT-Tolyan', 'Lasunii', 'Mistic', 'Thoums'],
+		'red': ['MVDE', 'TT-Tolyan', 'Lasunii', 'Mystic', 'Thoums'],
 		'blue': ['ImitatoR', 'Maldito', 'chitrox', 'Cold-M', 'Rigel'],
 		'redScore': 3,
 		'blueScore': 2,
@@ -2872,7 +2872,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'TT-Tolyan', 'Lasunii', 'Mistic', 'Thoums'],
+		'red': ['MVDE', 'TT-Tolyan', 'Lasunii', 'Mystic', 'Thoums'],
 		'blue': ['ImitatoR', 'Maldito', 'chitrox', 'Cold-M', 'Rigel'],
 		'redScore': 4,
 		'blueScore': 0,
@@ -2881,7 +2881,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'TT-Tolyan', 'Lasunii', 'Mistic', 'Thoums'],
+		'red': ['MVDE', 'TT-Tolyan', 'Lasunii', 'Mystic', 'Thoums'],
 		'blue': ['ImitatoR', 'Maldito', 'chitrox', 'Cold-M', 'Rigel'],
 		'redScore': 5,
 		'blueScore': 4,
@@ -2890,7 +2890,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'Cold-M', 'Lasunii', 'Mistic', 'Thoums'],
+		'red': ['MVDE', 'Cold-M', 'Lasunii', 'Mystic', 'Thoums'],
 		'blue': ['ImitatoR', 'TT-Tolyan', 'Maldito', 'chitrox', 'Rigel'],
 		'redScore': 1,
 		'blueScore': 0,
@@ -2899,7 +2899,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'Cold-M', 'Lasunii', 'Mistic', 'Thoums'],
+		'red': ['MVDE', 'Cold-M', 'Lasunii', 'Mystic', 'Thoums'],
 		'blue': ['ImitatoR', 'TT-Tolyan', 'Maldito', 'chitrox', 'Rigel'],
 		'redScore': 6,
 		'blueScore': 3,
@@ -2908,17 +2908,17 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'Cold-M', 'chitrox', 'Mistic', 'MoRoZ'],
+		'red': ['MVDE', 'Cold-M', 'chitrox', 'Mystic', 'MoRoZ'],
 		'blue': ['ImitatoR', 'TT-Tolyan', 'Maldito', 'Lasunii', 'Rigel'],
 		'redScore': 6,
 		'blueScore': 1,
 		'map': 'Archanastre',
 		'date': '14.11.2020',
-		'fixes': [['Lasunii', -25], ['Mistic', +25]]
+		'fixes': [['Lasunii', -25], ['Mystic', +25]]
 	});
 	
 	games.push({
-		'red': ['MVDE', 'TT-Tolyan', 'Rigel', 'Mistic', 'MoRoZ'],
+		'red': ['MVDE', 'TT-Tolyan', 'Rigel', 'Mystic', 'MoRoZ'],
 		'blue': ['ImitatoR', 'Maldito', 'Lasunii', 'Cold-M', 'chitrox'],
 		'redScore': 3,
 		'blueScore': 1,
@@ -2928,7 +2928,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'Rigel', 'Lasunii', 'Mistic', 'MoRoZ'],
+		'red': ['MVDE', 'Rigel', 'Lasunii', 'Mystic', 'MoRoZ'],
 		'blue': ['ImitatoR', 'Maldito', 'TT-Tolyan', 'Cold-M', 'chitrox'],
 		'redScore': 0,
 		'blueScore': 3,
@@ -2937,7 +2937,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'Rigel', 'Lasunii', 'Mistic', 'MoRoZ'],
+		'red': ['MVDE', 'Rigel', 'Lasunii', 'Mystic', 'MoRoZ'],
 		'blue': ['ImitatoR', 'Maldito', 'TT-Tolyan', 'Cold-M', 'chitrox'],
 		'redScore': 7,
 		'blueScore': 3,
@@ -2946,7 +2946,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'Rigel', 'Lasunii', 'Mistic', 'MoRoZ'],
+		'red': ['MVDE', 'Rigel', 'Lasunii', 'Mystic', 'MoRoZ'],
 		'blue': ['ImitatoR', 'Maldito', 'TT-Tolyan', 'Cold-M', 'chitrox'],
 		'redScore': 2,
 		'blueScore': 4,
@@ -2955,17 +2955,17 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'Rigel', 'Mistic', 'MoRoZ', 'Forsiets'],
+		'red': ['MVDE', 'Rigel', 'Mystic', 'MoRoZ', 'Forsiets'],
 		'blue': ['TT-Tolyan', 'Maldito', 'Cold-M', 'Lasunii', 'chitrox'],
 		'redScore': 3,
 		'blueScore': 5,
 		'map': 'Vault',
 		'date': '21.11.2020',
-		'fixes': [['Mistic', +25], ['chitrox', -25]]
+		'fixes': [['Mystic', +25], ['chitrox', -25]]
 	});
 	
 	games.push({
-		'red': ['MVDE', 'Rigel', 'Mistic', 'MoRoZ', 'Forsiets'],
+		'red': ['MVDE', 'Rigel', 'Mystic', 'MoRoZ', 'Forsiets'],
 		'blue': ['TT-Tolyan', 'Maldito', 'Cold-M', 'Lasunii', 'chitrox'],
 		'redScore': 5,
 		'blueScore': 1,
@@ -2974,7 +2974,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'Rigel', 'Mistic', 'MoRoZ', 'Forsiets'],
+		'red': ['MVDE', 'Rigel', 'Mystic', 'MoRoZ', 'Forsiets'],
 		'blue': ['TT-Tolyan', 'Maldito', 'Cold-M', 'Lasunii', 'chitrox'],
 		'redScore': 3,
 		'blueScore': 5,
@@ -2983,7 +2983,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'Rigel', 'Mistic', 'MoRoZ', 'Forsiets'],
+		'red': ['MVDE', 'Rigel', 'Mystic', 'MoRoZ', 'Forsiets'],
 		'blue': ['TT-Tolyan', 'Maldito', 'Cold-M', 'Lasunii', 'chitrox'],
 		'redScore': 5,
 		'blueScore': 1,
@@ -2992,7 +2992,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['MVDE', 'Rigel', 'Mistic', 'MoRoZ', 'Forsiets'],
+		'red': ['MVDE', 'Rigel', 'Mystic', 'MoRoZ', 'Forsiets'],
 		'blue': ['TT-Tolyan', 'Maldito', 'Cold-M', 'Lasunii', 'chitrox'],
 		'redScore': 8,
 		'blueScore': 3,
@@ -3002,7 +3002,7 @@ function getGames() {
 	
 	games.push({
 		'red': ['MVDE', 'Rigel', 'Lasunii', 'MoRoZ', 'Forsiets'],
-		'blue': ['TT-Tolyan', 'Maldito', 'Cold-M', 'Mistic', 'chitrox'],
+		'blue': ['TT-Tolyan', 'Maldito', 'Cold-M', 'Mystic', 'chitrox'],
 		'redScore': 1,
 		'blueScore': 3,
 		'map': 'Pistola',
@@ -3011,7 +3011,7 @@ function getGames() {
 	
 	games.push({
 		'red': ['MVDE', 'Rigel', 'Lasunii', 'MoRoZ', 'Forsiets'],
-		'blue': ['TT-Tolyan', 'Maldito', 'Cold-M', 'Mistic', 'chitrox'],
+		'blue': ['TT-Tolyan', 'Maldito', 'Cold-M', 'Mystic', 'chitrox'],
 		'redScore': 0,
 		'blueScore': 5,
 		'map': 'Campers Crossing',
@@ -3063,6 +3063,61 @@ function getGames() {
 		'blueScore': 4,
 		'map': 'Campers Crossing',
 		'date': '22.11.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Rigel', 'Lasunii', 'MoRoZ', 'Thoums'],
+		'blue': ['TT-Tolyan', 'Cold-M', 'chitrox', 'ImitatoR', 'Mystic'],
+		'redScore': 5,
+		'blueScore': 4,
+		'map': 'Vault',
+		'date': '25.11.2020',
+		'fixes': [['Rigel', -25]]
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Rigel', 'Lasunii', 'MoRoZ', 'Thoums'],
+		'blue': ['TT-Tolyan', 'Cold-M', 'chitrox', 'ImitatoR', 'Mystic'],
+		'redScore': 0,
+		'blueScore': 5,
+		'map': 'Grendelkeep',
+		'date': '25.11.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Rigel', 'Lasunii', 'MoRoZ', 'Thoums'],
+		'blue': ['TT-Tolyan', 'Cold-M', 'chitrox', 'ImitatoR', 'Mystic'],
+		'redScore': 1,
+		'blueScore': 6,
+		'map': 'Archanastre',
+		'date': '25.11.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Rigel', 'Lasunii', 'MoRoZ', 'Mystic'],
+		'blue': ['TT-Tolyan', 'Cold-M', 'chitrox', 'ImitatoR', 'Thoums'],
+		'redScore': 5,
+		'blueScore': 3,
+		'map': 'Virility',
+		'date': '25.11.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Rigel', 'Lasunii', 'MoRoZ', 'Mystic'],
+		'blue': ['TT-Tolyan', 'Cold-M', 'chitrox', 'ImitatoR', 'Thoums'],
+		'redScore': 1,
+		'blueScore': 2,
+		'map': 'Campers Crossing',
+		'date': '25.11.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Rigel', 'Lasunii', 'MoRoZ', 'Mystic'],
+		'blue': ['TT-Tolyan', 'Cold-M', 'chitrox', 'ImitatoR', 'Thoums'],
+		'redScore': 5,
+		'blueScore': 3,
+		'map': 'Anfractuous',
+		'date': '25.11.2020'
 	});
 	
 	return games;

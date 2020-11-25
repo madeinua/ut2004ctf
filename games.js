@@ -3026,7 +3026,7 @@ function getGames() {
 		'blueScore': 8,
 		'map': 'Grendelkeep',
 		'date': '22.11.2020',
-		'fixes': [['Rigel', +25], ['Loox', +25], ['Lasunii', -50], ['Thoums', -100], ['MoroZ', -100]]
+		'fixes': [['Rigel', +25], ['Loox', +25], ['Lasunii', -50], ['Thoums', -100], ['MoRoZ', -100]]
 	});
 	
 	games.push({
@@ -3062,8 +3062,7 @@ function getGames() {
 		'redScore': 2,
 		'blueScore': 4,
 		'map': 'Campers Crossing',
-		'date': '22.11.2020',
-		'fixes': [['MoroZ', -50]]
+		'date': '22.11.2020'
 	});
 	
 	return games;

@@ -413,7 +413,7 @@
 
         // Apply fixes to the player score
         if (typeof game.fixes !== 'undefined') {
-            for (var f in game.fixes) {
+		    for (var f in game.fixes) {
                 if (game.fixes[f][0] === playerName) {
                     bonus += game.fixes[f][1];
                 }
@@ -485,6 +485,27 @@
     };
 
     for (i in games) {
+	
+		if (typeof games[i].fixes !== 'undefined') {
+		
+			var fixes = games[i].fixes;
+		
+			for (var f in fixes) {
+			
+				var found = false;
+				
+				for (var p in players) {
+					if (p === fixes[f][0]) {
+						found = true;
+					}
+				}
+				
+				if (!found) {
+					alert('Unknown player ' + fixes[f][0]);
+				}
+			}
+		}
+	
         updateTeamsEloInGame(i);
         updatePlayersScores(games[i], players);
     }

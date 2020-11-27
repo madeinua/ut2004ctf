@@ -3026,7 +3026,7 @@ function getGames() {
 		'blueScore': 8,
 		'map': 'Grendelkeep',
 		'date': '22.11.2020',
-		'fixes': [['Rigel', +25], ['Loox', +25], ['Lasunii', -50], ['Thoums', -100], ['MoRoZ', -100]]
+		'fixes': [['Loox', +25], ['Lasunii', -50], ['Thoums', -75], ['MoRoZ', -100]]
 	});
 	
 	games.push({
@@ -3071,8 +3071,7 @@ function getGames() {
 		'redScore': 5,
 		'blueScore': 4,
 		'map': 'Vault',
-		'date': '25.11.2020',
-		'fixes': [['Rigel', -25]]
+		'date': '25.11.2020'
 	});
 	
 	games.push({

@@ -3198,7 +3198,7 @@ function getGames() {
 		'blueScore': 2,
 		'map': 'Grendelkeep',
 		'date': '02.12.2020',
-		'fixes': [['Thoums', +25]]
+		'fixes': [['Thoums', +25], ['simson', -100]]
 	});
 	
 	games.push({

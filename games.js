@@ -1497,7 +1497,7 @@ function getGames() {
 		'blue': ['Gooz', 'Maldito', 'j', 'Rigel', 'Thoums'],
 		'redScore': 1,
 		'blueScore': 2,
-		'map': 'Anfractouos',
+		'map': 'Anfractuous',
 		'date': '15.08.2020',
 		'fixes': [['j', +100], ['Rigel', -50], ['Thoums', +50]]
 	});
@@ -3189,6 +3189,80 @@ function getGames() {
 		'blueScore': 2,
 		'map': 'Campers Crossing',
 		'date': '29.11.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'ImitatoR', 'chitrox', 'Cold-M', 'Thoums'],
+		'blue': ['TT-Tolyan', 'j', 'simson', 'Lasunii', 'Mystic'],
+		'redScore': 4,
+		'blueScore': 2,
+		'map': 'Grendelkeep',
+		'date': '02.12.2020',
+		'fixes': [['Thoums', +25]]
+	});
+	
+	games.push({
+		'red': ['MVDE', 'ImitatoR', 'chitrox', 'Cold-M', 'Thoums'],
+		'blue': ['TT-Tolyan', 'j', 'simson', 'Lasunii', 'Mystic'],
+		'redScore': 5,
+		'blueScore': 2,
+		'map': 'Vault',
+		'date': '02.12.2020'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'TT-Tolyan', 'chitrox', 'Cold-M', 'Thoums'],
+		'blue': ['ImitatoR', 'j', 'simson', 'Lasunii', 'Mystic'],
+		'redScore': 9,
+		'blueScore': 3,
+		'map': 'Archanastre',
+		'date': '02.12.2020'
+	});
+	
+	games.push({
+		'red': ['ImitatoR', 'TT-Tolyan', 'chitrox', 'Cold-M', 'Lasunii'],
+		'blue': ['MVDE', 'j', 'simson', 'Thoums', 'Mystic'],
+		'redScore': 1,
+		'blueScore': 10,
+		'map': 'Virility',
+		'date': '02.12.2020'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'j', 'TT-Tolyan', 'chitrox', 'Cold-M'],
+		'blue': ['MVDE', 'ImitatoR', 'simson', 'Thoums', 'Lasunii'],
+		'redScore': 8,
+		'blueScore': 5,
+		'map': 'Anfractuous',
+		'date': '02.12.2020'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'j', 'Lasunii', 'chitrox', 'Cold-M'],
+		'blue': ['MVDE', 'ImitatoR', 'Rigel', 'Thoums', 'TT-Tolyan'],
+		'redScore': 1,
+		'blueScore': 6,
+		'map': 'Pistola',
+		'date': '02.12.2020',
+		'fixes': [['Rigel', -25]]
+	});
+	
+	games.push({
+		'red': ['Gooz', 'j', 'Lasunii', 'chitrox', 'Cold-M'],
+		'blue': ['MVDE', 'ImitatoR', 'Rigel', 'Thoums', 'TT-Tolyan'],
+		'redScore': 6,
+		'blueScore': 3,
+		'map': 'Grendelkeep',
+		'date': '03.12.2020'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'j', 'Lasunii', 'chitrox', 'Cold-M'],
+		'blue': ['MVDE', 'ImitatoR', 'Rigel', 'Thoums', 'TT-Tolyan'],
+		'redScore': 2,
+		'blueScore': 7,
+		'map': 'DeepSprinta',
+		'date': '03.12.2020'
 	});
 	
 	return games;

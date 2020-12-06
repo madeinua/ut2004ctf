@@ -3272,7 +3272,7 @@ function getGames() {
 		'blueScore': 5,
 		'map': 'Archanastre',
 		'date': '05.12.2020',
-		'fixes': [['Loox', +25], ['Lasunii', +75], ['Gooz', +75], ['Cold-M', -25]]
+		'fixes': [['Loox', +25], ['Lasunii', +75], ['Gooz', +75]]
 	});
 	
 	games.push({

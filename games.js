@@ -3320,5 +3320,33 @@ function getGames() {
 		'date': '05.12.2020'
 	});
 	
+	games.push({
+		'red': ['Gooz', 'j', 'chitrox', 'Rigel', 'Forsiets'],
+		'blue': ['MVDE', 'ImitatoR', 'Mystic', 'Lasunii', 'MoRoZ'],
+		'redScore': 2,
+		'blueScore': 4,
+		'map': 'Virility',
+		'date': '10.12.2020'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'j', 'chitrox', 'Rigel', 'Forsiets'],
+		'blue': ['MVDE', 'ImitatoR', 'Mystic', 'Lasunii', 'MoRoZ'],
+		'redScore': 7,
+		'blueScore': 3,
+		'map': 'Grendelkeep',
+		'date': '10.12.2020'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'j', 'chitrox', 'Rigel', 'Forsiets'],
+		'blue': ['MVDE', 'ImitatoR', 'Mystic', 'Lasunii', 'MoRoZ'],
+		'redScore': 1,
+		'blueScore': 8,
+		'map': 'Vault',
+		'date': '10.12.2020',
+		'fixes': [['Lasunii', +75], ['Rigel', -25]]
+	});
+	
 	return games;
 }

@@ -3348,5 +3348,42 @@ function getGames() {
 		'fixes': [['Lasunii', +75], ['Rigel', -25]]
 	});
 	
+	games.push({
+		'red': ['Koffee', 'ImitatoR', 'chitrox', 'Cold-M', 'rug:dude'],
+		'blue': ['MVDE', 'j', 'Lasunii', 'Hodor', 'MoRoZ'],
+		'redScore': 2,
+		'blueScore': 3,
+		'map': 'Vault',
+		'date': '22.12.2020'
+	});
+	
+	games.push({
+		'red': ['j', 'ImitatoR', 'chitrox', 'Cold-M', 'rug:dude'],
+		'blue': ['MVDE', 'Forsiets', 'Lasunii', 'Hodor', 'MoRoZ'],
+		'redScore': 3,
+		'blueScore': 7,
+		'map': 'Archanastre',
+		'date': '22.12.2020'
+	});
+	
+	games.push({
+		'red': ['j', 'ImitatoR', 'chitrox', 'Cold-M', 'Lasunii'],
+		'blue': ['MVDE', 'Forsiets', 'rug:dude', 'Hodor', 'MoRoZ'],
+		'redScore': 6,
+		'blueScore': 0,
+		'map': 'Virility',
+		'date': '22.12.2020'
+	});
+	
+	games.push({
+		'red': ['ImitatoR', 'chitrox', 'Cold-M', 'MoRoZ', 'Lasunii'],
+		'blue': ['MVDE', 'j', 'Forsiets', 'rug:dude', 'Hodor'],
+		'redScore': 1,
+		'blueScore': 4,
+		'map': 'Anfractuous',
+		'date': '22.12.2020',
+		'fixes': [['Forsiets', +150]]
+	});
+	
 	return games;
 }

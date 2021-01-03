@@ -3320,7 +3320,7 @@ function getGames() {
 		'date': '05.12.2020',
 		
 		// PG
-		'fixes': [['TT-Tolyan', +200], ['Mystic', +100]]
+		'fixes': [['TT-Tolyan', +150], ['Mystic', +100]]
 	});
 	
 	games.push({
@@ -3390,7 +3390,7 @@ function getGames() {
 		'date': '22.12.2020',
 		'fixes': [['Forsiets', +150], 
 			//PG
-			['ImitatoR', +150], ['chitrox', +150], ['Cold-M', +150], ['MoRoZ', +100], ['Lasunii', +200], ['Forsiets', +200]
+			['ImitatoR', +100], ['chitrox', +100], ['Cold-M', +150], ['MoRoZ', +100], ['Lasunii', +150], ['Forsiets', +150]
 		]
 	});
 	

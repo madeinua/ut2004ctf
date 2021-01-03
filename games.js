@@ -3317,7 +3317,10 @@ function getGames() {
 		'redScore': 7,
 		'blueScore': 2,
 		'map': 'DeepSprinta',
-		'date': '05.12.2020'
+		'date': '05.12.2020',
+		
+		// PG
+		'fixes': [['TT-Tolyan', +200], ['Mystic', +100]]
 	});
 	
 	games.push({
@@ -3335,7 +3338,10 @@ function getGames() {
 		'redScore': 7,
 		'blueScore': 3,
 		'map': 'Grendelkeep',
-		'date': '10.12.2020'
+		'date': '10.12.2020',
+		
+		// PG
+		'fixes': [['Rigel', +150], ['MoRoZ', +150]]
 	});
 	
 	games.push({
@@ -3382,7 +3388,10 @@ function getGames() {
 		'blueScore': 4,
 		'map': 'Anfractuous',
 		'date': '22.12.2020',
-		'fixes': [['Forsiets', +150]]
+		'fixes': [['Forsiets', +150], 
+			//PG
+			['ImitatoR', +150], ['chitrox', +150], ['Cold-M', +150], ['MoRoZ', +100], ['Lasunii', +200], ['Forsiets', +200]
+		]
 	});
 	
 	return games;

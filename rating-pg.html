@@ -2,6 +2,7 @@
 <head>
 
 	<script src="lib.js"></script>
+	<script src="games.js"></script>
 
     <style type="text/css">
         .tablesorter-blue {
@@ -216,22 +217,10 @@
 
         return players;
     }
-
-	function include(filename)
-	{
-		var head = document.getElementsByTagName('head')[0];
-
-		var script = document.createElement('script');
-		script.src = filename;
-		script.type = 'text/javascript';
-
-		head.appendChild(script);
-	}
-	
-	include('games.js');
-	include('core.js');
 	
 </script>
+
+<script src="core.js"></script>
 
 </body>
 </html>

@@ -3781,7 +3781,8 @@ function getGames() {
 		'blueScore': 4,
 		'map': 'Vault',
 		'date': '07.01.2021',
-		'location': 'PG'
+		'location': 'PG',
+		'fixes': [['Cold-M', +50]]
 	});
 	
 	return games;

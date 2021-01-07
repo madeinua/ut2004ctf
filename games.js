@@ -3694,5 +3694,95 @@ function getGames() {
 		'location': 'PG'
 	});
 	
+	games.push({
+		'red': ['MVDE', 'ImitatoR', 'chitrox', 'Thoums', 'Forsiets'],
+		'blue': ['TT-Tolyan', 'Naut', 'Cold-M', 'Maldito', 'Mystic'],
+		'redScore': 2,
+		'blueScore': 8,
+		'map': 'Archanastre',
+		'date': '07.01.2021',
+		'location': 'PG'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'ImitatoR', 'chitrox', 'Thoums', 'Forsiets'],
+		'blue': ['TT-Tolyan', 'Naut', 'Cold-M', 'Maldito', 'Mystic'],
+		'redScore': 3,
+		'blueScore': 6,
+		'map': 'Vault',
+		'date': '07.01.2021',
+		'location': 'PG'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'ImitatoR', 'chitrox', 'Thoums', 'Cold-M'],
+		'blue': ['TT-Tolyan', 'Naut', 'Forsiets', 'Maldito', 'Mystic'],
+		'redScore': 4,
+		'blueScore': 1,
+		'map': 'Grendelkeep',
+		'date': '07.01.2021',
+		'location': 'PG'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'ImitatoR', 'chitrox', 'Forsiets', 'Cold-M'],
+		'blue': ['TT-Tolyan', 'Naut', 'Thoums', 'Maldito', 'Mystic'],
+		'redScore': 7,
+		'blueScore': 8,
+		'map': 'Grendelkeep',
+		'date': '07.01.2021',
+		'location': 'PG'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'ImitatoR', 'chitrox', 'Cold-M', 'Thoums'],
+		'blue': ['TT-Tolyan', 'Naut', 'Maldito', 'Forsiets', 'Mystic'],
+		'redScore': 5,
+		'blueScore': 1,
+		'map': 'Campers Crossing',
+		'date': '07.01.2021',
+		'location': 'PG'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'ImitatoR', 'chitrox', 'Cold-M', 'Forsiets'],
+		'blue': ['TT-Tolyan', 'Naut', 'Maldito', 'Mystic', 'Thoums'],
+		'redScore': 8,
+		'blueScore': 1,
+		'map': 'Virility',
+		'date': '07.01.2021',
+		'location': 'PG'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'ImitatoR', 'chitrox', 'Forsiets', 'Mystic'],
+		'blue': ['TT-Tolyan', 'Naut', 'Thoums', 'Maldito', 'Cold-M'],
+		'redScore': 2,
+		'blueScore': 4,
+		'map': 'Pistola',
+		'date': '07.01.2021',
+		'location': 'PG'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'ImitatoR', 'Cold-M', 'Forsiets', 'Mystic'],
+		'blue': ['TT-Tolyan', 'Naut', 'Thoums', 'Maldito', 'chitrox'],
+		'redScore': 5,
+		'blueScore': 4,
+		'map': 'Anfractuous',
+		'date': '07.01.2021',
+		'location': 'PG'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'ImitatoR', 'Cold-M', 'Forsiets', 'Mystic'],
+		'blue': ['TT-Tolyan', 'Naut', 'Thoums', 'Maldito', 'chitrox'],
+		'redScore': 5,
+		'blueScore': 4,
+		'map': 'Vault',
+		'date': '07.01.2021',
+		'location': 'PG'
+	});
+	
 	return games;
 }

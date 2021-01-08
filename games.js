@@ -3793,7 +3793,7 @@ function getGames() {
 		'map': 'Archanastre',
 		'date': '08.01.2021',
 		'location': 'PG',
-		'fixes': [['MVDE', -200]]
+		'fixes': [['MVDE', -150]]
 	});
 	
 	games.push({

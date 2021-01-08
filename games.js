@@ -3785,5 +3785,66 @@ function getGames() {
 		'fixes': [['Cold-M', +50]]
 	});
 	
+	games.push({
+		'red': ['TT-Tolyan', 'GooZ', 'ImitatoR', 'rug:dude', 'Mystic'],
+		'blue': ['MVDE', 'Cold-M', 'Krnki', 'Forsiets', 'chitrox'],
+		'redScore': 1,
+		'blueScore': 4,
+		'map': 'Archanastre',
+		'date': '08.01.2021',
+		'location': 'PG',
+		'fixes': [['MVDE', -200]]
+	});
+	
+	games.push({
+		'red': ['TT-Tolyan', 'GooZ', 'ImitatoR', 'rug:dude', 'Mystic'],
+		'blue': ['MVDE', 'Cold-M', 'Krnki', 'Forsiets', 'chitrox'],
+		'redScore': 4,
+		'blueScore': 7,
+		'map': 'Grendelkeep',
+		'date': '08.01.2021',
+		'location': 'PG'
+	});
+	
+	games.push({
+		'red': ['TT-Tolyan', 'GooZ', 'ImitatoR', 'Cold-M', 'Mystic'],
+		'blue': ['MVDE', 'rug:dude', 'Krnki', 'Forsiets', 'chitrox'],
+		'redScore': 5,
+		'blueScore': 1,
+		'map': 'Campers Crossing',
+		'date': '08.01.2021',
+		'location': 'PG'
+	});
+	
+	games.push({
+		'red': ['ImitatoR', 'chitrox', 'Cold-M', 'Rigel', 'Krnki'],
+		'blue': ['MVDE', 'TT-Tolyan', 'rug:dude', 'Mystic', 'Forsiets'],
+		'redScore': 5,
+		'blueScore': 0,
+		'map': 'Virility',
+		'date': '08.01.2021',
+		'location': 'PG'
+	});
+	
+	games.push({
+		'red': ['ImitatoR', 'chitrox', 'Cold-M', 'Rigel', 'Forsiets'],
+		'blue': ['MVDE', 'TT-Tolyan', 'rug:dude', 'Mystic', 'Krnki'],
+		'redScore': 10,
+		'blueScore': 0,
+		'map': 'Vault',
+		'date': '08.01.2021',
+		'location': 'PG'
+	});
+	
+	games.push({
+		'red': ['ImitatoR', 'chitrox', 'Krnki', 'Rigel', 'Forsiets'],
+		'blue': ['MVDE', 'TT-Tolyan', 'rug:dude', 'Mystic', 'Cold-M'],
+		'redScore': 4,
+		'blueScore': 7,
+		'map': 'Anfractuous',
+		'date': '08.01.2021',
+		'location': 'PG'
+	});
+	
 	return games;
 }

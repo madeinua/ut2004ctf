@@ -3786,7 +3786,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['TT-Tolyan', 'GooZ', 'ImitatoR', 'rug:dude', 'Mystic'],
+		'red': ['TT-Tolyan', 'Gooz', 'ImitatoR', 'rug:dude', 'Mystic'],
 		'blue': ['MVDE', 'Cold-M', 'Krnki', 'Forsiets', 'chitrox'],
 		'redScore': 1,
 		'blueScore': 4,
@@ -3797,7 +3797,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['TT-Tolyan', 'GooZ', 'ImitatoR', 'rug:dude', 'Mystic'],
+		'red': ['TT-Tolyan', 'Gooz', 'ImitatoR', 'rug:dude', 'Mystic'],
 		'blue': ['MVDE', 'Cold-M', 'Krnki', 'Forsiets', 'chitrox'],
 		'redScore': 4,
 		'blueScore': 7,
@@ -3807,7 +3807,7 @@ function getGames() {
 	});
 	
 	games.push({
-		'red': ['TT-Tolyan', 'GooZ', 'ImitatoR', 'Cold-M', 'Mystic'],
+		'red': ['TT-Tolyan', 'Gooz', 'ImitatoR', 'Cold-M', 'Mystic'],
 		'blue': ['MVDE', 'rug:dude', 'Krnki', 'Forsiets', 'chitrox'],
 		'redScore': 5,
 		'blueScore': 1,

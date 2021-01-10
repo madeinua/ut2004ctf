@@ -3846,5 +3846,85 @@ function getGames() {
 		'location': 'PG'
 	});
 	
+	games.push({
+		'red': ['Gooz', 'TT-Tolyan', 'ImitatoR', 'Lasunii', 'Mystic'],
+		'blue': ['MVDE', 'Cold-M', 'chitrox', 'Rigel', 'Thoums'],
+		'redScore': 5,
+		'blueScore': 3,
+		'map': 'Archanastre',
+		'date': '09.01.2021',
+		'location': 'PG'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'TT-Tolyan', 'ImitatoR', 'Lasunii', 'Mystic'],
+		'blue': ['MVDE', 'Cold-M', 'chitrox', 'Rigel', 'Thoums'],
+		'redScore': 5,
+		'blueScore': 1,
+		'map': 'Vault',
+		'date': '09.01.2021',
+		'location': 'PG'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'TT-Tolyan', 'ImitatoR', 'Thoums', 'Mystic'],
+		'blue': ['MVDE', 'Cold-M', 'chitrox', 'Rigel', 'Lasunii'],
+		'redScore': 6,
+		'blueScore': 8,
+		'map': 'Vault',
+		'date': '09.01.2021',
+		'location': 'PG'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'TT-Tolyan', 'ImitatoR', 'Thoums', 'Mystic'],
+		'blue': ['MVDE', 'Cold-M', 'chitrox', 'Rigel', 'Lasunii'],
+		'redScore': 5,
+		'blueScore': 4,
+		'map': 'Grendelkeep',
+		'date': '09.01.2021',
+		'location': 'PG'
+	});
+	
+	games.push({
+		'red': ['Loox', 'TT-Tolyan', 'ImitatoR', 'Thoums', 'Mystic'],
+		'blue': ['MVDE', 'Cold-M', 'chitrox', 'Rigel', 'Lasunii'],
+		'redScore': 4,
+		'blueScore': 5,
+		'map': 'Virility',
+		'date': '09.01.2021',
+		'location': 'PG'
+	});
+	
+	games.push({
+		'red': ['Loox', 'TT-Tolyan', 'ImitatoR', 'Lasunii', 'Mystic'],
+		'blue': ['MVDE', 'Cold-M', 'chitrox', 'Rigel', 'Thoums'],
+		'redScore': 4,
+		'blueScore': 5,
+		'map': 'Virility',
+		'date': '09.01.2021',
+		'location': 'PG'
+	});
+	
+	games.push({
+		'red': ['Loox', 'TT-Tolyan', 'ImitatoR', 'Lasunii', 'Mystic'],
+		'blue': ['MVDE', 'Cold-M', 'chitrox', 'Rigel', 'Thoums'],
+		'redScore': 3,
+		'blueScore': 4,
+		'map': 'Anfractuous',
+		'date': '09.01.2021',
+		'location': 'PG'
+	});
+	
+	games.push({
+		'red': ['Loox', 'TT-Tolyan', 'ImitatoR', 'Lasunii', 'Mystic'],
+		'blue': ['MVDE', 'Cold-M', 'chitrox', 'Rigel', 'Thoums'],
+		'redScore': 0,
+		'blueScore': 3,
+		'map': 'Twin Tombs',
+		'date': '10.01.2021',
+		'location': 'PG'
+	});
+	
 	return games;
 }

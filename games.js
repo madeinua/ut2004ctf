@@ -3926,5 +3926,42 @@ function getGames() {
 		'location': 'PG'
 	});
 	
+	games.push({
+		'red': ['MVDE', 'Loox', 'TT-Tolyan', 'Lasunii', 'pepper'],
+		'blue': ['Gooz', 'ImitatoR', 'Cold-M', 'chitrox', 'Rigel'],
+		'redScore': 1,
+		'blueScore': 6,
+		'map': 'Grendelkeep',
+		'date': '14.01.2021',
+		'fixes': [['MVDE', -200]]
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Loox', 'TT-Tolyan', 'Lasunii', 'pepper'],
+		'blue': ['Gooz', 'ImitatoR', 'Cold-M', 'chitrox', 'Rigel'],
+		'redScore': 4,
+		'blueScore': 5,
+		'map': 'Anfractuous',
+		'date': '14.01.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Loox', 'TT-Tolyan', 'Lasunii', 'Rigel'],
+		'blue': ['Gooz', 'ImitatoR', 'Cold-M', 'chitrox', 'pepper'],
+		'redScore': 0,
+		'blueScore': 3,
+		'map': 'Vault',
+		'date': '14.01.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Loox', 'TT-Tolyan', 'Lasunii', 'Rigel'],
+		'blue': ['Gooz', 'ImitatoR', 'Cold-M', 'chitrox', 'pepper'],
+		'redScore': 3,
+		'blueScore': 4,
+		'map': 'Vault',
+		'date': '15.01.2021'
+	});
+	
 	return games;
 }

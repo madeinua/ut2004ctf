@@ -3933,7 +3933,7 @@ function getGames() {
 		'blueScore': 6,
 		'map': 'Grendelkeep',
 		'date': '14.01.2021',
-		'fixes': [['MVDE', -200]]
+		'fixes': [['Gooz', +100], ['MVDE', -100]]
 	});
 	
 	games.push({

@@ -3971,7 +3971,7 @@ function getGames() {
 		'blueScore': 0,
 		'map': 'Vault',
 		'date': '16.01.2021',
-		'fixes': [['Gooz', -50], ['j', -25], ['TT-Tolyan', +25]]
+		'fixes': [['MVDE', +25], ['Gooz', -50], ['j', -25], ['TT-Tolyan', +25]]
 	});
 	
 	games.push({

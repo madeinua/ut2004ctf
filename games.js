@@ -3523,7 +3523,8 @@ function getGames() {
 		'redScore': 2,
 		'blueScore': 3,
 		'map': 'Vault',
-		'date': '22.12.2020'
+		'date': '22.12.2020',
+		'fixes': [['Koffee', -50]]
 	});
 	
 	games.push({
@@ -3961,6 +3962,79 @@ function getGames() {
 		'blueScore': 4,
 		'map': 'Vault',
 		'date': '15.01.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'ImitatoR', 'TT-Tolyan', 'Lasunii', 'Cold-M'],
+		'blue': ['Gooz', 'j', 'Maldito', 'chitrox', 'Mystic'],
+		'redScore': 4,
+		'blueScore': 0,
+		'map': 'Vault',
+		'date': '16.01.2021',
+		'fixes': [['Gooz', -50], ['j', -25], ['TT-Tolyan', +25]]
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Maldito', 'TT-Tolyan', 'Lasunii', 'Cold-M'],
+		'blue': ['Gooz', 'j', 'ImitatoR', 'chitrox', 'Mystic'],
+		'redScore': 3,
+		'blueScore': 6,
+		'map': 'Vault',
+		'date': '16.01.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Maldito', 'TT-Tolyan', 'Lasunii', 'Cold-M'],
+		'blue': ['Gooz', 'j', 'ImitatoR', 'chitrox', 'Mystic'],
+		'redScore': 3,
+		'blueScore': 2,
+		'map': 'Archanastre',
+		'date': '16.01.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Maldito', 'TT-Tolyan', 'Lasunii', 'Cold-M'],
+		'blue': ['Gooz', 'j', 'ImitatoR', 'chitrox', 'Mystic'],
+		'redScore': 0,
+		'blueScore': 3,
+		'map': 'Grendelkeep',
+		'date': '16.01.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Maldito', 'TT-Tolyan', 'Lasunii', 'Cold-M'],
+		'blue': ['Gooz', 'j', 'ImitatoR', 'chitrox', 'Mystic'],
+		'redScore': 3,
+		'blueScore': 0,
+		'map': 'DeepSprinta',
+		'date': '16.01.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Maldito', 'TT-Tolyan', 'Lasunii', 'Cold-M'],
+		'blue': ['Gooz', 'j', 'ImitatoR', 'chitrox', 'Mystic'],
+		'redScore': 4,
+		'blueScore': 3,
+		'map': 'Virility',
+		'date': '16.01.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Maldito', 'TT-Tolyan', 'Lasunii', 'Cold-M'],
+		'blue': ['Gooz', 'j', 'ImitatoR', 'chitrox', 'Mystic'],
+		'redScore': 3,
+		'blueScore': 2,
+		'map': 'Anfractuous',
+		'date': '16.01.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Maldito', 'TT-Tolyan', 'Lasunii', 'Cold-M'],
+		'blue': ['Gooz', 'j', 'ImitatoR', 'Naut', 'Rigel'],
+		'redScore': 3,
+		'blueScore': 2,
+		'map': 'Ages',
+		'date': '16.01.2021'
 	});
 	
 	return games;

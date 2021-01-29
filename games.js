@@ -4081,7 +4081,8 @@ function getGames() {
 		'blueScore': 7,
 		'map': 'Vault',
 		'date': '23.01.2021',
-		'fixes': [['ImitatoR', -50], ['Lasunii', +25], ['Mystic', +25], ['chitrox', +25]]
+		'location': 'PG',
+		'fixes': [['ImitatoR', -25], ['Lasunii', +25], ['Mystic', +25], ['chitrox', +25]]
 	});
 	
 	games.push({
@@ -4090,6 +4091,7 @@ function getGames() {
 		'redScore': 0,
 		'blueScore': 5,
 		'map': 'Grendelkeep',
+		'location': 'PG',
 		'date': '23.01.2021'
 	});
 	
@@ -4099,6 +4101,7 @@ function getGames() {
 		'redScore': 1,
 		'blueScore': 5,
 		'map': 'Virility',
+		'location': 'PG',
 		'date': '23.01.2021'
 	});
 	
@@ -4108,6 +4111,7 @@ function getGames() {
 		'redScore': 4,
 		'blueScore': 0,
 		'map': 'Anfractuous',
+		'location': 'PG',
 		'date': '23.01.2021'
 	});
 	
@@ -4117,6 +4121,7 @@ function getGames() {
 		'redScore': 3,
 		'blueScore': 2,
 		'map': 'Pistola',
+		'location': 'PG',
 		'date': '23.01.2021'
 	});
 	
@@ -4127,7 +4132,7 @@ function getGames() {
 		'blueScore': 4,
 		'map': 'Grendelkeep',
 		'date': '27.01.2021',
-		'fixes': [['Gooz', +100], ['Small', -50]]
+		'fixes': [['Gooz', +100], ['Small', -50], ['ImitatoR', -50]]
 	});
 	
 	games.push({

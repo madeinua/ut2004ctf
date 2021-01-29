@@ -4074,5 +4074,97 @@ function getGames() {
 		'date': '20.01.2021'
 	});
 	
+	games.push({
+		'red': ['MVDE', 'TT-Tolyan', 'Maldito', 'MoRoZ', 'rug:dude'],
+		'blue': ['ImitatoR', 'Lasunii', 'Cold-M', 'Mystic', 'chitrox'],
+		'redScore': 4,
+		'blueScore': 7,
+		'map': 'Vault',
+		'date': '23.01.2021',
+		'fixes': [['ImitatoR', -50], ['Lasunii', +25], ['Mystic', +25], ['chitrox', +25]]
+	});
+	
+	games.push({
+		'red': ['MVDE', 'TT-Tolyan', 'Maldito', 'MoRoZ', 'rug:dude'],
+		'blue': ['ImitatoR', 'Lasunii', 'Cold-M', 'Mystic', 'chitrox'],
+		'redScore': 0,
+		'blueScore': 5,
+		'map': 'Grendelkeep',
+		'date': '23.01.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'TT-Tolyan', 'Maldito', 'MoRoZ', 'rug:dude'],
+		'blue': ['ImitatoR', 'Lasunii', 'Cold-M', 'Mystic', 'chitrox'],
+		'redScore': 1,
+		'blueScore': 5,
+		'map': 'Virility',
+		'date': '23.01.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Lasunii', 'Maldito', 'Mystic', 'rug:dude'],
+		'blue': ['ImitatoR', 'TT-Tolyan', 'Cold-M', 'MoRoZ', 'chitrox'],
+		'redScore': 4,
+		'blueScore': 0,
+		'map': 'Anfractuous',
+		'date': '23.01.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Lasunii', 'Maldito', 'Mystic', 'rug:dude'],
+		'blue': ['ImitatoR', 'TT-Tolyan', 'Cold-M', 'MoRoZ', 'chitrox'],
+		'redScore': 3,
+		'blueScore': 2,
+		'map': 'Pistola',
+		'date': '23.01.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Cold-M', 'chitrox', 'Small', 'Forsiets'],
+		'blue': ['Gooz', 'j', 'ImitatoR', 'Analyzer', 'Lasunii'],
+		'redScore': 2,
+		'blueScore': 4,
+		'map': 'Grendelkeep',
+		'date': '27.01.2021',
+		'fixes': [['Gooz', +100], ['Small', -50]]
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Cold-M', 'chitrox', 'Small', 'Forsiets'],
+		'blue': ['Gooz', 'j', 'ImitatoR', 'Analyzer', 'Lasunii'],
+		'redScore': 3,
+		'blueScore': 5,
+		'map': 'Vault',
+		'date': '27.01.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Cold-M', 'chitrox', 'Small', 'Forsiets'],
+		'blue': ['Gooz', 'j', 'ImitatoR', 'Analyzer', 'Lasunii'],
+		'redScore': 0,
+		'blueScore': 3,
+		'map': 'Archanastre',
+		'date': '27.01.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'TT-Tolyan', 'Lasunii', 'Small', 'Forsiets'],
+		'blue': ['j', 'ImitatoR', 'Cold-M', 'chitrox', 'Rigel'],
+		'redScore': 3,
+		'blueScore': 1,
+		'map': 'Virility',
+		'date': '27.01.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'TT-Tolyan', 'Lasunii', 'Cold-M', 'Forsiets'],
+		'blue': ['j', 'ImitatoR', 'Small', 'chitrox', 'Rigel'],
+		'redScore': 3,
+		'blueScore': 4,
+		'map': 'Anfractuous',
+		'date': '27.01.2021'
+	});
+	
 	return games;
 }

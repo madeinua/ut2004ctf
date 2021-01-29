@@ -3373,6 +3373,12 @@ for (i in activePlayersDates) {
 
 playersTimestamps.reverse();
 
+for (var i in players) {
+	if (!playersTimestamps.includes(i)) {
+		playersTimestamps.push(i);
+	}
+}
+
 buff = '';
 
 buff += '<p><label for="showActiveOnly" style="cursor:pointer;"><input type="checkbox" id="showActiveOnly" checked="checked" /> Show active players only (who have played in the last ' + minActivePlayersDays + ' days).</label></p>';
@@ -3713,8 +3719,6 @@ var getSelect = function(t, p) {
 
 	txt += '<option value="">- Any -</option>';
 	
-	
-
 	for (var p in playersTimestamps) {
 		txt += '<option value="' + playersTimestamps[p] + '">' + playersTimestamps[p] + '</option>';
 	}

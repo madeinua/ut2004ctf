@@ -4082,7 +4082,7 @@ function getGames() {
 		'map': 'Vault',
 		'date': '23.01.2021',
 		'location': 'PG',
-		'fixes': [['ImitatoR', -25], ['Lasunii', +25], ['Mystic', +25], ['chitrox', +25]]
+		'fixes': [['ImitatoR', -25], ['Mystic', +25], ['chitrox', +25]]
 	});
 	
 	games.push({
@@ -4132,7 +4132,7 @@ function getGames() {
 		'blueScore': 4,
 		'map': 'Grendelkeep',
 		'date': '27.01.2021',
-		'fixes': [['Gooz', +100], ['Small', -50], ['ImitatoR', -50]]
+		'fixes': [['Gooz', +100], ['Small', -50]]
 	});
 	
 	games.push({
@@ -4169,6 +4169,67 @@ function getGames() {
 		'blueScore': 4,
 		'map': 'Anfractuous',
 		'date': '27.01.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Maldito', 'ImitatoR', 'chitrox', 'pr!x'],
+		'blue': ['TT-Tolyan', 'Lasunii', 'Cold-M', 'Naut', 'Thoums'],
+		'redScore': 7,
+		'blueScore': 4,
+		'map': 'Vault',
+		'location': 'PG',
+		'date': '30.01.2021',
+		'fixes': [['MVDE', +50], ['Lasunii', -25], ['Naut', -50], ['chitrox', +25]]
+	});
+	
+	games.push({
+		'red': ['MVDE', 'TT-Tolyan', 'ImitatoR', 'pr!x', 'Thoums'],
+		'blue': ['Maldito', 'Lasunii', 'chitrox', 'Cold-M', 'Naut'],
+		'redScore': 5,
+		'blueScore': 2,
+		'map': 'Archanastre',
+		'location': 'PG',
+		'date': '30.01.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'TT-Tolyan', 'ImitatoR', 'pr!x', 'Thoums'],
+		'blue': ['Maldito', 'Lasunii', 'chitrox', 'Cold-M', 'Naut'],
+		'redScore': 5,
+		'blueScore': 3,
+		'map': 'Grendelkeep',
+		'location': 'PG',
+		'date': '30.01.2021'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'Maldito', 'TT-Tolyan', 'Lasunii', 'Thoums'],
+		'blue': ['MVDE', 'ImitatoR', 'chitrox', 'Cold-M', 'Naut'],
+		'redScore': 1,
+		'blueScore': 8,
+		'map': 'Virility',
+		'location': 'PG',
+		'date': '30.01.2021'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'Naut', 'TT-Tolyan', 'Lasunii', 'Thoums'],
+		'blue': ['MVDE', 'Maldito', 'ImitatoR', 'chitrox', 'Cold-M'],
+		'redScore': 2,
+		'blueScore': 4,
+		'map': 'Ages',
+		'location': 'PG',
+		'date': '30.01.2021'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'Naut', 'TT-Tolyan', 'Lasunii', 'Maldito'],
+		'blue': ['MVDE', 'ImitatoR', 'chitrox', 'Cold-M', 'Thoums'],
+		'redScore': 4,
+		'blueScore': 3,
+		'map': 'Anfractuous',
+		'location': 'PG',
+		'date': '30.01.2021'
 	});
 	
 	return games;

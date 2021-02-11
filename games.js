@@ -4433,7 +4433,7 @@ function getGames() {
 		'map': 'Vault',
 		'location': 'PG',
 		'date': '10.02.2021',
-		'fixes': [['Rigel', +50], ['ImitatoR', +50], ['Thoums', -50]]
+		'fixes': [['Rigel', +50], ['chitrox', +25], ['ImitatoR', +50], ['Thoums', -50]]
 	});
 	
 	games.push({

@@ -4575,7 +4575,7 @@ function getGames() {
 		'map': 'Vault',
 		'location': 'PG',
 		'date': '15.02.2021',
-		'fixes': [['Rigel', +25], ['Gooz', -50], ['MVDE', -25]]
+		'fixes': [['Rigel', +25], ['Gooz', -50]]
 	});
 	
 	games.push({
@@ -4667,7 +4667,7 @@ function getGames() {
 		'map': 'Archanastre',
 		'location': 'PG',
 		'date': '20.02.2021',
-		'fixes': [['Gooz', -25]]
+		'fixes': [['Gooz', -50]]
 	});
 	
 	games.push({
@@ -4698,6 +4698,118 @@ function getGames() {
 		'map': 'Campers Crossing',
 		'location': 'PG',
 		'date': '21.02.2021'
+	});
+	
+	games.push({
+		'red': ['TT-Tolyan', 'Lasunii', 'Maldito', 'Cold-M', 'j'],
+		'blue': ['MVDE', 'ImitatoR', 'chitrox', 'Rigel', 'MoRoZ'],
+		'redScore': 8,
+		'blueScore': 3,
+		'map': 'Vault',
+		'location': 'PG',
+		'date': '22.02.2021',
+		'fixes': [['MoRoZ', +100]]
+	});
+	
+	games.push({
+		'red': ['TT-Tolyan', 'Lasunii', 'Maldito', 'Cold-M', 'j'],
+		'blue': ['MVDE', 'ImitatoR', 'chitrox', 'Rigel', 'MoRoZ'],
+		'redScore': 1,
+		'blueScore': 3,
+		'map': 'Archanastre',
+		'location': 'PG',
+		'date': '22.02.2021'
+	});
+	
+	games.push({
+		'red': ['TT-Tolyan', 'Lasunii', 'Maldito', 'Cold-M', 'j'],
+		'blue': ['MVDE', 'ImitatoR', 'chitrox', 'Rigel', 'MoRoZ'],
+		'redScore': 0,
+		'blueScore': 1,
+		'map': 'Virility',
+		'location': 'PG',
+		'date': '22.02.2021'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'TT-Tolyan', 'ImitatoR', 'Lasunii', 'Mystic'],
+		'blue': ['MVDE', 'Maldito', 'Naut', 'chitrox', 'MoRoZ'],
+		'redScore': 2,
+		'blueScore': 3,
+		'map': 'Virility',
+		'location': 'PG',
+		'date': '27.02.2021',
+		'fixes': [['Gooz', -25], ['Naut', +25]]
+	});
+	
+	games.push({
+		'red': ['TT-Tolyan', 'ImitatoR', 'Lasunii', 'Mystic', 'Sonic'],
+		'blue': ['MVDE', 'Maldito', 'Naut', 'chitrox', 'MoRoZ'],
+		'redScore': 1,
+		'blueScore': 6,
+		'map': 'Vault',
+		'location': 'PG',
+		'date': '27.02.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'ImitatoR', 'Lasunii', 'chitrox', 'Sonic'],
+		'blue': ['TT-Tolyan', 'Maldito', 'Naut', 'MoRoZ', 'Mystic'],
+		'redScore': 5,
+		'blueScore': 2,
+		'map': 'Vault',
+		'location': 'PG',
+		'date': '27.02.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'ImitatoR', 'Lasunii', 'chitrox', 'Sonic'],
+		'blue': ['TT-Tolyan', 'Maldito', 'Naut', 'MoRoZ', 'Mystic'],
+		'redScore': 6,
+		'blueScore': 3,
+		'map': 'Grendelkeep',
+		'location': 'PG',
+		'date': '27.02.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'ImitatoR', 'chitrox', 'Sonic', 'MoRoZ'],
+		'blue': ['TT-Tolyan', 'Maldito', 'Naut', 'Lasunii', 'Mystic'],
+		'redScore': 7,
+		'blueScore': 1,
+		'map': 'Archanastre',
+		'location': 'PG',
+		'date': '27.02.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Maldito', 'chitrox', 'Sonic', 'MoRoZ'],
+		'blue': ['TT-Tolyan', 'ImitatoR', 'Naut', 'Lasunii', 'Mystic'],
+		'redScore': 3,
+		'blueScore': 1,
+		'map': 'Archanastre',
+		'location': 'PG',
+		'date': '27.02.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Maldito', 'chitrox', 'Sonic', 'MoRoZ'],
+		'blue': ['TT-Tolyan', 'ImitatoR', 'Naut', 'Lasunii', 'Mystic'],
+		'redScore': 0,
+		'blueScore': 8,
+		'map': 'Twin Tombs',
+		'location': 'PG',
+		'date': '27.02.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Maldito', 'chitrox', 'Sonic', 'MoRoZ'],
+		'blue': ['TT-Tolyan', 'ImitatoR', 'Naut', 'Lasunii', 'Mystic'],
+		'redScore': 7,
+		'blueScore': 2,
+		'map': 'Anfractuous',
+		'location': 'PG',
+		'date': '27.02.2021'
 	});
 	
 	return games;

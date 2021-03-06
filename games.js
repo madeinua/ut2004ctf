@@ -4910,7 +4910,8 @@ function getGames() {
 		'blueScore': 7,
 		'map': 'Anfractuous',
 		'location': 'PG',
-		'date': '06.03.2021'
+		'date': '06.03.2021',
+		'fixes': [['Gooz', +25]]
 	});
 	
 	games.push({

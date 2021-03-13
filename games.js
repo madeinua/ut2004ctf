@@ -4896,7 +4896,7 @@ function getGames() {
 	games.push({
 		'red': ['Gooz', 'TT-Tolyan', 'Maldito', 'Lasunii', 'Sonic'],
 		'blue': ['MVDE', 'Naut', 'ImitatoR', 'chitrox', 'Cold-M'],
-		'redScore': 3,
+		'redScore': 1,
 		'blueScore': 10,
 		'map': 'Grendelkeep',
 		'location': 'PG',
@@ -4923,7 +4923,7 @@ function getGames() {
 		'location': 'PG',
 		'date': '06.03.2021'
 	});
-	
+		
 	games.push({
 		'red': ['MVDE', 'Naut', 'TT-Tolyan', 'Maldito', 'Lasunii'],
 		'blue': ['Gooz', 'ImitatoR', 'chitrox', 'Cold-M', 'Rigel'],
@@ -4932,6 +4932,66 @@ function getGames() {
 		'map': 'Vault',
 		'location': 'PG',
 		'date': '06.03.2021'
+	});
+	
+	games.push({
+		'red': ['TT-Tolyan', 'Rigel', 'Lasunii', 'MoRoZ', 'Forsiets'],
+		'blue': ['j', 'Thoums', 'chitrox', 'Cold-M', 'Mystic'],
+		'redScore': 4,
+		'blueScore': 6,
+		'map': 'Vault',
+		'location': 'PG',
+		'date': '10.03.2021'
+	});
+	
+	games.push({
+		'red': ['TT-Tolyan', 'Rigel', 'Lasunii', 'MoRoZ', 'Forsiets'],
+		'blue': ['j', 'Thoums', 'chitrox', 'Cold-M', 'Mystic'],
+		'redScore': 1,
+		'blueScore': 6,
+		'map': 'Archanastre',
+		'location': 'PG',
+		'date': '10.03.2021'
+	});
+	
+	games.push({
+		'red': ['TT-Tolyan', 'Lasunii', 'Rigel', 'MoRoZ', 'Thoums'],
+		'blue': ['j', 'chitrox', 'Cold-M', 'Mystic', 'Forsiets'],
+		'redScore': 7,
+		'blueScore': 1,
+		'map': 'Grendelkeep',
+		'location': 'PG',
+		'date': '10.03.2021'
+	});
+	
+	games.push({
+		'red': ['TT-Tolyan', 'Cold-M', 'Thoums', 'Mystic', 'Forsiets'],
+		'blue': ['j', 'Rigel', 'chitrox', 'Lasunii', 'MoRoZ'],
+		'redScore': 5,
+		'blueScore': 6,
+		'map': 'Virility',
+		'location': 'PG',
+		'date': '10.03.2021'
+	});
+	
+	games.push({
+		'red': ['TT-Tolyan', 'Cold-M', 'MoRoZ', 'Thoums', 'Mystic'],
+		'blue': ['j', 'Rigel', 'chitrox', 'Lasunii', 'Forsiets'],
+		'redScore': 4,
+		'blueScore': 1,
+		'map': 'Anfractuous',
+		'location': 'PG',
+		'date': '10.03.2021'
+	});
+	
+	games.push({
+		'red': ['TT-Tolyan', 'Cold-M', 'Thoums', 'Mystic', 'Forsiets'],
+		'blue': ['j', 'Rigel', 'chitrox', 'Lasunii', 'MoRoZ'],
+		'redScore': 7,
+		'blueScore': 2,
+		'map': 'Anfractuous',
+		'location': 'PG',
+		'date': '10.03.2021'
 	});
 	
 	return games;

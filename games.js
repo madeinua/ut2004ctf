@@ -5133,7 +5133,7 @@ function getGames() {
 		'map': 'Virility',
 		'location': 'EU',
 		'date': '23.03.2021',
-		'fixes': [['ImitatoR', +25], ['Mystic', +50]]
+		'fixes': [['ImitatoR', +50], ['Mystic', +50], ['Naut', +25]]
 	});
 	
 	games.push({

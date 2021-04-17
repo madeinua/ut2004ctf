@@ -5365,7 +5365,88 @@ function getGames() {
 		'blueScore': 4,
 		'map': 'Grendelkeep',
 		'location': 'PG',
-		'date': '15.04.2021'
+		'date': '16.04.2021'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'TT-Tolyan', 'Lasunii', 'Cold-M', 'MoRoZ'],
+		'blue': ['MVDE', 'ImitatoR', 'chitrox', 'Mystic', 'Thoums'],
+		'redScore': 7,
+		'blueScore': 3,
+		'map': 'Vault',
+		'location': 'PG',
+		'date': '17.04.2021',
+		'fixes': [['MVDE', -50], ['Lasunii', +50], ['Rigel', +50], ['Cold-M', +25]]
+	});
+	
+	games.push({
+		'red': ['Gooz', 'TT-Tolyan', 'Lasunii', 'Cold-M', 'MoRoZ'],
+		'blue': ['MVDE', 'ImitatoR', 'chitrox', 'Mystic', 'Thoums'],
+		'redScore': 3,
+		'blueScore': 2,
+		'map': 'Archanastre',
+		'location': 'PG',
+		'date': '17.04.2021'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'TT-Tolyan', 'Lasunii', 'Cold-M', 'MoRoZ'],
+		'blue': ['MVDE', 'ImitatoR', 'chitrox', 'Mystic', 'Thoums'],
+		'redScore': 4,
+		'blueScore': 1,
+		'map': 'Anfractuous',
+		'location': 'PG',
+		'date': '17.04.2021'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'TT-Tolyan', 'Lasunii', 'MoRoZ', 'Thoums'],
+		'blue': ['MVDE', 'ImitatoR', 'chitrox', 'Mystic', 'Cold-M'],
+		'redScore': 3,
+		'blueScore': 5,
+		'map': 'Virility',
+		'location': 'PG',
+		'date': '17.04.2021'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'TT-Tolyan', 'Lasunii', 'MoRoZ', 'Thoums'],
+		'blue': ['MVDE', 'ImitatoR', 'chitrox', 'Mystic', 'Cold-M'],
+		'redScore': 10,
+		'blueScore': 4,
+		'map': 'Grendelkeep',
+		'location': 'PG',
+		'date': '17.04.2021'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'TT-Tolyan', 'Lasunii', 'MoRoZ', 'Thoums'],
+		'blue': ['MVDE', 'ImitatoR', 'chitrox', 'Mystic', 'Cold-M'],
+		'redScore': 2,
+		'blueScore': 8,
+		'map': 'Ages',
+		'location': 'PG',
+		'date': '17.04.2021'
+	});
+	
+	games.push({
+		'red': ['TT-Tolyan', 'Lasunii', 'Rigel', 'MoRoZ', 'Cold-M'],
+		'blue': ['MVDE', 'ImitatoR', 'chitrox', 'Mystic', 'Thoums'],
+		'redScore': 6,
+		'blueScore': 4,
+		'map': 'Virility',
+		'location': 'PG',
+		'date': '18.04.2021'
+	});
+	
+	games.push({
+		'red': ['TT-Tolyan', 'Lasunii', 'Rigel', 'MoRoZ', 'Cold-M'],
+		'blue': ['MVDE', 'ImitatoR', 'chitrox', 'Mystic', 'Thoums'],
+		'redScore': 4,
+		'blueScore': 3,
+		'map': 'Campers Crossing',
+		'location': 'PG',
+		'date': '18.04.2021'
 	});
 	
 	return games;

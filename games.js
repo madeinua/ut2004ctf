@@ -5315,7 +5315,7 @@ function getGames() {
 		'map': 'Vault',
 		'location': 'PG',
 		'date': '15.04.2021',
-		'fixes': [['Mystic', +50], ['Thoums', +100]]
+		'fixes': [['Mystic', +50], ['Thoums', +100], ['MoRoZ', -25]]
 	});
 	
 	games.push({

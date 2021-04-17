@@ -5434,7 +5434,7 @@ function getGames() {
 		'blue': ['MVDE', 'ImitatoR', 'chitrox', 'Mystic', 'Thoums'],
 		'redScore': 6,
 		'blueScore': 4,
-		'map': 'Virility',
+		'map': 'Pistola',
 		'location': 'PG',
 		'date': '18.04.2021'
 	});

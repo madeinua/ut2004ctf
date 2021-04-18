@@ -5133,7 +5133,7 @@ function getGames() {
 		'map': 'Virility',
 		'location': 'EU',
 		'date': '23.03.2021',
-		'fixes': [['ImitatoR', +50], ['Mystic', +50], ['Naut', +25]]
+		'fixes': [['ImitatoR', +50], ['Mystic', +25], ['Naut', +25]]
 	});
 	
 	games.push({
@@ -5315,7 +5315,7 @@ function getGames() {
 		'map': 'Vault',
 		'location': 'PG',
 		'date': '15.04.2021',
-		'fixes': [['Mystic', +50], ['Thoums', +100], ['MoRoZ', -25]]
+		'fixes': [['Thoums', +100]]
 	});
 	
 	games.push({

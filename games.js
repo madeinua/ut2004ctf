@@ -5224,7 +5224,7 @@ function getGames() {
 		'map': 'Vault',
 		'location': 'PG',
 		'date': '03.04.2021',
-		'fixes': [['Mystic', +25], ['ImitatoR', +25], ['Gooz', +25]]
+		'fixes': [['ImitatoR', +25], ['Gooz', +25]]
 	});
 	
 	games.push({
@@ -5376,7 +5376,7 @@ function getGames() {
 		'map': 'Vault',
 		'location': 'PG',
 		'date': '17.04.2021',
-		'fixes': [['MVDE', -50], ['Lasunii', +50], ['Rigel', +50], ['Cold-M', +25]]
+		'fixes': [['MVDE', -50], ['Lasunii', +50], ['Rigel', +50]]
 	});
 	
 	games.push({
@@ -5497,7 +5497,69 @@ function getGames() {
 		'blueScore': 6,
 		'map': 'Anfractuous',
 		'location': 'PG',
-		'date': '21.04.2021'
+		'date': '21.04.2021',
+		'fixes': [['j', +25]]
+	});
+	
+	games.push({
+		'red': ['Gooz', 'TT-Tolyan', 'Lasunii', 'Maldito', 'Thoums'],
+		'blue': ['MVDE', 'ImitatoR', 'Cold-M', 'Mystic', 'chitrox'],
+		'redScore': 6,
+		'blueScore': 2,
+		'map': 'Archanastre',
+		'location': 'PG',
+		'date': '24.04.2021',
+		'fixes': [['chitrox', +50], ['Maldito', +50], ['MVDE', -25]]
+	});
+	
+	games.push({
+		'red': ['Gooz', 'TT-Tolyan', 'Lasunii', 'Maldito', 'Thoums'],
+		'blue': ['MVDE', 'ImitatoR', 'Cold-M', 'Mystic', 'chitrox'],
+		'redScore': 5,
+		'blueScore': 6,
+		'map': 'Virility',
+		'location': 'PG',
+		'date': '24.04.2021'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'TT-Tolyan', 'Lasunii', 'Maldito', 'Thoums'],
+		'blue': ['MVDE', 'ImitatoR', 'Cold-M', 'Mystic', 'chitrox'],
+		'redScore': 11,
+		'blueScore': 4,
+		'map': 'Grendelkeep',
+		'location': 'PG',
+		'date': '24.04.2021'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'Mystic', 'Lasunii', 'Maldito', 'Thoums'],
+		'blue': ['MVDE', 'TT-Tolyan', 'ImitatoR', 'Cold-M', 'chitrox'],
+		'redScore': 5,
+		'blueScore': 2,
+		'map': 'Grendelkeep',
+		'location': 'PG',
+		'date': '24.04.2021'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'Mystic', 'Lasunii', 'Maldito', 'Thoums'],
+		'blue': ['MVDE', 'TT-Tolyan', 'ImitatoR', 'Cold-M', 'chitrox'],
+		'redScore': 1,
+		'blueScore': 7,
+		'map': 'Anfractuous',
+		'location': 'PG',
+		'date': '24.04.2021'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'Mystic', 'Lasunii', 'Maldito', 'Thoums'],
+		'blue': ['MVDE', 'TT-Tolyan', 'ImitatoR', 'Cold-M', 'chitrox'],
+		'redScore': 2,
+		'blueScore': 3,
+		'map': 'Ages',
+		'location': 'PG',
+		'date': '24.04.2021'
 	});
 	
 	return games;

@@ -3075,7 +3075,7 @@ var getPlayerEloInGame = function(playerName, game, gameNum) {
 	teamDiff = isWin && myTeamElo > opTeamElo ? 1 : teamDiff;
 	teamDiff = !isWin && opTeamElo > myTeamElo ? 1 : teamDiff;
 
-	bonus = (isWin ? 1 : -1) * teamDiff * 2;
+	bonus = (isWin ? 1 : -1) * teamDiff * 4;
 
 	if (isWin && bonus > 4 && date >= minDarkHorseTs) {
 		darkHorses[playerName]++;
@@ -3107,18 +3107,44 @@ var getPlayerEloInGame = function(playerName, game, gameNum) {
 	return oldElo + bonus;
 };
 
+var corrects = 0,
+	mistakes = 0;
+	
 var updateTeamsEloInGame = function(gameNum) {
 
 	var game = games[gameNum],
 		playersInGame = game.red.concat(game.blue),
-		eloResults = [];
+		eloResults = [],
+		redElo = 0,
+		blueElo = 0;
 
 	for (var i in playersInGame) {
 		eloResults[playersInGame[i]] = getPlayerEloInGame(playersInGame[i], game, gameNum);
 	}
 
 	for (var playerName in eloResults) {
+		
 		players[playerName] = eloResults[playerName];
+		
+		if (isBlueTeamPlayer(game, playerName)) {
+			blueElo += players[playerName];
+		} else {
+			redElo += players[playerName];
+		}
+		
+		if (game.redScore > game.blueScore) {
+			if (redElo >= blueElo) {
+				corrects += redElo - blueElo;
+			} else {
+				mistakes += blueElo - redElo;
+			}
+		} else {
+			if (blueElo >= redElo) {
+				corrects += blueElo - redElo;
+			} else {
+				mistakes += redElo - blueElo;
+			}
+		}
 	}
 };
 
@@ -3193,6 +3219,8 @@ for (i in games) {
 	updateTeamsEloInGame(i);
 	updatePlayersScores(games[i], players);
 }
+
+console.log('Current accuracy: ' + corrects * 100 / (corrects + mistakes) + '%');
 
 var sortedPlayers = getSortedKeys(players);
 

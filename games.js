@@ -5133,7 +5133,7 @@ function getGames() {
 		'map': 'Virility',
 		'location': 'EU',
 		'date': '23.03.2021',
-		'fixes': [['ImitatoR', +50], ['Mystic', +25], ['Naut', +25]]
+		'fixes': [['ImitatoR', +50], ['Mystic', +25]]
 	});
 	
 	games.push({
@@ -5565,8 +5565,8 @@ function getGames() {
 	games.push({
 		'red': ['ImitatoR', 'TT-Tolyan', 'Cold-M', 'j', 'Mystic'],
 		'blue': ['MVDE', 'Lasunii', 'Rigel', 'chitrox', 'Thoums'],
-		'redScore': 2,
-		'blueScore': 5, // @TODO check
+		'redScore': 4,
+		'blueScore': 6,
 		'map': 'Vault',
 		'location': 'PG',
 		'date': '28.04.2021',
@@ -5586,8 +5586,8 @@ function getGames() {
 	games.push({
 		'red': ['TT-Tolyan', 'Lasunii', 'j', 'Mystic', 'Thoums'],
 		'blue': ['MVDE', 'Rigel', 'chitrox', 'Cold-M', 'Hodor'],
-		'redScore': 5, // @TODO check
-		'blueScore': 1,
+		'redScore': 10,
+		'blueScore': 2,
 		'map': 'Archanastre',
 		'location': 'PG',
 		'date': '28.04.2021'
@@ -5596,11 +5596,162 @@ function getGames() {
 	games.push({
 		'red': ['TT-Tolyan', 'Lasunii', 'Cold-M', 'Mystic', 'Thoums'],
 		'blue': ['MVDE', 'Rigel', 'chitrox', 'j', 'Hodor'],
-		'redScore': 5, // @TODO check
-		'blueScore': 3,
+		'redScore': 6,
+		'blueScore': 4,
 		'map': 'Virility',
 		'location': 'PG',
 		'date': '28.04.2021'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'TT-Tolyan', 'Cold-M', 'Hodor', 'Thoums'],
+		'blue': ['MVDE', 'Naut', 'chitrox', 'Maldito', 'Mystic'],
+		'redScore': 3,
+		'blueScore': 5,
+		'map': 'Vault',
+		'location': 'PG',
+		'date': '01.05.2021'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'TT-Tolyan', 'Cold-M', 'Hodor', 'Thoums'],
+		'blue': ['MVDE', 'Naut', 'chitrox', 'Maldito', 'Mystic'],
+		'redScore': 3,
+		'blueScore': 4,
+		'map': 'Archanastre',
+		'location': 'PG',
+		'date': '01.05.2021'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'TT-Tolyan', 'Cold-M', 'Hodor', 'Thoums'],
+		'blue': ['MVDE', 'Naut', 'chitrox', 'Maldito', 'Mystic'],
+		'redScore': 1,
+		'blueScore': 5,
+		'map': 'Grendelkeep',
+		'location': 'PG',
+		'date': '01.05.2021'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'TT-Tolyan', 'Naut', 'Hodor', 'Thoums'],
+		'blue': ['MVDE', 'chitrox', 'Cold-M', 'Maldito', 'Mystic'],
+		'redScore': 7,
+		'blueScore': 2,
+		'map': 'Virility',
+		'location': 'PG',
+		'date': '01.05.2021'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'Naut', 'Mystic', 'Hodor', 'Thoums'],
+		'blue': ['MVDE', 'TT-Tolyan', 'chitrox', 'Cold-M', 'Maldito'],
+		'redScore': 3,
+		'blueScore': 4,
+		'map': 'Anfractuous',
+		'location': 'PG',
+		'date': '01.05.2021'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'Naut', 'Mystic', 'Hodor', 'Thoums'],
+		'blue': ['MVDE', 'TT-Tolyan', 'chitrox', 'Cold-M', 'Maldito'],
+		'redScore': 5,
+		'blueScore': 4,
+		'map': 'Ages',
+		'location': 'PG',
+		'date': '02.05.2021'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'ImitatoR', 'Cold-M', 'Thoums', 'shunky'],
+		'blue': ['MVDE', 'chitrox', 'Mystic', 'vestnik', 'rug:dude'],
+		'redScore': 10,
+		'blueScore': 3,
+		'map': 'Vault',
+		'location': 'EU',
+		'date': '06.05.2021'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'ImitatoR', 'Thoums', 'shunky', 'rug:dude'],
+		'blue': ['MVDE', 'chitrox', 'Mystic', 'vestnik', 'Cold-M'],
+		'redScore': 3,
+		'blueScore': 5,
+		'map': 'Ages',
+		'location': 'EU',
+		'date': '06.05.2021'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'ImitatoR', 'Thoums', 'j', 'rug:dude'],
+		'blue': ['MVDE', 'chitrox', 'Mystic', 'vestnik', 'Cold-M'],
+		'redScore': 10,
+		'blueScore': 3,
+		'map': 'Betrayal',
+		'location': 'EU',
+		'date': '06.05.2021'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'Thoums', 'j', 'Cold-M', 'rug:dude'],
+		'blue': ['MVDE', 'ImitatoR', 'chitrox', 'Mystic', 'vestnik'],
+		'redScore': 2,
+		'blueScore': 5,
+		'map': 'Archanastre',
+		'location': 'EU',
+		'date': '06.05.2021'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'j', 'TT-Tolyan', 'Maldito', 'Thoums'],
+		'blue': ['MVDE', 'ImitatoR', 'chitrox', 'Cold-M', 'Mystic'],
+		'redScore': 8,
+		'blueScore': 3,
+		'map': 'Nazu',
+		'location': 'PG',
+		'date': '08.05.2021',
+		'fixes': [['j', +50], ['Cold-M', -25]]
+	});
+	
+	games.push({
+		'red': ['Gooz', 'j', 'TT-Tolyan', 'Maldito', 'Thoums'],
+		'blue': ['MVDE', 'ImitatoR', 'chitrox', 'Cold-M', 'Mystic'],
+		'redScore': 6,
+		'blueScore': 3,
+		'map': 'Vault',
+		'location': 'PG',
+		'date': '08.05.2021'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'j', 'Cold-M', 'Maldito', 'Thoums'],
+		'blue': ['MVDE', 'TT-Tolyan', 'ImitatoR', 'chitrox', 'Mystic'],
+		'redScore': 1,
+		'blueScore': 3,
+		'map': 'Archanastre',
+		'location': 'PG',
+		'date': '08.05.2021'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'j', 'Cold-M', 'Maldito', 'Thoums'],
+		'blue': ['MVDE', 'TT-Tolyan', 'ImitatoR', 'chitrox', 'Mystic'],
+		'redScore': 4,
+		'blueScore': 5,
+		'map': 'Grendelkeep',
+		'location': 'PG',
+		'date': '08.05.2021'
+	});
+	
+	games.push({
+		'red': ['Gooz', 'j', 'Cold-M', 'Maldito', 'Thoums'],
+		'blue': ['MVDE', 'TT-Tolyan', 'ImitatoR', 'chitrox', 'Mystic'],
+		'redScore': 3,
+		'blueScore': 4,
+		'map': 'Anfractuous',
+		'location': 'PG',
+		'date': '08.05.2021'
 	});
 	
 	return games;

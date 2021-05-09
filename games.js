@@ -5711,7 +5711,7 @@ function getGames() {
 		'map': 'Nazu',
 		'location': 'PG',
 		'date': '08.05.2021',
-		'fixes': [['j', +50], ['Cold-M', -25]]
+		'fixes': [['j', +50], ['Cold-M', -25], ['Thoums', +25]]
 	});
 	
 	games.push({

@@ -5754,5 +5754,75 @@ function getGames() {
 		'date': '08.05.2021'
 	});
 	
+	games.push({
+		'red': ['MVDE', 'Maldito', 'chitrox', 'Mystic', 'MoRoZ'],
+		'blue': ['ImitatoR', 'Lasunii', 'Rigel', 'Hodor', 'Thoums'],
+		'redScore': 6,
+		'blueScore': 1,
+		'map': 'Aquatica',
+		'location': 'PG',
+		'date': '10.05.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Maldito', 'chitrox', 'Mystic', 'MoRoZ'],
+		'blue': ['ImitatoR', 'Lasunii', 'Rigel', 'Hodor', 'Thoums'],
+		'redScore': 5,
+		'blueScore': 4,
+		'map': 'Vault',
+		'location': 'PG',
+		'date': '10.05.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Maldito', 'chitrox', 'Mystic', 'MoRoZ'],
+		'blue': ['ImitatoR', 'Lasunii', 'Rigel', 'Hodor', 'Thoums'],
+		'redScore': 9,
+		'blueScore': 7,
+		'map': 'Grendelkeep',
+		'location': 'PG',
+		'date': '10.05.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Maldito', 'chitrox', 'Mystic', 'MoRoZ'],
+		'blue': ['ImitatoR', 'Lasunii', 'Rigel', 'Cold-M', 'Thoums'],
+		'redScore': 4,
+		'blueScore': 7,
+		'map': 'Virility',
+		'location': 'PG',
+		'date': '10.05.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'TT-Tolyan', 'chitrox', 'Mystic', 'MoRoZ'],
+		'blue': ['ImitatoR', 'Lasunii', 'Rigel', 'Cold-M', 'Thoums'],
+		'redScore': 6,
+		'blueScore': 3,
+		'map': 'Archanastre',
+		'location': 'PG',
+		'date': '10.05.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'Rigel', 'chitrox', 'Mystic', 'MoRoZ'],
+		'blue': ['ImitatoR', 'Lasunii', 'TT-Tolyan', 'Cold-M', 'Thoums'],
+		'redScore': 6,
+		'blueScore': 3,
+		'map': 'Anfractuous',
+		'location': 'PG',
+		'date': '10.05.2021'
+	});
+	
+	games.push({
+		'red': ['MVDE', 'TT-Tolyan', 'Rigel', 'chitrox', 'MoRoZ'],
+		'blue': ['ImitatoR', 'Lasunii', 'Cold-M', 'Mystic', 'Thoums'],
+		'redScore': 2,
+		'blueScore': 3,
+		'map': 'Pistola',
+		'location': 'PG',
+		'date': '11.05.2021'
+	});
+	
 	return games;
 }

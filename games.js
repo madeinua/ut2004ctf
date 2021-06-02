@@ -5995,7 +5995,7 @@ function getGames() {
 		'map': 'Anfractuous',
 		'location': 'EU',
 		'date': '29.05.2021',
-		'fixes': [['MVDE', -50]]
+		'fixes': [['MVDE', -50], ['Cold-M', -25]]
 	});
 	
 	games.push({

@@ -6026,7 +6026,7 @@ function getGames() {
 		'map': 'Vault',
 		'location': 'EU',
 		'date': '02.06.2021',
-		'fixes': [['Thoums', +100]]
+		'fixes': [['Thoums', +100], ['Mystic', +100]]
 	});
 	
 	games.push({
@@ -6067,7 +6067,7 @@ function getGames() {
 		'map': 'Vault',
 		'location': 'EU',
 		'date': '05.06.2021',
-		'fixes': [['Naut', +75], ['Maldito', +25]]
+		'fixes': [['Naut', +75], ['Maldito', +25], ['chitrox', -50]]
 	});
 	
 	games.push({

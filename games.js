@@ -5995,7 +5995,7 @@ function getGames() {
 		'map': 'Anfractuous',
 		'location': 'EU',
 		'date': '29.05.2021',
-		'fixes': [['MVDE', -50], ['Cold-M', -25], ['Gooz', -50]]
+		'fixes': [['MVDE', -50], ['Cold-M', -25], ['Gooz', -100]]
 	});
 	
 	games.push({
@@ -6067,7 +6067,7 @@ function getGames() {
 		'map': 'Vault',
 		'location': 'EU',
 		'date': '05.06.2021',
-		'fixes': [['Naut', +75], ['Maldito', +25], ['chitrox', -50]]
+		'fixes': [['Naut', +75], ['Maldito', +25], ['chitrox', -25]]
 	});
 	
 	games.push({
@@ -6118,6 +6118,77 @@ function getGames() {
 		'map': 'Ages',
 		'location': 'EU',
 		'date': '06.06.2021'
+	});
+	
+	games.push({
+		'red': ['j', 'ImitatoR', 'Cold-M', 'TT-Tolyan', 'chitrox'],
+		'blue': ['MVDE', 'Lasunii', 'Mystic', 'Thoums', 'Forsiets'],
+		'redScore': 4,
+		'blueScore': 2,
+		'map': 'Archanastre',
+		'location': 'EU',
+		'date': '09.06.2021',
+		'fixes': [['MVDE', -50], ['Mystic', +50]]
+	});
+	
+	games.push({
+		'red': ['j', 'ImitatoR', 'Cold-M', 'TT-Tolyan', 'chitrox'],
+		'blue': ['MVDE', 'Lasunii', 'Mystic', 'Thoums', 'Forsiets'],
+		'redScore': 3,
+		'blueScore': 2,
+		'map': 'Vault',
+		'location': 'EU',
+		'date': '09.06.2021'
+	});
+	
+	games.push({
+		'red': ['j', 'ImitatoR', 'Cold-M', 'TT-Tolyan', 'chitrox'],
+		'blue': ['MVDE', 'Lasunii', 'Mystic', 'Thoums', 'Forsiets'],
+		'redScore': 5,
+		'blueScore': 0,
+		'map': 'Virility',
+		'location': 'EU',
+		'date': '09.06.2021'
+	});
+	
+	games.push({
+		'red': ['j', 'ImitatoR', 'Cold-M', 'Mystic', 'chitrox'],
+		'blue': ['MVDE', 'Lasunii', 'TT-Tolyan', 'Thoums', 'Forsiets'],
+		'redScore': 4,
+		'blueScore': 1,
+		'map': 'Virility',
+		'location': 'EU',
+		'date': '09.06.2021'
+	});
+	
+	games.push({
+		'red': ['ImitatoR', 'TT-Tolyan', 'Cold-M', 'chitrox', 'Thoums'],
+		'blue': ['MVDE', 'j', 'Lasunii', 'Mystic', 'Forsiets'],
+		'redScore': 2,
+		'blueScore': 3,
+		'map': 'Anfractuous',
+		'location': 'EU',
+		'date': '09.06.2021'
+	});
+	
+	games.push({
+		'red': ['ImitatoR', 'TT-Tolyan', 'Cold-M', 'chitrox', 'Thoums'],
+		'blue': ['MVDE', 'j', 'Lasunii', 'Mystic', 'Forsiets'],
+		'redScore': 6,
+		'blueScore': 5,
+		'map': 'Grendelkeep',
+		'location': 'EU',
+		'date': '10.06.2021'
+	});
+	
+	games.push({
+		'red': ['ImitatoR', 'TT-Tolyan', 'Cold-M', 'chitrox', 'Thoums'],
+		'blue': ['MVDE', 'j', 'Lasunii', 'Mystic', 'Forsiets'],
+		'redScore': 2,
+		'blueScore': 5,
+		'map': 'Ages',
+		'location': 'EU',
+		'date': '10.06.2021'
 	});
 	
 	return games;
